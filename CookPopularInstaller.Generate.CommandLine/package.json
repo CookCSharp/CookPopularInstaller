@@ -1,0 +1,77 @@
+{
+  "Project": {
+    "PackageFolder": "D:\\Users\\chance.zheng\\Desktop\\Company\\CookPopularInstaller\\Output\\Package",
+    "PackageOutputPath": "D:\\Users\\chance.zheng\\Desktop\\CookCSharp",
+    "Company": "CookCSharp",
+    "PackageName": "CookPopularInstaller.Generate",
+    "PackageVersion": "1.0.0.1",
+    "PackageFileExtension": ".exe",
+    "PackageType": "CustomUIExe",
+    "PackageTheme": "Default",
+    "AppFileName": "CookPopularInstaller.Generate.exe",
+    "Applogo": "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\Icon\\CookPopularInstaller.Generate.ico"
+  },
+  "Confuse": {
+    "IsConfuse": "False",
+    "ConfuseDllNames": [
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.App.FailBitMap.dll",
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.App.PhysicalEditor.dll",
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.App.Stdf.dll",
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.App.TestFlowEditor.dll",
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.App.WaferMap.dll",
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.App.WaveTracer.dll",
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.FSharpCore.dll",
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.Service.dll",
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.SharedToolkit.dll",
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.ToolsManagement.dll",
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.VisualBasicCore.dll",
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.SharpDXCore.dll",
+      "D:\\Users\\chance.zheng\\Desktop\\CookCSharp\\ToolsManagement\\CookCSharp.SkiaSharpCore.dll"
+    ]
+  },
+  "Depends": {
+    "DependDialogVariables": [
+      {
+        "CheckType": 0,
+        "CheckValue": "WIX",
+        "Name": "wixtoolset",
+        "InstallCommand": "/quiet /norestart",
+        "Value": "Depends/wix314.exe"
+      },
+      {
+        "CheckType": 0,
+        "CheckValue": "Path",
+        "Name": "Python",
+        "InstallCommand": "/quiet InstallAllUsers=1 PrependPath=1 Include_test=0",
+        "Value": "Depends/python-3.11.1-amd64.exe"
+      }
+    ]
+  },
+  "Extensions": {
+    "EnvironmentVariables": [],
+    "RegistryVariables": [
+      {
+        "RegistryHive": 2,
+        "RegistryValueKind": 0,
+        "Path": "Software\\[CompanyName]\\[ProductName]",
+        "Name": "Directory",
+        "Value": "[InstallFolder]"
+      },
+      {
+        "RegistryHive": 2,
+        "RegistryValueKind": 0,
+        "Path": "Software\\[CompanyName]\\[ProductName]",
+        "Name": "Path",
+        "Value": "[AppPath]"
+      },
+      {
+        "RegistryHive": 2,
+        "RegistryValueKind": 0,
+        "Path": "Software\\[CompanyName]\\[ProductName]",
+        "Name": "Version",
+        "Value": "[ProductVersion]"
+      }
+    ],
+    "WindowsServices": []
+  }
+}

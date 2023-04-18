@@ -1,0 +1,39 @@
+﻿<Project>
+  <ImportGroup>
+    <Import Project="CookPopularInstaller.props"/>
+  </ImportGroup>
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <UseHostCompilerIfAvailable>false</UseHostCompilerIfAvailable>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <Platforms>AnyCPU;x86;x64;ia64</Platforms>
+    <LangVersion>latest</LangVersion>
+    <!--设定语言-->
+    <SatelliteResourceLanguages>zh-Hans</SatelliteResourceLanguages>
+    <!--不生产ReferenceAssembly，即ref文件-->
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <!--<Nullable>enable</Nullable>-->
+    <!--指示编译器是否应为相同的输入产生相同的程序集-->
+    <Deterministic>true</Deterministic>
+    <WarningLevel>4</WarningLevel>
+    <Authors>Chance</Authors>
+    <Version>1.0.0.1</Version>
+    <Company>写代码的厨子</Company>
+    <Product>$(MSBuildProjectName)</Product>
+    <Title>$(MSBuildProjectName)</Title>
+    <Copyright>Copyright © CookCSharp All rights reserved.</Copyright>
+  </PropertyGroup>
+
+  <!--<Target Name="ObfuscarTask" AfterTargets="AfterBuild" Condition="$(TargetFramework.StartsWith('net5')) or $(TargetFramework.StartsWith('net6'))">
+    <PropertyGroup>
+      <ObfuscateCommand>$(Obfuscar) "$(SolutionDir)Obfuscar.xml"</ObfuscateCommand>
+    </PropertyGroup>
+    <Exec WorkingDirectory="$(OutputPath)" Command="$(ObfuscateCommand)" />
+    <Copy SourceFiles="$(TargetDir)*.dll" DestinationFolder=""/>
+  </Target>-->
+</Project>

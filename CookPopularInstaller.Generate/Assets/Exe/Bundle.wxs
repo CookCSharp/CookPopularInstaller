@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension"
+	 xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension"
+     xmlns:loc="http://schemas.microsoft.com/wix/2006/localization">
+
+  <Bundle Name="!(bind.packageName.CookPopularInstaller)" Version="!(bind.packageVersion.CookPopularInstaller)" Manufacturer="!(bind.packageManufacturer.CookPopularInstaller)"
+          HelpTelephone="!(loc.HelpTelephone)" HelpUrl="!(loc.HelpUrl)" UpdateUrl="!(loc.UpdateUrl)" AboutUrl="!(loc.AboutUrl)"
+          Compressed="yes" IconSourceFile="Assets\Public\CookPopularInstaller.Generate.ico"
+          Copyright="Copyright © 2018-2023 !(bind.packageManufacturer.CookPopularInstaller). All rights reserved."
+		  DisableRemove="no" DisableModify="no" DisableRepair="no"
+          UpgradeCode="44f65e2d-5c42-41a7-8e0e-09757d882501">
+
+    <bal:Condition Message="!(loc.WindowsVersionMessage)">
+      <![CDATA[VersionNT64 >= v6.3]]>
+    </bal:Condition>
+
+    <!--<util:RegistrySearchRef Id="ToolsManagementSearch"/>-->
+    <!--检测CookPopularInstaller是否安装-->
+    <!--<util:RegistrySearchRef Id="InstallerSearch"/>-->
+    <!--<Variable Name="InstallFolder" Type="string" Value="[InstallerInfo]ToolsManagement\"/>-->
+
+    <Variable Name="ExeName" Type="string" Value="!(loc.ExeProcessName)"/>
+    <!--ProgramFiles6432Folder-->
+    <Variable Name="InstallFolder" Type="string" Value="[ProgramFilesFolder]!(bind.packageManufacturer.CookPopularInstaller)\!(bind.packageName.CookPopularInstaller)\"/>
+
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+      <bal:WixStandardBootstrapperApplication LaunchTarget="[InstallFolder]\[ExeName]"
+                                              LaunchWorkingFolder="[InstallFolder]"
+                                              LaunchHidden="yes"
+                                              SuppressRepair="no" SuppressOptionsUI="no" ShowVersion="yes"
+                                              LogoFile="Assets\Public\CookPopularInstaller.png"
+                                              LogoSideFile="Assets\Public\CookPopularInstaller.png"
+                                              LicenseFile="Assets\Public\License.rtf" />
+    </BootstrapperApplicationRef>
+
+    <Chain DisableRollback="yes">
+      <MsiPackage Id="CookPopularInstaller" Vital="yes" Compressed="yes" SourceFile="$(var.CookPopularInstaller.Msi.TargetPath)"
+                  DisplayInternalUI="no" Permanent="no" Visible="no" ForcePerMachine="yes" InstallCondition="VersionNT64">
+        <MsiProperty Name="INSTALLFOLDER" Value="[InstallFolder]"/>
+        <!--<MsiProperty Name="InstallFolder" Value="[InstallFolder]"/>-->
+      </MsiPackage>
+    </Chain>
+  </Bundle>
+
+  <Fragment>
+    <!--<util:RegistrySearch Id="ToolsManagementSearch"
+                         Root="HKLM"
+                         Key="Software\CookCSharp\ToolsManagement"
+                         Result="exists"
+                         Variable="ToolsManagementInfo"/>
+    <bal:Condition Message="ToolsManagement is installed, Please uninstall it manually">
+      <![CDATA[Installed OR ToolsManagementInfo]]>
+    </bal:Condition>-->
+    <!--<util:RegistrySearch Id="InstallerSearch"
+                         Root="HKLM"
+                         Key="Software\CookCSharp\CookPopularInstaller"
+                         Result="value"
+                         Variable="InstallerInfo"
+                         Value="Path"/>
+    <bal:Condition Message="CookPopularInstaller is not installed">InstallerInfo</bal:Condition>-->
+  </Fragment>
+
+</Wix>

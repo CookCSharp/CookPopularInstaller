@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="Title">ToolsManagement</sys:String>
+    <sys:String x:Key="Minimize">最小化</sys:String>
+    <sys:String x:Key="Close">关闭</sys:String>
+
+    <sys:String x:Key="Company">CookCSharp</sys:String>
+    <sys:String x:Key="Copyright">Copyright © 2022-2023 CookCSharp. All Rights Reserved</sys:String>
+
+    <sys:String x:Key="Install">一键安装</sys:String>
+    <sys:String x:Key="ReadAgree">我已阅读并同意</sys:String>
+    <sys:String x:Key="License">《用户许可协议》</sys:String>
+    <sys:String x:Key="Browser">浏览</sys:String>
+
+    <sys:String x:Key="Agree">同意(_Y)</sys:String>
+    <sys:String x:Key="Disagree">不同意(_N)</sys:String>
+
+    <sys:String x:Key="Modify">更改(_M)</sys:String>
+    <sys:String x:Key="Repair">修复(_R)</sys:String>
+    <sys:String x:Key="Uninstall">卸载(_U)</sys:String>
+
+    <sys:String x:Key="Cancel">取消(_C)</sys:String>
+    <sys:String x:Key="Finish">完成(_F)</sys:String>
+
+    <sys:String x:Key="Sure">确定(_S)</sys:String>
+
+</ResourceDictionary>

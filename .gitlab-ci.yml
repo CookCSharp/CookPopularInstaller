@@ -1,0 +1,11 @@
+stages:
+  - build
+
+ncatestinstaller:
+  stage: build
+  tags:
+    - build
+  script:
+    - python build.py
+  only:
+    - master

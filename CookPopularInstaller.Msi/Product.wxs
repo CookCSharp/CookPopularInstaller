@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+	 xmlns:bal="http://schemas.microsoft.com/wix/BalExtension"
+	 xmlns:loc="http://schemas.microsoft.com/wix/2006/localization"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+
+  <?define DependencyLibrariesDir=$(var.SolutionDir)Output\Publish ?>
+  <?define ExeProcessName=CookPopularInstaller.Generate.exe ?>
+
+  <Product Id="*" UpgradeCode="{FB5896D4-D9AA-47C6-8F9E-FB7A16D867DE}"
+           Language="1033" Codepage="950"
+           Name="!(loc.ProductName)" Version="!(bind.FileVersion.App.exe)" Manufacturer="!(loc.Manufacturer)">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine"
+             Description="!(loc.Description)" Comments="!(loc.Comments)" Keywords="!(loc.ProductName)"
+             Platform="x86" InstallPrivileges="elevated" AdminImage="yes" />
+
+    <MajorUpgrade Schedule="afterInstallInitialize" DowngradeErrorMessage="!(loc.DowngradeErrorMessage)" />
+    <MediaTemplate EmbedCab="yes" />
+    <!--<Property Id="MSIENFORCEUPGRADECOMPONENTRULES" Value="1"/>-->
+
+    <!--<PropertyRef Id="NETFRAMEWORK35"/>
+    <Condition Message="!(loc.DotnetFrameworkNeeded)">
+      <![CDATA[Installed OR NETFRAMEWORK35]]>
+    </Condition>
+    <Condition Message="!(loc.AppNotSupported)">
+      <![CDATA[Installed OR ((VersionNT >= 501 AND ServicePackLevel >= 2) OR (VersionNT >= 502))]]>
+    </Condition>-->
+
+    <!--<Upgrade Id="E839E546-BFC8-4A49-B002-CC9F4750E474">
+      <UpgradeVersion OnlyDetect="yes" Minimum="!(bind.FileVersion.App.exe)" IncludeMinimum="no" Property="NEWER_VERSION_FOUND" />
+      <UpgradeVersion Minimum="1.0.0.0" IncludeMinimum="yes" Maximum="!(bind.FileVersion.App.exe)" IncludeMaximum="no" Property="OLDER_VERSION_FOUND" />
+    </Upgrade>
+
+    <CustomAction Id="NewerVersionFound" Error="!(loc.SuperFormNewerVersionInstalled)" />
+    <InstallExecuteSequence>
+      <Custom Action="NewerVersionFound" After="FindRelatedProducts">
+        <![CDATA[NEWER_VERSION_FOUND]]>
+      </Custom>
+      <RemoveExistingProducts After="InstallInitialize"/>
+      <Custom Action="WixCloseApplications" Before="InstallInitialize" />
+    </InstallExecuteSequence>
+    <util:CloseApplication Id="CloseSuperForm" CloseMessage="no" Description="!(loc.MustCloseSuperForm)"
+                           ElevatedCloseMessage="no" RebootPrompt="no" Target="$(var.ExeProcessName)"/>-->
+
+    <Icon Id="App.ico" SourceFile="..\Assets\Images\CookPopularInstaller.Generate.ico" />
+    <Property Id="ARPPRODUCTICON" Value="App.ico" />
+    <Icon Id="Uninstall.ico" SourceFile="..\Assets\Images\Uninstall.ico" />
+
+    <Binary Id="CSharpCustomActions" SourceFile="$(var.CookPopularInstaller.CSharpCustomAction.TargetDir)$(var.CookPopularInstaller.CSharpCustomAction.TargetName).CA.dll"/>
+    <CustomAction Id="SetInstallMessage" BinaryKey="CSharpCustomActions" Execute="immediate" DllEntry="SetInstallMessage" Return="check" Impersonate="yes"/>
+    <CustomAction Id="DecompressCustomAction" BinaryKey="CSharpCustomActions" Execute="immediate" DllEntry="DecompressCustomAction" Return="check" Impersonate="yes"/>
+    <CustomAction Id="CSharpCustomActionDataCheck" Property="DecompressCustomAction" Value="INSTALLDEPENDSMESSAGE=[INSTALLDEPENDSMESSAGE];INSTALLFOLDER=[INSTALLFOLDER]" Return="check" Impersonate="yes"/>
+    <InstallExecuteSequence>
+      <Custom Action="SetInstallMessage" After="InstallInitialize">
+        Not Installed AND NOT WIX_UPGRADE_DETECTED
+      </Custom>
+      <Custom Action="CSharpCustomActionDataCheck" Before="InstallInitialize"/>
+      <Custom Action="DecompressCustomAction" After="InstallFinalize">
+        Not Installed AND NOT WIX_UPGRADE_DETECTED
+      </Custom>
+    </InstallExecuteSequence>
+
+    <WixVariable Id="WixUIBannerBmp" Value="Resources\top_banner.png" />
+    <WixVariable Id="WixUIDialogBmp" Value="Resources\dialog_background.png" />
+    <WixVariable Id="WixUILicenseRtf" Value="..\Assets\License.rtf" />
+
+    <!--6种默认安装对话框-->
+    <UI>
+      <!--<UIRef Id="WixUI_Common" />-->
+      <!--<UIRef Id="WixUI_Minimal"/>-->
+      <UIRef Id="WixUI_InstallDir" />
+      <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+      <!--<UIRef Id="WixUI_FeatureTree" />-->
+      <!--<UIRef Id="WixUI_Mondo" />-->
+      <!--<UIRef Id="WixUI_Advanced" />
+	  <Property Id="ApplicationFolderName" Value="My Application Folder" />
+	  <Property Id="WixAppFolder" Value="WixPerMachineFolder" />
+	  <WixVariable Id="WixUISupportPerMachine" Value="1" />-->
+      <!--<Property Id="WixAppFolder" Value="WixPerUserFolder" />
+	  <WixVariable Id="WixUISupportPerUser" Value="0" />-->
+
+      <Property Id="INSTALLDEPENDSMESSAGE" Value="正在安装依赖环境" Secure="yes" />
+      <ProgressText Action="DecompressCustomAction">[INSTALLDEPENDSMESSAGE]</ProgressText>
+
+      <!--触发启动App-->
+      <Publish Dialog="ExitDialog" Control="Finish" Event="DoAction" Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
+
+      <DialogRef Id="FilesInUse"/>
+      <DialogRef Id="MsiRMFilesInUse"/>
+      <UIRef Id="WixUI_ErrorProgressText" />
+    </UI>
+    <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch !(loc.ProductName)" />
+
+    <!--将App启动包含在Finish页面中-->
+    <Property Id="WixShellExecTarget" Value="[#App.exe]"/>
+    <CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
+
+    <Feature Id="ProductFeature" Title="!(loc.ProductName)" Level="1">
+      <!--<ComponentRef Id="CustomFolder"/>-->
+      <!--<ComponentGroupRef Id="ApplicationComponents" />-->
+      <ComponentGroupRef Id="DependencyLibrariesGroup" />
+      <ComponentGroupRef Id="EnvironmentComponents" />
+      <ComponentGroupRef Id="RegistryComponents" />
+      <ComponentRef Id="ApplicationDesktopComponent"/>
+      <ComponentRef Id="ApplicationStartMenuComponent" />
+      <ComponentRef Id="ApplicationStartMenuUninstallComponent" />
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="Company" Name="!(loc.CompanyName)">
+          <Directory Id="INSTALLFOLDER" Name="!(loc.ProductName)"/>
+        </Directory>
+      </Directory>
+      <Directory Id="DesktopFolder"/>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="AppStartMenuFolder" Name="!(loc.ProductName)"/>
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <!--<Fragment>
+    <DirectoryRef Id="INSTALLFOLDER">
+      <Component Id="CustomFolder" Guid="C6D0FB30-6D8E-46B3-97DA-7CA76FCBE5D5" KeyPath="yes">
+        <CreateFolder Directory="INSTALLFOLDER">
+          <Permission User="SYSTEM" GenericAll="yes"/>
+          <Permission User="EveryOne" GenericAll="yes" GenericRead="yes" Read="yes" ReadAttributes="yes" GenericExecute="yes" TakeOwnership="yes" GenericWrite="yes" WriteAttributes="yes" ReadPermission="yes" ChangePermission="yes"/>
+          <Permission User="Users" Domain="[LOCAL_MACHINE_NAME]" GenericRead="yes" Read="yes" ReadAttributes="yes" GenericExecute="yes" TakeOwnership="yes" GenericWrite="yes" WriteAttributes="yes" ReadPermission="yes" ChangePermission="yes"/>
+        </CreateFolder>
+      </Component>
+    </DirectoryRef>
+  </Fragment>-->
+
+  <!--<Fragment>
+    <ComponentGroup Id="ApplicationComponents" Directory="INSTALLFOLDER">
+      <Component Id="ApplicationComponent1" Guid="963B77C1-DC54-4FFD-931A-A7FD7AE7AD0F">
+        <File Id="App.exe" Source="$(var.DependencyLibrariesDir)$(var.ExeProcessName)" KeyPath="yes"/>
+      </Component>
+      <Component Id="ApplicationComponent2" Guid="BD6FF6F5-A88E-44DC-9183-BD2B87C32E60">
+        <File Id="App.config" Source="$(var.DependencyLibrariesDir)CookCSharp.ToolsManagement.dll.config" KeyPath="yes"/>
+      </Component>
+      <Component Id="ApplicationComponent3" Guid="FC5CFF91-0FE8-42F3-A9FF-3EA9B93F62E0">
+        <File Id="App.json" Source="$(var.DependencyLibrariesDir)CookCSharp.ToolsManagement.runtimeconfig.json" KeyPath="yes"/>
+      </Component>
+      <Component Id="UninstallComponent" Guid="E0776B89-88B4-4E11-BE0F-13E7E0A3ED3F">
+        <File Id="uninstall.exe" Source="C:\Windows\System32\msiexec.exe" KeyPath="yes"/>
+      </Component>
+    </ComponentGroup>
+  </Fragment>-->
+
+  <?include $(sys.CURRENTDIR)\Directory.wxi ?>
+
+  <Fragment>
+    <!--Environment-->
+    <ComponentGroup Id="EnvironmentComponents" Directory="INSTALLFOLDER">
+      <Component Id="RegistryTest" Guid="9717E750-F364-4D3F-90D6-89BF7676E381" KeyPath="yes">
+        <Environment Id="RegistryTestEnvironment" Name="RegistryTest" Action="set" Permanent="no" System="yes" Part="last" Value="RegistryTest"/>
+      </Component>
+    </ComponentGroup>
+
+    <!--Registry-->
+    <ComponentGroup Id="RegistryComponents" Directory="INSTALLFOLDER">
+      <!--<Component Id="RegistryTest" Guid="49EBED08-DCF2-45E8-AE29-17FAE00E5ABD">
+        <RegistryKey Root="HKLM" Key="Software\!(loc.CompanyName)\!(loc.ProductName)" Action="createAndRemoveOnUninstall" ForceCreateOnInstall="no" ForceDeleteOnUninstall="no"/>
+        <RegistryValue Root="HKLM" Key="Software\!(loc.CompanyName)\!(loc.ProductName)" Action="write" Name="InstallDir" Type="string" Value="[INSTALLFOLDER]" KeyPath="yes"/>
+      </Component>-->
+      <Component Id="RegistryDirectoryComponent" Guid="FA3DB6E6-4232-4FD9-B6F6-5660EB0528D5">
+        <RegistryValue Id="RegistryDirectoryValue" Action="write"
+					   Root="HKLM" Key="Software\!(loc.CompanyName)\!(loc.ProductName)"
+					   Name="Directory" Value="[INSTALLFOLDER]" Type="string" KeyPath="yes"/>
+      </Component>
+      <Component Id="RegistryPathComponent" Guid="1ECA3238-1B7B-4818-9A02-FAD3D6773613">
+        <RegistryValue Id="RegistryPathValue" Action="write"
+					   Root="HKLM" Key="Software\!(loc.CompanyName)\!(loc.ProductName)"
+					   Name="AppPath" Value="[#App.exe]" Type="string" KeyPath="yes"/>
+      </Component>
+      <Component Id="RegistryVersionComponent" Guid="80FF4855-CE91-409F-9F78-9601B4AF88C7">
+        <RegistryValue Id="RegistryVersionValue" Action="write"
+                       Root="HKLM" Key="Software\!(loc.CompanyName)\!(loc.ProductName)"
+                       Name="Version" Value="!(bind.FileVersion.App.exe)" Type="string" KeyPath="yes"/>
+      </Component>
+    </ComponentGroup>
+
+    <!--Shortcut on Desktop-->
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="ApplicationDesktopComponent">
+        <Shortcut Id="ApplicationDesktopShortcut" Name="!(loc.ProductName)"
+                  Target="[#App.exe]" Icon="App.ico" WorkingDirectory="INSTALLFOLDER" Directory="DesktopFolder"/>
+        <RemoveFolder Id="CleanUpDesktopShortcut" Directory="DesktopFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\!(loc.CompanyName)\!(loc.ProductName)"
+                       Name="DesktopShortcutInstalled" Value="1" Type="integer" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+
+    <!--Shortcut in StartMenu-->
+    <DirectoryRef Id="AppStartMenuFolder">
+      <Component Id="ApplicationStartMenuComponent" Guid="94024279-3EDD-40E7-AD19-541022C8EBE6">
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="!(loc.ProductName)" Description="!(loc.ProductName)"
+                  Target="[#App.exe]" Icon="App.ico" WorkingDirectory="INSTALLFOLDER"/>
+        <RemoveFolder Id="CleanUpStartMenuShortCut1" Directory="AppStartMenuFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\!(loc.CompanyName)\!(loc.ProductName)"
+                       Name="StartMenuShortcutInstalled" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+      <Component Id="ApplicationStartMenuUninstallComponent" Guid="9C9FAAFC-9449-42D2-9285-F2EB34256883">
+        <Shortcut Id="ApplicationStartMenuUninstallShortcut" Name="Uninstall !(loc.ProductName)" Description="Uninstall !(loc.ProductName)"
+                  Target="[SystemFolder]msiexec.exe" Arguments="/x [ProductCode]" Icon="Uninstall.ico"/>
+        <RemoveFolder Id="CleanUpStartMenuShortCut2" Directory="AppStartMenuFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\!(loc.CompanyName)\!(loc.ProductName)"
+                       Name="StartMenuShortcutUninstalled" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+</Wix>

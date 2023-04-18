@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Include xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <Component Id="">
+    <ServiceInstall Id="NATEService" Name="NATEService" DisplayName="NATEService"
+                    Description="ATEStudio的通信服务" Start="auto"
+                    Type="ownProcess" ErrorControl="normal"
+                    Account="LocalSystem" Vital="yes" Interactive="no">
+      <util:ServiceConfig FirstFailureActionType="restart"
+                          SecondFailureActionType="restart"
+                          ThirdFailureActionType="restart"/>
+    </ServiceInstall>
+    <ServiceControl Id="NATEService" Name="NATEService" Start="install" Stop="both" Remove="uninstall" Wait="yes" />
+    <ServiceConfig ServiceName="NATEService" OnInstall="yes" DelayedAutoStart="no" />
+  </Component>
+  <Component>
+    
+  </Component>
+</Include>

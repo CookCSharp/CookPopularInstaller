@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2006/localization" Culture="zh-cn" Codepage="936" Language="4">
+  <String Id="HelpTelephone">021-20940020</String>
+  <String Id="HelpUrl">https://gitee.com/chancezheng</String>
+  <String Id="UpdateUrl">https://gitee.com/chancezheng</String>
+  <String Id="AboutUrl">https://gitee.com/chancezheng</String>
+  <String Id="WindowsVersionMessage">软件需要更高版本的windows操作系统！></String>
+  <String Id="ExeProcessName">CookPopularInstaller.Generate.exe</String>
+</WixLocalization>

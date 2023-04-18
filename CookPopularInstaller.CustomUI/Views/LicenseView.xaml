@@ -1,0 +1,76 @@
+﻿<UserControl x:Name="RootControl"
+             x:Class="CookPopularInstaller.CustomUI.Views.LicenseView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:behavior="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pc="https://Chance.CookPopularControl/2021/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:vm="clr-namespace:CookPopularInstaller.CustomUI.ViewModels"
+             mc:Ignorable="d"
+             Background="Transparent"
+             VerticalAlignment="Bottom"
+             d:DataContext="{d:DesignInstance Type={x:Type vm:LicenseViewModel}}"
+             d:DesignHeight="360"
+             d:DesignWidth="580"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+
+    <UserControl.Resources>
+        <PowerEase x:Key="EasingKey" EasingMode="EaseOut" Power="4" />
+        <Style x:Key="{x:Type TextBlock}" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Foreground" Value="OrangeRed" />
+        </Style>
+    </UserControl.Resources>
+
+    <behavior:Interaction.Triggers>
+        <behavior:EventTrigger EventName="Loaded">
+            <behavior:ControlStoryboardAction ControlStoryboardOption="Play" IsEnabled="True">
+                <behavior:ControlStoryboardAction.Storyboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetName="RootControl" Storyboard.TargetProperty="Height"
+                                         From="0" To="360" Duration="0:0:0.5"
+                                         EasingFunction="{StaticResource EasingKey}" />
+                    </Storyboard>
+                </behavior:ControlStoryboardAction.Storyboard>
+            </behavior:ControlStoryboardAction>
+        </behavior:EventTrigger>
+        <!--<behavior:DataTrigger Binding="{Binding IsUnloaded, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Value="True">
+            <behavior:ControlStoryboardAction ControlStoryboardOption="Play" IsEnabled="True">
+                <behavior:ControlStoryboardAction.Storyboard>
+                    <Storyboard>
+                        <DoubleAnimation Storyboard.TargetName="RootControl" Storyboard.TargetProperty="Height"
+                                         From="360" To="0" Duration="0:0:0.5"
+                                         EasingFunction="{StaticResource EasingKey}" />
+                    </Storyboard>
+                </behavior:ControlStoryboardAction.Storyboard>
+            </behavior:ControlStoryboardAction>
+        </behavior:DataTrigger>-->
+    </behavior:Interaction.Triggers>
+
+    <Grid Height="360" Margin="10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="10" />
+            <RowDefinition />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="2">
+            <TextBlock Text="{Binding LicenseContent}" HorizontalAlignment="Center" />
+        </ScrollViewer>
+        <StackPanel Grid.Row="3" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Width="80"
+                    Content="{StaticResource Agree}"
+                    Margin="0,0,20,10"
+                    Command="{Binding AgreeLicenseCommand}"
+                    CommandParameter="InstallView" />
+            <Button Width="80"
+                    Content="{StaticResource Disagree}"
+                    Margin="0,0,20,10"
+                    Command="{Binding DisagreeLicenseCommand}"
+                    CommandParameter="InstallView" />
+        </StackPanel>
+    </Grid>
+
+</UserControl>
