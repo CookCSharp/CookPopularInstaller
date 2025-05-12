@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <ApplicationIcon>Assets\App.ico</ApplicationIcon>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FodyWeavers.xml" />
+    <None Remove="FodyWeavers.xsd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\upgrade_code.json" Link="Assets\upgrade_code.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\7z.dll" />
+    <EmbeddedResource Include="$(OutputPath)diff.7z" Condition="$([System.IO.File]::Exists($(OutputPath)diff.7z))" Link="Assets\diff.7z" />
+    <EmbeddedResource Include="$(OutputPath)content.json" Condition="$([System.IO.File]::Exists($(OutputPath)content.json))" Link="Assets\content.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
+    <PackageReference Include="Costura.Fody" Version="5.7.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Squid-Box.SevenZipSharp" Version="1.6.1.23" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Management" Version="7.0.0" />
+  </ItemGroup>
+  
+</Project>

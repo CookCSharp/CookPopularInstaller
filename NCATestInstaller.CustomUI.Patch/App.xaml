@@ -1,0 +1,18 @@
+﻿<Application x:Class="NCATestInstaller.CustomUI.Patch.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NCATestInstaller.CustomUI.Patch"
+             xmlns:p="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!--<ResourceDictionary Source="pack://application:,,,/CookPopularControl;component/Themes/DefaultPopularColor.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/CookPopularControl;component/Themes/DefaultPopularControl.xaml" />-->
+            </ResourceDictionary.MergedDictionaries>
+            <Geometry x:Key="SuccessGeometry" p:Freeze="true">M10,17L5,12 6.41,10.58 10,14.17 17.59,6.58 19,8 M12,2A10,10,0,0,0,2,12A10,10,0,0,0,12,22A10,10,0,0,0,22,12A10,10,0,0,0,12,2z</Geometry>
+            <Geometry x:Key="ErrorGeometry" p:Freeze="true">M12,2C17.53,2 22,6.47 22,12 22,17.53 17.53,22 12,22 6.47,22 2,17.53 2,12 2,6.47 6.47,2 12,2 M15.59,7L12,10.59 8.41,7 7,8.41 10.59,12 7,15.59 8.41,17 12,13.41 15.59,17 17,15.59 13.41,12 17,8.41 15.59,7z</Geometry>
+            <Geometry x:Key="InfoGeometry" p:Freeze="true">M13,13L11,13 11,7 13,7 M13,17L11,17 11,15 13,15 M12,2A10,10,0,0,0,2,12A10,10,0,0,0,12,22A10,10,0,0,0,22,12A10,10,0,0,0,12,2z</Geometry>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

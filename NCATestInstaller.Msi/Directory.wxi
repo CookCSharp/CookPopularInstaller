@@ -1,0 +1,314 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Include xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Directory Id="dirA23B699A6BC60FD64219767AB7139367" Name="Assets" />
+            <Directory Id="dir6A90E81722C7D91D1F21161ADF11AF96" Name="CommandLine" />
+            <Directory Id="dirF9E3447EB21768D805E1954685437AC3" Name="Depends" />
+            <Directory Id="dir3384D516679ED362302BD04F7FF9ADE6" Name="Extensions" />
+            <Directory Id="dir6486EB3E45FE47E1CFE1E9638D7F24AC" Name="Obfuscar" />
+            <Directory Id="dir4E8A5961CECB922D214EE6A7049B81F1" Name="Uninstall" />
+            <Directory Id="dir43FCCFA109FBF584D9155DCE31E452EB" Name="x64" />
+            <Directory Id="dir97F42FF68945B97AAE670945C4FDAE93" Name="x86" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="DependencyLibrariesGroup">
+            <Component Id="cmp90A5BB80EF6336B96A20D6ECD7F12573" Directory="INSTALLFOLDER" Guid="{8B855876-BFF7-4F71-8F99-A19D1A4DF917}" Win64="$(var.Win64)">
+                <File Id="fil6BC7E74795302C55EC4233F32A23BE71" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\123.txt" />
+            </Component>
+            <Component Id="cmp5331CA5F52193D033714FDDF20C463C5" Directory="INSTALLFOLDER" Guid="{C2DEC05B-B205-4E9F-B496-5AB029F95A97}" Win64="$(var.Win64)">
+                <File Id="filCB70EB97061F227F60A18AA79D1F1486" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\App.config" />
+            </Component>
+            <Component Id="cmp0DB6A9FE15BAB53BF6249425CBFE0028" Directory="INSTALLFOLDER" Guid="{9A5A2521-A72D-495E-8923-6CD526554743}" Win64="$(var.Win64)">
+                <File Id="filE2C62692488FA3BD6BA6BAF382C2AF54" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\BootstrapperCore.dll" />
+            </Component>
+            <Component Id="cmp01BD7E1B92CBDBB06B4B7B089A9B3BB8" Directory="INSTALLFOLDER" Guid="{2806D651-8750-4AF5-A6FE-1B3A54CF5B4F}" Win64="$(var.Win64)">
+                <File Id="fil28091698AD688C0AB10014A78FCD3287" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularControl.dll" />
+            </Component>
+            <Component Id="cmp71B1758C208DF7F41C0DAD9156B8A6BD" Directory="INSTALLFOLDER" Guid="{57D91705-7D9A-4747-BDE7-16400780A84D}" Win64="$(var.Win64)">
+                <File Id="fil2E8C11DA6A5465F1CACBEF9386543B13" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularCSharpToolkit.dll" />
+            </Component>
+            <Component Id="cmp3A3DCB2CB767F63098FA411AE7BB90A7" Directory="INSTALLFOLDER" Guid="{44415AC6-F38A-46C4-9422-868130B730EA}" Win64="$(var.Win64)">
+                <File Id="filC88A84AAA7679BB1CC51240EFA2EB406" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\DryIoc.dll" />
+            </Component>
+            <Component Id="cmpCE3AA6F900B100D6B07C312E605BC62C" Directory="INSTALLFOLDER" Guid="{F0F942AF-0AD9-4F1C-8140-AF5751A72EC3}" Win64="$(var.Win64)">
+                <File Id="fil2AC9EF13260514C58FDB6C9921955D88" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\handle.exe" />
+            </Component>
+            <Component Id="cmp13D58469BCB864EB53214ED46E622188" Directory="INSTALLFOLDER" Guid="{0782685B-7019-41B1-8C48-E8909936CED4}" Win64="$(var.Win64)">
+                <File Id="fil28F7A9478894C77C5F6C2A95DAA4B459" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\log4net.dll" />
+            </Component>
+            <Component Id="cmp3949728EA9840BC34724197B368334AC" Directory="INSTALLFOLDER" Guid="{E444F57F-EA05-4300-936A-E261C0E28485}" Win64="$(var.Win64)">
+                <File Id="filDEA4341F561E3B7A80B31531A2FA0E17" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.Deployment.WindowsInstaller.dll" />
+            </Component>
+            <Component Id="cmp3E4F3E4686A9B425B5812E5171CCDEEF" Directory="INSTALLFOLDER" Guid="{81F77D40-DC5F-4CFA-96D0-5576B00D4AD9}" Win64="$(var.Win64)">
+                <File Id="fil24DC60A8CFEFE326A0444D71C66806C1" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.Win32.Registry.dll" />
+            </Component>
+            <Component Id="cmp8AC833CFB7DC6722697152FE46DA157A" Directory="INSTALLFOLDER" Guid="{E6E70110-0052-435F-B284-5BEA9A2C3865}" Win64="$(var.Win64)">
+                <File Id="filD3CAD095889A5DE7EAAE25C73BC9910A" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.Xaml.Behaviors.dll" />
+            </Component>
+            <Component Id="cmp81050D6FCCD8F2905FBFC2666ED45CB9" Directory="INSTALLFOLDER" Guid="{7E4EBEF1-30A2-4D19-8251-579E07707E24}" Win64="$(var.Win64)">
+                <File Id="fil2359483FDF3698195BDFE93C927AF707" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\NCATestInstaller.CSharpCustomAction.CA.dll" />
+            </Component>
+            <Component Id="cmp4D286876CDE461338F6F0619380B2721" Directory="INSTALLFOLDER" Guid="{934B4C92-1E6E-4C76-A988-CE0E95118F6C}" Win64="$(var.Win64)">
+                <File Id="filECCDC961E6D181829096F1290430E3B1" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\NCATestInstaller.CSharpCustomAction.dll" />
+            </Component>
+            <Component Id="cmpAB0AB6A95325C4C4F162EA761FF1A9C6" Directory="INSTALLFOLDER" Guid="{C1838921-EB8B-48D2-9185-86FB923E99CF}" Win64="$(var.Win64)">
+                <File Id="fil1FF3F7E81012F985C475B113D8E70A4A" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\NCATestInstaller.CSharpCustomAction.dll.config" />
+            </Component>
+            <Component Id="cmpC7E017BBA63FBA487490709931AC1D0D" Directory="INSTALLFOLDER" Guid="{9AC84828-BADB-4180-A9A8-A3BEE97E5FC1}" Win64="$(var.Win64)">
+                <File Id="filB675A482F87E63542497B514900D4ABA" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\NCATestInstaller.CustomUI.exe" />
+            </Component>
+            <Component Id="cmp7C6226DD95264A24759480DF95192BD9" Directory="INSTALLFOLDER" Guid="{2F7A50F1-86C9-4ABE-A8C4-03C0A010FA16}" Win64="$(var.Win64)">
+                <File Id="fil7C2CDB68C1FC8BB83D72C48F244AC1D0" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\NCATestInstaller.CustomUI.exe.config" />
+            </Component>
+            <Component Id="cmp7B1376C107E92350F7FC9540BBC06A58" Directory="INSTALLFOLDER" Guid="{61B3684E-1F97-4525-8FE8-76F6AB5A3F56}" Win64="$(var.Win64)">
+                <File Id="App.exe" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\NCATestInstaller.Generate.exe" />
+            </Component>
+            <Component Id="cmpB1814BBE6ACE06EB1DDD35BBABEE8EB8" Directory="INSTALLFOLDER" Guid="{04C06E4B-2251-4120-B07E-D3A06E2EBE6A}" Win64="$(var.Win64)">
+                <File Id="filF1A6894920803E8FA05C170B1C5D1133" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\NCATestInstaller.Generate.exe.config" />
+            </Component>
+            <Component Id="cmpE224F24E475171A2AE951B8DF82FF27B" Directory="INSTALLFOLDER" Guid="{0F57EF52-722B-4C49-B1F8-3FF12D7EBD78}" Win64="$(var.Win64)">
+                <File Id="filF5CDD16EEC3B24035DCC32E30C7A1DB5" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\NCATestInstaller.Toolkit.deps.json" />
+            </Component>
+            <Component Id="cmp0004EB73397D61E8A24B09114D58F6B9" Directory="INSTALLFOLDER" Guid="{E279891A-9E77-49AE-8520-2BE9B6F0EEB5}" Win64="$(var.Win64)">
+                <File Id="fil627DE613AB368D769C40B7BE68C794D0" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\NCATestInstaller.Toolkit.dll" />
+            </Component>
+            <Component Id="cmp47E83BEE0B715DB6EF30769D5D158867" Directory="INSTALLFOLDER" Guid="{0FA01528-0EF3-490F-B775-23D40853E115}" Win64="$(var.Win64)">
+                <File Id="fil707CE0156D869D562C7DEE4A749B5543" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\NCATestInstaller.Toolkit.dll.config" />
+            </Component>
+            <Component Id="cmpBC4FC00A26E7D32479D42D3411317FC5" Directory="INSTALLFOLDER" Guid="{61564186-4BB8-4B3F-91C6-CB20523E2513}" Win64="$(var.Win64)">
+                <File Id="fil90A8AAD9FC612906D405476D61CEA3F4" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmp03D7B650F8B878E4777A46EDB795761F" Directory="INSTALLFOLDER" Guid="{310A3D94-C47D-4F5D-8E9B-ECB10FD69F0C}" Win64="$(var.Win64)">
+                <File Id="fil25E0BE43AC66696960DD057BF437E6CE" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Ookii.Dialogs.Wpf.dll" />
+            </Component>
+            <Component Id="cmpAC1A0D62E0E48EBA9C3CFD3F61E57FF3" Directory="INSTALLFOLDER" Guid="{A8C44F4E-8223-4E30-885E-1E8371B8DFB2}" Win64="$(var.Win64)">
+                <File Id="filAC210D4455FB6223BFC50092E3FECCE9" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\package.json" />
+            </Component>
+            <Component Id="cmp59564654D02343646998A8D6A6F0C25F" Directory="INSTALLFOLDER" Guid="{A3C1DE6B-4855-4AEC-BA7E-0E7B2949F819}" Win64="$(var.Win64)">
+                <File Id="fil86F2842A309A2CABD479166F2B4E0588" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Prism.dll" />
+            </Component>
+            <Component Id="cmp1D8C6ABF55C2B2B4242EE9F241074EAC" Directory="INSTALLFOLDER" Guid="{15E58684-DCD2-4B36-88A0-E06E16C58231}" Win64="$(var.Win64)">
+                <File Id="fil4D3E845D168B89C1E51082CEE83971C8" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Prism.DryIoc.Wpf.dll" />
+            </Component>
+            <Component Id="cmpA9A2AB3353E22A8DA16EAAEE63473B2F" Directory="INSTALLFOLDER" Guid="{88B4A093-53A2-4C4E-9A9A-6EA69AABACCD}" Win64="$(var.Win64)">
+                <File Id="fil88EDC55735A4B2968B2469EF3EB5D6E7" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Prism.Wpf.dll" />
+            </Component>
+            <Component Id="cmp55D15D832C8EA4D38A9ED5865C55350D" Directory="INSTALLFOLDER" Guid="{E0BBABCB-C9EF-461A-9555-E48A2727788E}" Win64="$(var.Win64)">
+                <File Id="filDC2AD106ACE9F77DFAD85F17708E9111" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\PropertyChanged.dll" />
+            </Component>
+            <Component Id="cmpC51538CC7360A884AEC7A84A5923018B" Directory="INSTALLFOLDER" Guid="{E0CBFDFB-5FC9-4966-851A-B4A15BF540A3}" Win64="$(var.Win64)">
+                <File Id="filED862600816F963DB3B1E6F508456CF0" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\QRCoder.dll" />
+            </Component>
+            <Component Id="cmp2F31E04D5B8E818B015AEE0BC01DEA44" Directory="INSTALLFOLDER" Guid="{321BDD7C-28A1-45D7-A762-C564AD889E98}" Win64="$(var.Win64)">
+                <File Id="fil923AAC4B92FDB46A4D795FDCA1F53BDE" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\SevenZipSharp.dll" />
+            </Component>
+            <Component Id="cmpA8E9B0F7880FD862527F572D44923DBE" Directory="INSTALLFOLDER" Guid="{47255D03-7AFD-458A-BB3C-14EEB2D5F714}" Win64="$(var.Win64)">
+                <File Id="fil0A3AF25C140AD8D0989ADD5185440697" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\SplashScreen.dll" />
+            </Component>
+            <Component Id="cmp89F5F904B3CAF843A281A5A84D668E1E" Directory="INSTALLFOLDER" Guid="{564DD744-76FF-46ED-81A3-FCAA295DCF78}" Win64="$(var.Win64)">
+                <File Id="fil7882FAF25832DB256D31EEFC7582E0FF" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Configuration.ConfigurationManager.dll" />
+            </Component>
+            <Component Id="cmp6FB68A3D94F72D93B83F617A34391D43" Directory="INSTALLFOLDER" Guid="{8A368B7A-C56A-43A2-9779-BDDE02A7A65D}" Win64="$(var.Win64)">
+                <File Id="fil68E5BC92D13004A9B7057B40B42A647F" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.IO.FileSystem.AccessControl.dll" />
+            </Component>
+            <Component Id="cmpAFCF21A15F6EDA45A32D147050609285" Directory="INSTALLFOLDER" Guid="{14DBF07B-A779-4E5A-9992-3B3A2B07ED31}" Win64="$(var.Win64)">
+                <File Id="filAE286E96EA00902BC284AEBF3030D6E4" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Runtime.CompilerServices.Unsafe.dll" />
+            </Component>
+            <Component Id="cmpA79A142FCEA412B1ABBD7BE954692F65" Directory="INSTALLFOLDER" Guid="{7AB17415-1034-4C53-B1A8-6E5B0057A923}" Win64="$(var.Win64)">
+                <File Id="fil0B3269E73A503751E3461F1BA6DEB094" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Security.AccessControl.dll" />
+            </Component>
+            <Component Id="cmp5CC6136D6E2A90DE115411181360DDDC" Directory="INSTALLFOLDER" Guid="{D3E3507F-2AFF-43EC-81BC-98729DEEE56C}" Win64="$(var.Win64)">
+                <File Id="fil207371132F5873BD864FD57447824213" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Security.Permissions.dll" />
+            </Component>
+            <Component Id="cmp98A131703008D3AC809721FE16EEAFF8" Directory="INSTALLFOLDER" Guid="{4E06F69F-5C83-4AF5-97E8-510862DAA264}" Win64="$(var.Win64)">
+                <File Id="fil50D3CD433FCD76F25C71E81C31B6DD3A" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Security.Principal.Windows.dll" />
+            </Component>
+            <Component Id="cmpB3AE432D48BF3A5AB43C6DAF12AB454A" Directory="INSTALLFOLDER" Guid="{A3AD18D0-5D1D-4662-8CC9-4098E5E83DB7}" Win64="$(var.Win64)">
+                <File Id="filF7CF33617C2B93F6EEF50C0DEB533B07" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Threading.Tasks.Extensions.dll" />
+            </Component>
+            <Component Id="cmp3A99A623A71A716A198559E0C9D59400" Directory="INSTALLFOLDER" Guid="{60683D56-A603-4C88-AFFB-01ABCA24579F}" Win64="$(var.Win64)">
+                <File Id="filE6242AE03AF2509440ADF395C76688A4" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.ValueTuple.dll" />
+            </Component>
+            <Component Id="cmpBEC715782490BD2AC6E2C93F2525865F" Directory="INSTALLFOLDER" Guid="{1F39C3EA-24D1-4D7B-8CD5-D896FDE405C1}" Win64="$(var.Win64)">
+                <File Id="filF7E6EF61D1437B4669D7DE7C4066BD7E" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Unity.Abstractions.dll" />
+            </Component>
+            <Component Id="cmp665B78AB4AC844F961BF5ECBB81E189B" Directory="INSTALLFOLDER" Guid="{319FBDD3-2314-4CCE-8AA2-5748FD974690}" Win64="$(var.Win64)">
+                <File Id="filA3C7419293ACF778143324C6DB73F920" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Unity.Container.dll" />
+            </Component>
+            <Component Id="cmp7AB1D40F1DC924908277C7E66D75F98D" Directory="dir3DFA6F3206F79BB11079069A20C50A36" Guid="{4329A3B5-A081-49C7-AA33-DDE7F06D63A5}" Win64="$(var.Win64)">
+                <File Id="filC8EC2C98E1ABAD055308A89ADB0452F4" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\CustomUIExe\Bundle.wxs" />
+            </Component>
+            <Component Id="cmp3D430641C3C01D06A2C26361EEED74F2" Directory="dir3DFA6F3206F79BB11079069A20C50A36" Guid="{6299DDBF-A92D-45D8-91F4-CD0C9A66659D}" Win64="$(var.Win64)">
+                <File Id="filCD8EF588D005ADD9F25B97487280B5CB" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\CustomUIExe\NCATestInstaller.CustomUIExe.wixproj" />
+            </Component>
+            <Component Id="cmp29DEB025AD882735F54D0110A956C387" Directory="dir3DFA6F3206F79BB11079069A20C50A36" Guid="{F2A5236D-374B-44B2-BDAA-C1EB5F6EBCF6}" Win64="$(var.Win64)">
+                <File Id="fil6920E4BB78BAEA515E0C6EAE04C3A221" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\CustomUIExe\zh-cn.wxl" />
+            </Component>
+            <Component Id="cmpD8F819E0B6B2909C750A60CA9E47B302" Directory="dir32BA7D47CEF839642427A183AD631DD0" Guid="{16DFEA74-18FA-4221-813A-D986D7A22772}" Win64="$(var.Win64)">
+                <File Id="fil3475A1CB3E5244046975D977BB9BEC1C" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Exe\Bundle.wxs" />
+            </Component>
+            <Component Id="cmp01A720ECBF83955D24A81B2DDE3E8698" Directory="dir32BA7D47CEF839642427A183AD631DD0" Guid="{A15C5B08-C5F2-4503-A172-D16F148D98F1}" Win64="$(var.Win64)">
+                <File Id="filB91C96872FC2AD39302CFD3E8AFCF650" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Exe\zh-cn.wxl" />
+            </Component>
+            <Component Id="cmp98559F72131083103938A6A5E3BE5AB4" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{054D92FB-4B69-4F79-9EEB-814C54477424}" Win64="$(var.Win64)">
+                <File Id="fil7418E36A55A3608F0AB3CFE93EF37A1D" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\Directory.wxi" />
+            </Component>
+            <Component Id="cmpE4832E91BCBDE41BD22912659F1DEF42" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{30C90A41-091C-45DE-B428-20F11626E0B0}" Win64="$(var.Win64)">
+                <File Id="fil46F15A18443BA65E497E29436ACDC8D4" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\HeatTransform.xslt" />
+            </Component>
+            <Component Id="cmp05C3AD28A1EE8252D6B828EA24A51A41" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{6295B835-5E16-4C3B-B3B0-C0507F104163}" Win64="$(var.Win64)">
+                <File Id="filFA9A3AC23F9BABB1396B5C857AE84F78" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\NCATestInstaller.Msi.wixproj" />
+            </Component>
+            <Component Id="cmpF6D6979408AD7BA9CE4F1D8423DA3875" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{3334CAB8-C7D1-4550-BE4C-3583D31020C6}" Win64="$(var.Win64)">
+                <File Id="filEE2624E65F11D3F0C2CFC471770FAE7C" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\Product.wxs" />
+            </Component>
+            <Component Id="cmpD3D8E1A87C349A7DB67FD755024E3723" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{D9946F6E-1582-472F-9189-161037F369DE}" Win64="$(var.Win64)">
+                <File Id="fil8D059C60FCC32E35C306F300B821656A" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\update_directory_product.py" />
+            </Component>
+            <Component Id="cmp0569D89E5A61F0C7A18ECE9C232E34AC" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{7BDB98CC-0421-429C-A1D9-E603F563D2D3}" Win64="$(var.Win64)">
+                <File Id="filA875A7559609D6A30B9EFBBFF46456BF" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\upgrade_code.json" />
+            </Component>
+            <Component Id="cmpA0C303FF9F347A386543BDE264A7E3DF" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{F3E35F29-C974-4095-A313-401EBFD71E69}" Win64="$(var.Win64)">
+                <File Id="filFC47B0D6CF151F5F6B00736FD0EF509E" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\zh-cn.wxl" />
+            </Component>
+            <Component Id="cmp87984CCC159EA18320E1C5BA66321272" Directory="dirA30E1AE1038F3A967AE4C060574DC15C" Guid="{5A5857B5-8920-4A4A-8981-9743BE4B9C03}" Win64="$(var.Win64)">
+                <File Id="filC65F5D2F801EDB1780E7EE20F8230350" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\Images\dialog_background.png" />
+            </Component>
+            <Component Id="cmpD3D1828770DFB438EABFA99BF1977DF4" Directory="dirA30E1AE1038F3A967AE4C060574DC15C" Guid="{7DF87553-9954-4B00-9436-79DA0236DD03}" Win64="$(var.Win64)">
+                <File Id="fil867402601955C7E504107ED891E75063" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\Images\top_banner.png" />
+            </Component>
+            <Component Id="cmpF3B98A84CC32EB070AF3031EC4DA7349" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{AF45C126-6C8C-4F94-810A-18B3242CCFB1}" Win64="$(var.Win64)">
+                <File Id="fil8C2D5A0A82C877EF105F42028E15FDBC" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Public\License.rtf" />
+            </Component>
+            <Component Id="cmpEA9FB3A81D321D6F5F2E5549E0C3029E" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{C0F1CF0B-C166-4819-95DC-47D67CDD7A34}" Win64="$(var.Win64)">
+                <File Id="filB4C1316FDC3350C532FC2659F511DE6F" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Public\NCATestInstaller.Generate.ico" />
+            </Component>
+            <Component Id="cmpD1A1BC82F3B712E57A3890E7E5922B90" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{0A3E6C69-BBF9-402B-B1E3-B2229117BD8E}" Win64="$(var.Win64)">
+                <File Id="filE37D41BF2D27210635302A8691F32251" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Public\NCATestInstaller.Generate.png" />
+            </Component>
+            <Component Id="cmpF4EF9365812247DAE0674C1A5D44CDA3" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{147976E1-9238-419A-9275-2133ABB56D90}" Win64="$(var.Win64)">
+                <File Id="fil14FDD50F7C13FF430680F71573FBFC18" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Public\Uninstall.ico" />
+            </Component>
+            <Component Id="cmp9E3B82D5A2F8ED3AC9520DD56657E836" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{05DE18E1-7E32-4DF9-90DE-DAE0C4813D56}" Win64="$(var.Win64)">
+                <File Id="fil5DC1F236B0002DD10E06218729584C74" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Public\update_zhcn.py" />
+            </Component>
+            <Component Id="cmp3DB7B4D249504BFCA5599BCE903D2578" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{D73DF343-9928-4F9B-925B-7299F86B779D}" Win64="$(var.Win64)">
+                <File Id="fil16246381731963BF85CD8CDC3479C755" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\Microsoft.Win32.SystemEvents.dll" />
+            </Component>
+            <Component Id="cmpC0CAA6221DD15957F6F0266FEC305AE8" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{D5217764-C069-4142-A205-A7CAF244ED42}" Win64="$(var.Win64)">
+                <File Id="fil5A7EB1C16812D82D936BDA7FBE4BB52B" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\NCATestInstaller.Generate.CommandLine.deps.json" />
+            </Component>
+            <Component Id="cmp3085F1405B428613DF5111DA4030610C" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{C92AC64E-E004-435C-9892-584F48BBD104}" Win64="$(var.Win64)">
+                <File Id="fil0CF1CCD83E08CA029407CA8B82EAFE36" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\NCATestInstaller.Generate.CommandLine.dll" />
+            </Component>
+            <Component Id="cmp76C01EBCB0ED28630A4AC38151DE250C" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{FF3EE34A-5F8C-4E2B-B10B-930D6D679BA7}" Win64="$(var.Win64)">
+                <File Id="filCBAAA8FA32019CF1B9338ED14DBD1BF3" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\NCATestInstaller.Generate.CommandLine.dll.config" />
+            </Component>
+            <Component Id="cmp357499D648B14C2AC538548DB8F69644" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{C7C0EC2E-DE98-49C2-8378-781616A66A3F}" Win64="$(var.Win64)">
+                <File Id="fil1A0ED427F4E3E22AE398E46E4E983327" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\NCATestInstaller.Generate.CommandLine.exe" />
+            </Component>
+            <Component Id="cmp8924DCE5E126D4BE035D03247764A8B1" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{E12D437D-BF41-4266-895E-A123B2CACA6C}" Win64="$(var.Win64)">
+                <File Id="filA155893F695909259DA994AE4A9FC984" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\NCATestInstaller.Generate.CommandLine.runtimeconfig.json" />
+            </Component>
+            <Component Id="cmp651FA09D2B2CF8A6A1E824BA7CC0388D" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{50121CCF-2F4C-4790-9373-218D68129855}" Win64="$(var.Win64)">
+                <File Id="fil5E682D6D1FBE125B0A453BC59DFCC706" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\NCATestInstaller.Toolkit.dll" />
+            </Component>
+            <Component Id="cmp876C3361FBA05EAB9267BC745AE050CB" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{A8F2DEF9-9C4F-4CD5-BF4E-1051876F4B19}" Win64="$(var.Win64)">
+                <File Id="fil518955BC093D13232C89F4DCA0B96971" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\NCATestInstaller.Toolkit.dll.config" />
+            </Component>
+            <Component Id="cmp2789801A66CE47CD2D2B0FDC5A6668F0" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{967BA8CC-1E20-4A47-9FBE-89339C36ADD8}" Win64="$(var.Win64)">
+                <File Id="filDBA756E5056E832AA07DFF584D87F5F1" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmp81138C10E8CC67FB3C5EB7D8E153CB64" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{E503C2A8-3348-41F0-8D7A-6F6E6AD0BB76}" Win64="$(var.Win64)">
+                <File Id="fil964F226F146259FA76E3C47FB425E46A" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\package.json" />
+            </Component>
+            <Component Id="cmpF00092D4653209649C939DA1EEC216DA" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{80F252EE-D132-4757-89F9-CA5FF3AB6E4C}" Win64="$(var.Win64)">
+                <File Id="filEA2ABAB5289DED364F6D50A144C6F0DA" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\PropertyChanged.dll" />
+            </Component>
+            <Component Id="cmp06210E767999BEE63E2893B8B4714C6B" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{003A71E2-42FB-4665-BF9A-18A45E7FC5E8}" Win64="$(var.Win64)">
+                <File Id="fil076FC1B280C3AE35928910A983023E3C" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\System.Configuration.ConfigurationManager.dll" />
+            </Component>
+            <Component Id="cmpFF4681CC6FB10BF5CA02456CF5B2F155" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{5A58E290-C6DB-4777-A81F-24F0ED4E9C17}" Win64="$(var.Win64)">
+                <File Id="filFF6BF3B4109ED2C585DF14B369139DBF" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\System.Drawing.Common.dll" />
+            </Component>
+            <Component Id="cmp2473F3EF4463E0F6F1DD4B9D63B03FC1" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{3BBF0B03-D4CA-4E2D-A407-C532D5B6CAA9}" Win64="$(var.Win64)">
+                <File Id="fil96269F1BD2D66D98B1C2210452369ECD" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\System.Security.Cryptography.ProtectedData.dll" />
+            </Component>
+            <Component Id="cmp18EC51061AC6816570376C4CD2CFB808" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{28915AC4-B0DE-4C79-9908-8C70FFB79F4F}" Win64="$(var.Win64)">
+                <File Id="fil0FB3582D581D16479150245012A44815" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\System.Security.Permissions.dll" />
+            </Component>
+            <Component Id="cmp7C2E85992A3879EAB2837C45082BF419" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{1917904E-5FCE-457A-9767-1B99DCA086F5}" Win64="$(var.Win64)">
+                <File Id="filE9DA8EEEC08B1F041B45BA4FF04A10C2" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\System.Windows.Extensions.dll" />
+            </Component>
+            <Component Id="cmp5B7BB00B5AD93DA35A0FCF56C857F94F" Directory="dirF9E3447EB21768D805E1954685437AC3" Guid="{95F7EC66-F8EA-42C3-BD3E-C3ECA29D52FE}" Win64="$(var.Win64)">
+                <File Id="filE22831D020244D5E6B445441DB7C23D9" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Depends\python-3.11.1-amd64.exe" />
+            </Component>
+            <Component Id="cmp9DA17969F6EF7498A97AD1303F13EB9D" Directory="dirF9E3447EB21768D805E1954685437AC3" Guid="{1269554F-D849-40F2-B1A6-5F378846A7EF}" Win64="$(var.Win64)">
+                <File Id="filC7625AB9E2BA15A1056917E27A525C46" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Depends\wix314.exe" />
+            </Component>
+            <Component Id="cmpDBDD034298D63363016368967F4EC40D" Directory="dir3384D516679ED362302BD04F7FF9ADE6" Guid="{97A02477-E249-439E-8268-FF39CCF2051F}" Win64="$(var.Win64)">
+                <File Id="filED1DE3E86E002724CA2669E1808CF365" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Extensions\create_windows_service.py" />
+            </Component>
+            <Component Id="cmpD8365AFC4039B6787FD8E085ACF4FE3A" Directory="dir3384D516679ED362302BD04F7FF9ADE6" Guid="{92D7BC21-8661-4902-9F42-AE2C232854D6}" Win64="$(var.Win64)">
+                <File Id="filCA1C72E4A2C87FECCEBA4418FD2D16E6" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Extensions\delete_windows_service.py" />
+            </Component>
+            <Component Id="cmp70E7F4481BC7B2A8D9BE3A7AB5F69AE5" Directory="dir6486EB3E45FE47E1CFE1E9638D7F24AC" Guid="{BFABD579-F6D6-4770-A469-2934E9912D28}" Win64="$(var.Win64)">
+                <File Id="filA76AFA01C461F229CA02144A440179AE" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Obfuscar\Obfuscar.Console.exe" />
+            </Component>
+            <Component Id="cmp085B9CB3A69656D3AB0102467B11675E" Directory="dir6486EB3E45FE47E1CFE1E9638D7F24AC" Guid="{823F795F-1462-412C-A4CB-6FD4E9A08A02}" Win64="$(var.Win64)">
+                <File Id="fil417B904DF7F9284109DD76749EC8EFE9" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Obfuscar\Obfuscar.xml" />
+            </Component>
+            <Component Id="cmp59CFCF7E3BBA6D817F9F3B6D590FB4FA" Directory="dir6486EB3E45FE47E1CFE1E9638D7F24AC" Guid="{286B3F94-17B6-402F-9FE2-7501C6C26C23}" Win64="$(var.Win64)">
+                <File Id="filA4482F6BBEA780620918C6AE43FED257" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Obfuscar\update_obfuscar_xml.py" />
+            </Component>
+            <Component Id="cmpFE2810E11C8708892D6389BF589E4B97" Directory="dir4E8A5961CECB922D214EE6A7049B81F1" Guid="{24DA6D05-9972-403D-8D97-CBAA504B5BCA}" Win64="$(var.Win64)">
+                <File Id="fil74BFCC2CC0A8DD62642B4552658C8833" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Uninstall\Uninst.exe" />
+            </Component>
+            <Component Id="cmp93376EE54A201CE8EFB62F355E94E24F" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{2AF6857D-F6B8-4E0B-958F-A6D9CA0F3860}" Win64="$(var.Win64)">
+                <File Id="fil34157205638A55342CA700ABAEA6C6D2" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x64\7z.dll" />
+            </Component>
+            <Component Id="cmpEB87F7EC5E7FC50D830F82F748AFEEEC" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{AC640FAA-22C0-4B8D-84B7-8D2E8ACAD2BF}" Win64="$(var.Win64)">
+                <File Id="fil339B3918EDA7477E4C484B0E8D27FEA0" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x64\7za.dll" />
+            </Component>
+            <Component Id="cmpC9CEB125B8C747192F6BE6B634530F3E" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{617FF11E-E63D-456F-BC42-39792860927F}" Win64="$(var.Win64)">
+                <File Id="filB6D0E242153143CC5EB9C8BC21C38D13" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x64\7zxa.dll" />
+            </Component>
+            <Component Id="cmp7748EFA0DF27F725930CCAE3FDB1CA5E" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{4F7436A0-B8D7-4910-800D-CF6A39F1F651}" Win64="$(var.Win64)">
+                <File Id="filC266F8B1CB8084820C9B09AD1419BA13" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x86\7z.dll" />
+            </Component>
+            <Component Id="cmp4CAAC890D3293ACAC1246ABEE611449C" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{8561082F-26F7-41C8-B43B-5326AEEC9BB9}" Win64="$(var.Win64)">
+                <File Id="filA67A8B644C6DC3EA27F2FE85A22CCBFD" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x86\7za.dll" />
+            </Component>
+            <Component Id="cmp1B0B351FDAE2D4353D914782A16C324F" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{73266BDE-8D60-474E-BFFF-2AE0894120E3}" Win64="$(var.Win64)">
+                <File Id="fil6F358263494AC949A0B8A7DE4DAC2DAD" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x86\7zxa.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirA23B699A6BC60FD64219767AB7139367">
+            <Directory Id="dir32BA7D47CEF839642427A183AD631DD0" Name="Exe" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirA23B699A6BC60FD64219767AB7139367">
+            <Directory Id="dir3DFA6F3206F79BB11079069A20C50A36" Name="CustomUIExe" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirA23B699A6BC60FD64219767AB7139367">
+            <Directory Id="dir70FD858209ED658E8E7760219362B5D8" Name="Msi" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dir70FD858209ED658E8E7760219362B5D8">
+            <Directory Id="dirA30E1AE1038F3A967AE4C060574DC15C" Name="Images" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <DirectoryRef Id="dirA23B699A6BC60FD64219767AB7139367">
+            <Directory Id="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Name="Public" />
+        </DirectoryRef>
+    </Fragment>
+</Include>

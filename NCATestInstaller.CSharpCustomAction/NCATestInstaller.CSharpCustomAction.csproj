@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <WixInstallPath>C:\Program Files (x86)\WiX Toolset v3.14\bin</WixInstallPath>
+    <WixExtDir>$(WixInstallPath)</WixExtDir>
+    <WixTargetsPath>$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\wix.targets</WixTargetsPath>
+    <LuxTargetsPath>$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\lux.targets</LuxTargetsPath>
+    <WixTasksPath>$(WixInstallPath)\WixTasks.dll</WixTasksPath>
+    <WixSdkPath>C:\Program Files (x86)\WiX Toolset v3.14\SDK\</WixSdkPath>
+    <WixCATargetsPath>$(WixSdkPath)\wix.ca.targets</WixCATargetsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4599FE27-A86A-41BC-A1CF-7A9E4805DB8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>NCATestInstaller.CSharpCustomAction</RootNamespace>
+    <AssemblyName>NCATestInstaller.CSharpCustomAction</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="7z.Libs" Version="21.7.0" />
+    <PackageReference Include="Squid-Box.SevenZipSharp" Version="1.6.1.23" />
+    <Reference Include="Microsoft.Deployment.WindowsInstaller">
+      <HintPath>..\Libraries\Microsoft.Deployment.WindowsInstaller.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CustomAction.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NCATestInstaller.Toolkit\NCATestInstaller.Toolkit.csproj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(WixCATargetsPath)" Condition=" '$(WixCATargetsPath)' != '' " />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.CA.targets" Condition=" '$(WixCATargetsPath)' == '' AND Exists('$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.CA.targets') " />
+  <Target Name="EnsureWixToolsetInstalled" Condition=" '$(WixCATargetsImported)' != 'true' ">
+    <Error Text="The WiX Toolset v3.11 (or newer) build tools must be installed to build this project. To download the WiX Toolset, see http://wixtoolset.org/releases/" />
+  </Target>
+  <!--单独编译测试所用-->
+  <Target Name="PostBuild" AfterTargets="AfterBuild" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <!--<Exec Command="xcopy /I/E/Y $(OutputPath)..\*.dll $(ProjectDir)..\Output\Publish\" />-->
+  </Target>
+</Project>

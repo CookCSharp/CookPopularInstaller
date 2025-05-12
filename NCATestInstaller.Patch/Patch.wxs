@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Patch AllowRemoval="yes" Classification="Update" Codepage="936"
+         Manufacturer="NCATest" MoreInfoURL="http://www.ncatest.com"
+         DisplayName="ProductPatch" Description="Small Update Patch" >
+
+    <Media Id="5000" Cabinet="Product.cab" CompressionLevel="mszip" EmbedCab="no">
+      <PatchBaseline Id="Product">
+        <Validate ProductId="yes" ProductLanguage="yes" UpgradeCode="yes" />
+      </PatchBaseline>
+    </Media>
+    <PatchFamilyRef Id="PackagePatchFamily" ProductCode='{BAB2F1A2-2CC0-40CA-AA96-985F1A16A023}'/>
+  </Patch>
+
+  <!--<Fragment>
+    <Component Id='FileComponent' Directory='INSTALLFOLDER' Guid='{8793AFA4-80F2-4BCF-9806-ED2134855F2D}'>
+      <File KeyPath='yes' Source='D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package\123.txt'/>
+    </Component>
+  </Fragment>-->
+
+  <Fragment>
+    <PatchFamily Id='PackagePatchFamily' Version='1.0.0.2' Supersede='yes' >
+      <DirectoryRef Id='INSTALLFOLDER'>       
+        <!--<Component Id='cmp90A5BB80EF6336B96A20D6ECD7F12574' Guid='{8793AFA4-80F2-4BCF-9806-ED2134855F2D}'>
+          <File Id="fil6BC7E74795302C55EC4233F32A23BE4" KeyPath='yes' Source='D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package\123.txt'/>
+        </Component>-->
+      </DirectoryRef>
+    </PatchFamily>
+  </Fragment>
+
+
+
+  <!--<PatchCreation Id="{32F7F972-AEF9-486B-A34D-B4ED8049981D}" CleanWorkingFolder="yes" WholeFilesOnly="yes" OutputPath="Patch.pcp">
+    <PatchInformation Manufacturer="NCATest" Languages="1033" ShortNames="no"  Compressed="yes"
+                      Description="Small Update Patch" Comments="Small Update Patch" />
+    <PatchMetadata AllowRemoval="yes" Classification="Update" TargetProductName="Patch"
+                   ManufacturerName="NCATest" MoreInfoURL="http://www.ncatest.com"
+                   Description="Small Update Patch" DisplayName="Small Update Patch"/>
+    <Family DiskId="5000" Name="Patch" MediaSrcProp="Patch" SequenceStart="5000">
+      <UpgradeImage Id="Upgrade" SourceFile="D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\bin\Debug\x86\NCATestInstaller.Msi\zh-cn\NCATestInstaller2.msi">
+        <TargetImage Id="Target" SourceFile="D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\bin\Debug\x86\NCATestInstaller.Msi\zh-cn\NCATestInstaller1.msi" Order="2" IgnoreMissingFiles="no"/>
+      </UpgradeImage>
+    </Family>
+    <PatchSequence PatchFamily="PatchPatchFamily" Sequence="1.0.0.2" Supersede="yes" />
+  </PatchCreation>-->
+
+
+  <!--<PatchCreation Id="{32F7F972-AEF9-486B-A34D-B4ED8049981D}" CleanWorkingFolder="yes" WholeFilesOnly="yes" Codepage="936"
+                 OutputPath="Patch.pcp"
+                 AllowMajorVersionMismatches="yes" AllowProductCodeMismatches="yes">
+    <PatchInformation Manufacturer="NCATest" Languages="1033" ShortNames="no"  Compressed="yes"
+                      Description="Small Update Patch" Comments="Small Update Patch" />
+    <PatchMetadata AllowRemoval="yes" Classification="Update" TargetProductName="Patch"
+                   ManufacturerName="NCATest" MoreInfoURL="http://www.ncatest.com"
+                   Description="Small Update Patch" DisplayName="Small Update Patch"/>
+    <Family Name="Patch" DiskId="5000" MediaSrcProp="Patch" SequenceStart="5000">
+      <UpgradeImage Id="Upgrade" SourceFile="D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\bin\Debug\x86\NCATestInstaller.Msi\zh-cn\NCATestInstaller2.msi">
+        <TargetImage Id="Target" SourceFile="D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\bin\Debug\x86\NCATestInstaller.Msi\zh-cn\NCATestInstaller1.msi" Order="2" IgnoreMissingFiles="no"/>
+      </UpgradeImage>
+    </Family>
+    <PatchSequence PatchFamily="PatchPatchFamily" Sequence="1.0.0.2" Supersede="yes" ProductCode="{374D7045-39C4-4922-B747-BE1493D414F6}"/>
+  </PatchCreation>-->
+
+  <!--<Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="NCATestInstaller.Patch" />
+      </Directory>
+    </Directory>
+  </Fragment>-->
+
+  <!--<Fragment>
+    <Component Id="SampleComponent" Guid="963B77C1-DC54-4FFD-931A-A7FD7AE7AD0F" Directory="INSTALLFOLDER">
+      <File Id="ZhouBao" Source="D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\bin\Debug\x86\NCATestInstaller.Msi\zh-cn\zhoubao.txt" KeyPath="yes"/>
+    </Component>
+  </Fragment>-->
+
+</Wix>

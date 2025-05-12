@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension"
+     xmlns:loc="http://schemas.microsoft.com/wix/2006/localization"
+	 xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension" >
+
+  <?define UpgradeCode={374D7045-39C4-4922-B747-BE1493D414F6}?>
+  <?define PackageVersion=!(bind.packageVersion.NCATestInstaller)?>
+  <!--<?define PackageVersion=1.0.P01?>-->
+  <?define TargetFramework48Redist=..\Assets\Dotnet\dotnet48-x86-x64-allos-enu.exe?>
+  <?define TargetFramework48Web=https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48?>
+  <?define Dia=..\?>
+
+  <Bundle Name="!(bind.packageName.NCATestInstaller)" Version="!(bind.packageVersion.NCATestInstaller)" Manufacturer="!(bind.packageManufacturer.NCATestInstaller)"
+          HelpTelephone="!(loc.HelpTelephone)" HelpUrl="!(loc.HelpUrl)" UpdateUrl="!(loc.UpdateUrl)" AboutUrl="!(loc.AboutUrl)"
+          Compressed="yes" IconSourceFile="..\Assets\Images\NCATestInstaller.Generate.ico" SplashScreenSourceFile="Resources\SplashScreen.png"
+          Copyright="Copyright © 2018-2024 !(bind.packageManufacturer.NCATestInstaller). All rights reserved."
+          DisableRemove="no" DisableModify="no" DisableRepair="no"
+          UpgradeCode="$(var.UpgradeCode)">
+   
+    <!--<RelatedBundle Id="$(var.UpgradeCode)" Action="Upgrade"/>-->
+
+    <!--检测ONES是否安装-->
+    <!--<util:RegistrySearchRef Id="OnesSearch"/>-->
+    <!--<util:RegistrySearchRef Id="NetFrameworkVersionSearch"/>
+    <util:RegistrySearchRef Id="NetFramework48Search"/>-->
+
+    <!--查找安装包缓存位置-->
+    <util:ProductSearchRef Id="ProductSearch"/>
+    <!--<util:RegistrySearchRef Id="WixBundleProviderKeySearch"/>
+    <util:RegistrySearchRef Id="PackageCachePathSearch"/>-->
+
+    <Variable Name="ExeName" Type="string" Value="!(loc.ExeProcessName)" Persisted="no" bal:Overridable="yes"/>
+    <Variable Name="CompanyName" Type="string" Value="!(bind.packageManufacturer.NCATestInstaller)" Persisted="no" bal:Overridable="yes"/>
+    <Variable Name="ProductName" Type="string" Value="!(bind.packageName.NCATestInstaller)" Persisted="no" bal:Overridable="yes"/>
+    <Variable Name="PackageVersion" Type="string" Value="$(var.PackageVersion)" Persisted="no" bal:Overridable="yes"/>
+    <!--<Variable Name="InstallFolder" Type="string" Value="[ProgramFilesFolder]!(bind.packageManufacturer.NCATestInstaller)\!(bind.packageName.NCATestInstaller)\"/>-->
+    <Variable Name="UpgradeCode" Type="string" Value="$(var.UpgradeCode)"/>
+    <Variable Name="PreviousProduct" Type="string" Value=""/>
+
+    <!--<WixVariable Id="WixUAC" Value="1"/>
+    <WixVariable Id="WixBundleElevated" Value="1"/>-->
+    <WixVariable Id="WixMbaPrereqPackageId" Value="Netfx4Full"/>
+    <WixVariable Id="WixMbaPrereqLicenseUrl" Value="NetfxLicense.rtf"/>   
+
+    <!--ManagedBootstrapperApplicationHost-->
+    <BootstrapperApplicationRef Id="ManagedBootstrapperApplicationHost">
+      <bal:WixManagedBootstrapperApplicationHost LicenseFile="..\Assets\License.rtf" LogoFile="..\Assets\Images\NCATestInstaller.Generate.png" />
+      <Payload Name="BootstrapperCore.config" SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)$(var.NCATestInstaller.CustomUI.TargetFileName).config"/>
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetPath)" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)BootstrapperCore.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)CookPopularControl.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)CookPopularCSharpToolkit.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)DryIoc.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)handle.exe" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)log4net.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)Microsoft.Win32.Registry.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)Microsoft.Xaml.Behaviors.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)NCATestInstaller.Toolkit.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)Newtonsoft.Json.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)Ookii.Dialogs.Wpf.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)Prism.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)Prism.DryIoc.Wpf.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)Prism.Wpf.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)QRCoder.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)System.CodeDom.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)System.Configuration.ConfigurationManager.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)System.IO.FileSystem.AccessControl.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)System.Security.AccessControl.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)System.Security.Permissions.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)System.Security.Principal.Windows.dll" />
+      <Payload SourceFile="$(var.NCATestInstaller.CustomUI.TargetDir)System.ValueTuple.dll" />
+    </BootstrapperApplicationRef>
+
+    <!--<PayloadGroup Id="NetFx48Redist">
+      <Payload Name="Net48Redist" Compressed="yes"
+               SourceFile="$(var.TargetFramework48Redist)"/>
+    </PayloadGroup>-->
+
+    <!--InstallCondition="VersionNT64 AND NetFramework48Info &lt; v4.8"-->
+    <!--DetectCondition="VersionNT64 AND NetFramework48Info >= v4.8"-->
+    <Chain DisableRollback="no">
+      <!--<ExePackage Id="Netfx48Full" Description=".NetFramewrok4.8运行时"
+                  Cache="yes" Compressed="yes" PerMachine="yes"
+                  Permanent="yes" Vital="yes" SourceFile="$(var.TargetFramework48Redist)"
+                  InstallCommand="/q /ACTION=Install /norestart" 
+                  DetectCondition="VersionNT64 AND NetFramework48Info &gt; v4.8"
+                  InstallCondition="VersionNT64 AND NetFramework48Info &lt; v4.8"/>-->
+      <!--<PackageGroupRef Id="NetFx48Redist" After="Netfx48Full"/>-->
+      <MsiPackage Id="NCATestInstaller" SourceFile="$(var.NCATestInstaller.Msi.TargetPath)" Vital="yes" Compressed="yes"
+                  DisplayInternalUI="no" Permanent="no" Visible="no" Cache="yes" ForcePerMachine="yes" InstallCondition="VersionNT64">
+        <!--此种写法可传值到Product中，Product中访问时Name的值大写即可获取对应的Value-->
+        <MsiProperty Name="PRODUCTSTATE" Value="[ProductState]"/>
+        <MsiProperty Name="WIXBUNDLEPROVIDERKEY" Value="[WixBundleProviderKey]"/>
+        <MsiProperty Name="INSTALLFOLDER" Value="[InstallFolder]"/>
+        <MsiProperty Name="PACKAGEVERSION" Value="[PackageVersion]"/>
+        <MsiProperty Name="CANCELREQUEST" Value="[CancelRequest]"/>
+        
+        <MsiProperty Name="PREVIOUSWIXBUNDLEPROVIDERKEY" Value="[PreviousWixBundleProviderKey]"/>
+        <MsiProperty Name="PACKAGECACHEPATH" Value="[PackageCachePath]"/>       
+        <MsiProperty Name="PREVIOUSPRODUCT" Value="[PreviousProduct]"/>
+      </MsiPackage>
+    </Chain>
+  </Bundle>
+
+  <Fragment>
+    <!--<CustomAction Id="CreateInstallFolderAction" BinaryKey="dll" DllEntry="" Execute="immediate" Return="check" />
+    <Binary Id="dll" SourceFile="foo.dll"/>-->
+  </Fragment>
+
+  <Fragment>
+    <!--<util:RegistrySearch Id="OnesSearch"
+                         Root="HKLM"
+                         Key="Software\NCATest\ONES"
+                         Result="value"
+                         Variable="ONESInfo"
+                         Value="Path"/>
+    <bal:Condition Message="ONES is not installed">ONESInfo</bal:Condition>-->
+
+    <!--<util:RegistrySearch Id="NetFrameworkVersionSearch"
+                         Root="HKLM"
+                         Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4"
+                         Result="exists"
+                         Variable="NetFrameworkVersionInfo"/>-->
+    <!--<bal:Condition Message=".NetFramework4.8 is not installed">
+      <![CDATA[Installed OR NetFrameworkVersionInfo]]>
+    </bal:Condition>-->
+
+    <!--<util:RegistrySearch Id="NetFramework48Search"
+                         Root="HKLM"
+                         Key="SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full"
+                         Result="value"
+                         Variable="NetFramework48Info"
+                         Value="Version"
+                         After="NetFrameworkVersionSearch"/>-->
+    <!--<bal:Condition Message=".NetFramework4.8 is not installed">
+      <![CDATA[Installed OR NetFramework48Info >= "4.8"]]>
+    </bal:Condition>-->
+
+    <util:ProductSearch Id="ProductSearch" UpgradeCode="$(var.UpgradeCode)" Result="state" Variable="ProductState"/>
+    <util:RegistrySearch Id="WixBundleProviderKeySearch"
+                         After="ProductSearch"
+                         Condition="ProductState=5"
+                         Root="HKLM"
+                         Key="Software\NCATest\NCATestInstaller.Generate"
+                         Result="value"
+                         Value="WixBundleProviderKey"
+                         Variable="PreviousWixBundleProviderKey"/>
+    <util:RegistrySearch Id="PackageCachePathSearch"
+                         After="WixBundleProviderKeySearch"
+                         Root="HKLM"
+                         Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\[PreviousWixBundleProviderKey]"
+                         Result="value"
+                         Value="BundleCachePath"
+                         Variable="PackageCachePath"/>
+  </Fragment>
+
+</Wix>

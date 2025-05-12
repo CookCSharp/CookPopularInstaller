@@ -1,0 +1,9 @@
+﻿构建新包时：
+1.如果Id和Version都没有更改，那么Windows Installer会认为这两个包属于“小型更新”
+2.如果Id没有更改，Version属性更改，那么Windows Installer会认为这两个包属于“次要升级”，此时会覆盖安装
+3.如果这两个值都更改了，那么Windows Installer会认为这两个包属于“主要升级”（MajorUpgrade）
+4.如果保持Product.wxs中的Product元素的Id属性值“*”，那么每一次构建将视为“主要升级”
+5.对于同一个产品，无论其产品Id、Version如何变化，都应该保持UpgradeCode不变，以便Windows Installer能准确认为这是同一个产品的“主要升级”
+6.对于BootStrapper，Bundle元素的UpgradeCode属性一致需要与Product元素的UpgradeCode属性值保持一致
+7.对于Msi安装包，MajorUpgrade即可完成升级，对于Exe安装包
+8.Heat命令: -t HeatTransform.xslt 指定了Directory.wxi中的Win64属性值,使得可生成x86/x64的安装包

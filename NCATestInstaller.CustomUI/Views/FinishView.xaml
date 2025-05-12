@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="NCATestInstaller.CustomUI.Views.FinishView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pc="https://Chance.CookPopularControl/2021/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:pt="https://Chance.CookPopularCSharpToolkit/2021/xaml"
+             xmlns:vm="clr-namespace:NCATestInstaller.CustomUI.ViewModels"
+             mc:Ignorable="d"
+             d:DataContext="{d:DesignInstance Type={x:Type vm:FinishViewModel}}"
+             d:DesignHeight="360"
+             d:DesignWidth="580"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+
+    <UserControl.Resources>
+        <Image x:Key="HeaderImage"
+               Width="30" Height="30"
+               Source="../Assets/Images/company.png" />
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="1"
+               Width="200" Height="200"
+               Source="{Binding BackImage}" />
+        <TextBlock Grid.Row="2"
+                   Text="{Binding ResultMessage}"
+                   Foreground="{StaticResource ControlForegroundBrush}"
+                   FontSize="16" FontWeight="DemiBold"
+                   HorizontalAlignment="Center" />
+        <DockPanel Grid.Row="3" Margin="10,0">
+            <WrapPanel DockPanel.Dock="Right" VerticalAlignment="Center">
+                <Button Width="70" Height="28"
+                        Content="下一步"
+                        Margin="0,0,20,0"
+                        Command="{Binding NextButtonCommand}"
+                        Visibility="{Binding IsShowNextButton, Converter={pt:BooleanToVisibilityConverter}}" />
+                <Button Width="70" Height="28"
+                        Content="{StaticResource Finish}"
+                        Command="{Binding FinishInstallCommand}" />
+            </WrapPanel>
+
+            <CheckBox Height="24"
+                      Foreground="{StaticResource ControlForegroundBrush}"
+                      Background="{StaticResource PrimaryThemeBrush}"
+                      FontSize="14"
+                      IsChecked="{Binding IsRunApp}"
+                      pc:CheckBoxAssistant.FillBrush="{StaticResource ControlForegroundBrush}"
+                      Visibility="{Binding IsUninstalled, Converter={StaticResource BooleanToVisibilityReConverter}}">
+                <CheckBox.Content>
+                    <TextBlock Text="{Binding ProductName, StringFormat={}Launch {0}}" />
+                </CheckBox.Content>
+            </CheckBox>
+            <pc:EditingTag Content="{StaticResource Company}"
+                           Header="{StaticResource HeaderImage}"
+                           Foreground="{StaticResource ControlForegroundBrush}"
+                           FontSize="14"
+                           Visibility="{Binding IsUninstalled, Converter={StaticResource BooleanToVisibilityConverter}}"
+                           Style="{StaticResource DefaultEditingTagStyle}" />
+        </DockPanel>
+    </Grid>
+
+</UserControl>

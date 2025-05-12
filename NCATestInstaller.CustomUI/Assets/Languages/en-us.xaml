@@ -1,0 +1,52 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                    
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xml:space="preserve">
+    
+    <!--符号      十六进制      十进制-->
+    <!--回车      &#x000D;     &#13；-->
+    <!--换行      &#x000A;     &#10；-->
+    <!--空格      &#x0020;     &#32；-->
+    <!--Tab      &#x0009;     &#9；-->
+
+    <sys:String x:Key="Minimize">Minimize</sys:String>
+    <sys:String x:Key="Close">Close</sys:String>
+
+    <sys:String x:Key="Company">Shanghai NCATEST Technologies Co.,Ltd</sys:String>
+    <sys:String x:Key="Copyright">Copyright © 2018-2024 NCATEST. All Rights Reserved</sys:String>
+    
+    <sys:String x:Key="CheckRunning">You cannot start another instance of the installer, because you are running this instance.</sys:String>
+
+    <sys:String x:Key="Install">Install</sys:String>
+    <sys:String x:Key="ReadAgree">Agree</sys:String>
+    <sys:String x:Key="License">《License》</sys:String>
+    <sys:String x:Key="Browser">Browser</sys:String>
+
+    <sys:String x:Key="Agree">Agree(_Y)</sys:String>
+    <sys:String x:Key="Disagree">Disagree(_N)</sys:String>
+
+    <sys:String x:Key="Detected">Your computer has installed other versions for this product, you can go to the control panel and uninstall the product</sys:String>
+    <sys:String x:Key="Waiting">Please wait</sys:String>
+    <sys:String x:Key="Failed"> Failed</sys:String>
+    <sys:String x:Key="Finished"> Finish</sys:String>
+    <sys:String x:Key="Cancelled"> has cancel successful</sys:String>
+    <sys:String x:Key="Running">The following processes are being detected</sys:String>
+    <sys:String x:Key="EndProcess">Unable to terminate the process </sys:String>
+    <sys:String x:Key="ManualClose">Please manual close it</sys:String>
+    <sys:String x:Key="Ask">Whether to remove </sys:String>
+
+    <sys:String x:Key="Modify">Modify</sys:String>
+    <sys:String x:Key="ModifyDetailInfo">has no independently selectable feature</sys:String>
+    <sys:String x:Key="Repair">Repair</sys:String>
+    <sys:String x:Key="RepairDetailInfo">Repairs errors in the most recent installation by fixing missing and corrupt files, shortcuts, and registry entries.</sys:String>
+    <sys:String x:Key="Remove">Remove</sys:String>
+    <sys:String x:Key="RemoveDetailInfo">Removes it form your computer named </sys:String>
+
+    <sys:String x:Key="Cancel">Cancel(_C)</sys:String>
+    <sys:String x:Key="Finish">Finish(_F)</sys:String>
+    <sys:String x:Key="CloseWindow">Close(_C)</sys:String>
+
+    <sys:String x:Key="Sure">Sure(_S)</sys:String>
+    <sys:String x:Key="KillAll">End(_O)</sys:String>
+
+</ResourceDictionary>

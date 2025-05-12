@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define Version=1.0.5.5?>
+  <?define LowestVersion=1.0.0.0?>
+  <?define UpgradeCode={5F11DDDE-B048-4C20-8F08-2640D213AAF6}?>
+
+  <!--7465b9a0-156a-491b-b651-15152006daf8-->
+
+
+  <Product Id="*" Name="Setup" Language="1033" Version="$(var.Version)" Manufacturer="NCATest" UpgradeCode="$(var.UpgradeCode)">
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perMachine" InstallPrivileges="elevated"/>
+
+    <Property Id="ARPHELPLINK" Value="http://www.ncatest.com"/>
+    <Property Id="ARPURLINFOABOUT" Value="http://www.ncatest.com"/>
+    <Property Id="ARPURLUPDATEINFO" Value="http://www.ncatest.com"/>
+    <!--<Property Id="ARPNOREPAIR" Value="1"/>
+    <Property Id="ARPNOMODIFY" Value="1"/>-->
+    <!--<Property Id="ARPNOREMOVE" Value="1"/>-->
+    <Property Id="INSTALLED_PRODUCT_VERSION">
+      <RegistrySearch Id="FindProductVersion"
+                      Root="HKLM"
+                      Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\[OLDERPRODUCTDETCTED]"
+                      Name="DisplayVersion"
+                      Type="raw"/>
+    </Property>
+    <Property Id="CURRENTVERSION" Value="[ProductVersion]"/>
+    <!--<Property Id="REINSTALL" Value="ALL" Secure="yes"/>-->
+    <!--<Property Id="REINSTALLMODE" Value="amus" Secure="yes"/>-->
+
+    <MajorUpgrade Schedule="afterInstallExecute" AllowDowngrades="no" AllowSameVersionUpgrades="no" DowngradeErrorMessage="A higher version of [ProductName] is already installed." />
+    <!--Disallow="yes" DisallowUpgradeErrorMessage="AAA newer version of [ProductName] is already installed."-->
+    <!--!(bind.property.ProductVersion)-->
+
+    <Upgrade Id="$(var.UpgradeCode)">
+      <UpgradeVersion Minimum="0.0.0.0" IncludeMinimum="yes" OnlyDetect="yes" Property="OLDERPRODUCTDETCTED" />
+      <UpgradeVersion Minimum="0.0.0.0" IncludeMinimum="yes" Property="NEWERVERSIONBEINGUPGRADE" />
+    </Upgrade>
+    <Condition Message="Version [INSTALLED_PRODUCT_VERSION] or higher is required.">
+      <![CDATA["!(bind.property.ProductVersion)" >= INSTALLED_PRODUCT_VERSION]]>
+    </Condition>
+
+    <!--<Condition Message="Version $(var.LowestVersion) or higher is required.">
+      <![CDATA["!(bind.property.ProductVersion)" >= "$(var.LowestVersion)"]]>  
+    </Condition>-->
+    <!--<Condition Message="A same version of [ProductName] is already installed.">NOT OLDERPRODUCTDETCTED</Condition>-->
+
+    <!--<Condition Message="A newer version of [ProductName] [ProductVersion] [Manufacturer] [INSTALLED_PRODUCT_VERSION] is already installed.">
+      <![CDATA["!(bind.property.ProductVersion)" < "[INSTALLED_PRODUCT_VERSION]"]]>
+    </Condition>-->
+    <!--<Upgrade Id="7465b9a0-156a-491b-b651-15152006daf8">
+      <UpgradeVersion OnlyDetect="yes" Property="PREVIOUSPRODUCT" Minimum="1.0.0.0" IncludeMinimum="yes" />
+    </Upgrade>-->
+
+    <MediaTemplate EmbedCab="yes"/>
+
+    <!--<CustomAction Id="GetInstalledProductVersion" Property="INSTALLED_PRODUCT_VERSION" Value="[InstalledProductInfo(Version)]" Execute="immediate" />-->
+    <!--<CustomAction Id="GetInstalledProductVersion" Script="vbscript" Directory="TARGETDIR" ExeCommand="GetInstalledProductVersion.vbs [ProductCode]" Return="check" />-->
+    <InstallExecuteSequence>
+      <!--<Custom Action="GetInstalledProductVersion" After="InstallInitialize"/>-->
+      <!--<RemoveExistingProducts After="InstallInitialize"/>-->
+    </InstallExecuteSequence>
+
+    <Feature Id="ProductFeature" Title="Setup" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="Setup" />
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <!--<Component Id="RemoveOnRepairComponent" Guid="{09BE7324-0783-43A2-B903-FFE2E782A3E3}">
+        <RemoveFile Id="RemoveOnRepair" Name="*.*" On="both"/>
+      </Component>-->
+      <Component Id="ApplicationComponent" Guid="{B08A04BB-B237-463A-AD31-47881E4E1736}">
+        <File Id="App1.exe" DefaultVersion="65535.65535.65535.65535" Source="D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\bin\Debug\x86\NCATestInstaller.Msi\zh-cn\zhoubao.txt" KeyPath="yes"/>
+      </Component>
+      <!--DefaultVersion="65535.65535.65535.65535"-->
+      <Component Id="ApplicationComponent1" Guid="{CF86F015-7CC0-40FA-B5FC-151B2CFF5856}">
+        <File Id="App2.exe" Source="D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\bin\Debug\x86\NCATestInstaller.Msi\zh-cn\log.log" KeyPath="yes"/>
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

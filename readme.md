@@ -1,57 +1,46 @@
-### 为了方便自定义打包工具，本人开发了一个基于Wix3与WPF的免费自定义打包工具，支持以下功能。有问题可加QQ群交流：658794308，欢迎大家参与开发！
-- 支持msi与exe两种安装包格式
+## 基于Wix3的自定义打包工具，支持以下功能
+- 支持Msi与Exe两种安装包格式
 - 支持自定UI界面操作
-- 支持自定义功能(包括运行脚本，解压文件等等)
 - 支持命令行打包(集成到CI/CD)
-- 支持混淆obfucar
+- 支持命令行安装/卸载
+- 支持obfuscar混淆obfuscar
 - 支持日志
-- 支持Patch、依赖预置、扩展功能(Windows服务自启动/注册表写入/环境变量等)
-- 支持卸载时卸载依赖
-- 支持3中主题风格
+- 支持更新、回滚、Patch、依赖预置、扩展功能(Windows服务自启动/注册表写入/环境变量等)
+- 支持安装前后脚本的运行(bat/vbs/ps1)
+- 支持三种主题
+- 支持用户协议文件配置
 - 支持非管理员安装(安装系统盘亦可)
-- 支持win7 win10 winserver2012
-
-### 待新增功能
-1. 每次安装时自动覆盖上次的安装 
-2. 卸载程序
-3. 回滚
-4. 功能可选安装
-5. 安装完成后支持脚本嵌入
-6. 卸载检测应用是否关闭
-
-### 已知Bug
-1. Debug模式下build时CookPopularInstaller.Generate.exe生成日志没看见错误信息，但是显示错误
+- 支持win7+系统
+- 支持x86/x64两种架构安装包
+- 支持多种压缩文件的解压缩(7zip,xz,zip,tar,lzip,bzip2,gzip,rar)
+- 支持卸载后清除整个安装目录(亦可配置不清除全部)
+- 支持更新/升级(即覆盖安装)和Uninst.exe卸载
+- 支持调试
+- 支持国际化配置
+- 支持Passive模式(简洁UI模式)
+- 支持修复功能覆盖或不覆盖原文件
 
 
-### 注意
-1. 命令行工具为CookPopularInstaller.Generate.CommandLine.exe，接受的配置文件名称自定义，格式必须按照提供的默认package.json配置
-2. 依赖项安装包为压缩包时，压缩文件格式必须为.zip(暂时)
+## 待新增功能
+1. 功能可选安装
+2. 增加依赖环境安装检测，即安装后不再安装
 
-### 1.原生Msi安装包
-![Image](Effect/OriginalUIMsi/original_msi1.png)
-![Image](Effect/OriginalUIMsi/original_msi2.png)
-![Image](Effect/OriginalUIMsi/original_msi3.png)
-![Image](Effect/OriginalUIMsi/original_msi4.png)
-![Image](Effect/OriginalUIMsi/original_msi5.png)
 
-### 2.原生Exe安装包
-![Image](Effect/OriginalUIExe/original_exe1.png)
-![Image](Effect/OriginalUIExe/original_exe2.png)
-![Image](Effect/OriginalUIExe/original_exe3.png)
+## 待解决问题
+1. Debug模式下build时NCATestInstaller.Generate.exe生成日志没看见错误信息，但是显示错误
+2. 使得Msi格式安装包具有管理员权限(可修改PE文件，暂不需要)
+3. 进程检测时，如果存在相同的进程名，但是进程不在安装目录，依然会检测出来
 
-### 3.自定义Exe安装包
-![Image](Effect/CustomUIExe/Install.png)
-![Image](Effect/CustomUIExe/License.png)
-![Image](Effect/CustomUIExe/Progress.png)
-![Image](Effect/CustomUIExe/Finish.png)
-![Image](Effect/CustomUIExe/Uninstall.png)
 
-### 4.界面化工具
-![Image](Effect/Generate/Project.png)
-![Image](Effect/Generate/Confuse.png)
-![Image](Effect/Generate/Depends.png)
-![Image](Effect/Generate/Extensions.png)
-![Image](Effect/Generate/Build.png)
+## 待定
+1. x64架构的安装包注册表值会在64位上添加，但是安装包是x86架构的（目前wix3不支持，需升级到Wix4）
+2. 安装完成后控制面板显示的大小与实际不符合
+3. 安装完成后卡住，直接杀进程，界面跳转到安装失败，但是已经安装成功了，需要回滚
 
-### 5.命令行工具
-![Image](Effect/CommandLine/Use.png)
+
+## 注意
+1. 命令行工具为NCATestInstaller.Generate.CommandLine.exe，接受的配置文件名称自定义，格式必须按照提供的默认package.json配置
+2. 打包过程通过gitlab的runner，文件名为.gitlab-ci.yml,yaml文件书写百度自查
+3. 打包的项目git提交信息最好为英文，因为中文的提交信息可能导致CI/CD不能运行
+4. 新建项目的打包可参考[ATEStudioBuild](http://192.168.9.90:9092/systemsoftwareteam/atestudiobuild)
+5. 使用NCATestInstaller.Generate UI界面打包工具时需要将配置好的package.json文件拷贝至打包目录下，以便安装时执行自定义操作

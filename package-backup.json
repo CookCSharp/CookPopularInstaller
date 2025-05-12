@@ -1,0 +1,90 @@
+{
+  "Project": {
+    "AppFileName": "NCATestInstaller.Generate.exe",
+    "AppLogo": "",
+    "Company": "NCATest",
+    "ContainChinese": true,
+    "PackageFolder": "D:\\Users\\chance.zheng\\Desktop\\Company\\NCATestInstaller\\Output\\Package",
+    "PackageOutputPath": "",
+    "PackageName": "NCATestInstaller.Generate",
+    "PackageVersion": "1.0.0.1",
+    "PackageFileExtension": ".exe",
+    "PackageType": "CustomUIExe",
+    "PackageTheme": "Default",
+    "PackageLicenseName": "ONESLicense",
+    "PackagePlatform": "x86"
+  },
+  "Confuse": {
+    "IsConfuse": "False",
+    "ConfuseDllNames": []
+  },
+  "Depend": {
+    "DependDialogVariables": [
+      {
+        "CheckType": 0,
+        "CheckValue": "WIX",
+        "Name": "wixtoolset",
+        "InstallCommand": "/quiet /norestart",
+        "Value": "Depends/wix314.exe"
+      },
+      {
+        "CheckType": 0,
+        "CheckValue": "Path",
+        "Name": "Python",
+        "InstallCommand": "/quiet InstallAllUsers=1 PrependPath=1 Include_test=0",
+        "Value": "Depends/python-3.11.1-amd64.exe"
+      }
+    ]
+  },
+  "Extension": {
+    "EnvironmentVariables": [],
+    "RegistryVariables": [
+      {
+        "RegistryHive": 2,
+        "RegistryValueKind": 0,
+        "Path": "Software\\[CompanyName]\\[ProductName]",
+        "Name": "Path",
+        "Value": "[InstallFolder]"
+      },
+      {
+        "RegistryHive": 2,
+        "RegistryValueKind": 0,
+        "Path": "Software\\[CompanyName]\\[ProductName]",
+        "Name": "AppPath",
+        "Value": "[AppPath]"
+      },
+      {
+        "RegistryHive": 2,
+        "RegistryValueKind": 0,
+        "Path": "Software\\[CompanyName]\\[ProductName]",
+        "Name": "Version",
+        "Value": "[ProductVersion]"
+      },
+      {
+        "RegistryHive": 2,
+        "RegistryValueKind": 0,
+        "Path": "Software\\[CompanyName]\\[ProductName]",
+        "Name": "ProductCode",
+        "Value": "[ProductCode]"
+      },
+      {
+        "RegistryHive": 2,
+        "RegistryValueKind": 0,
+        "Path": "Software\\[CompanyName]\\[ProductName]",
+        "Name": "WixBundleProviderKey",
+        "Value": "[WIXBUNDLEPROVIDERKEY]"
+      }
+    ],
+    "WindowsServices": []
+  },
+  "BeforeInstall": {
+    "Scripts": [
+
+    ]
+  },
+  "AfterInstall": {
+    "Scripts": [
+
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <UseWPF>false</UseWPF>
+    <UseWindowsForms>false</UseWindowsForms>
+    <!--<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>-->
+    <!--<RuntimeIdentifier></RuntimeIdentifier>-->
+    <!--<AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>-->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta3" />
+    <PackageReference Include="System.Windows.Extensions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NCATestInstaller.Toolkit\NCATestInstaller.Toolkit.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\package.json" Link="package.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Scripts\update_directory_product.py">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="Scripts\update_obfuscar_xml.py">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="AfterBuild" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CreateItem Include="$(OutputPath)*.*" Exclude="">
+      <Output TaskParameter="Include" ItemName="MoveAfterBuild1" />
+    </CreateItem>   
+    <Copy SourceFiles="@(MoveAfterBuild1)" DestinationFolder="$(ProjectDir)..\Output\Publish\CommandLine" />
+    <CreateItem Include="$(OutputPath)Scripts\*.*" Exclude="">
+      <Output TaskParameter="Include" ItemName="MoveAfterBuild2" />
+    </CreateItem>
+    <Copy SourceFiles="@(MoveAfterBuild2)" DestinationFolder="$(ProjectDir)..\Output\Publish\CommandLine\Scripts" />
+    <RemoveDir Directories="$(ProjectDir)Output" />
+  </Target>
+
+</Project>

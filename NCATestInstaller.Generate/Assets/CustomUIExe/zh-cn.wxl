@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2006/localization" Culture="zh-cn" Codepage="936" Language="4">
+  <String Id="CompanyName">NCATest</String>
+  <String Id="ProductName">NCATestInstaller</String>
+  <String Id="IconSourceFile">Assets\Public\NCATestInstaller.Generate.ico</String>
+  <String Id="ExeProcessName">NCATestInstaller.Generate.exe</String>
+  <String Id="HelpTelephone">021-20940020</String>
+  <String Id="HelpUrl">http://www.ncatest.com</String>
+  <String Id="UpdateUrl">http://www.ncatest.com</String>
+  <String Id="AboutUrl">http://www.ncatest.com</String>
+  <String Id="WindowsVersionMessage">软件需要更高版本的windows操作系统</String>
+</WixLocalization>

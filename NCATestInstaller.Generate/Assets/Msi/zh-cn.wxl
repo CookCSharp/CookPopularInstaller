@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WixLocalization xmlns="http://schemas.microsoft.com/wix/2006/localization" Culture="zh-cn" Codepage="UTF-8" Language="4">
+  <String Id="Manufacturer">NCATest</String>
+  <String Id="CompanyName">NCATest</String>
+  <String Id="ProductName">NCATestInstaller</String>
+  <String Id="Description">NCATestInstaller</String>
+  <String Id="Comments">The msi package of !(loc.ProductName)</String>
+  <String Id="DowngradeErrorMessage">A newer version of [ProductName] is already installed.</String>
+  <String Id="DotnetFrameworkNeeded">需要.NetFramewrok3.5运行时</String>
+  <String Id="IconSourceFile">Assets\Public\NCATestInstaller.Generate.ico</String>
+</WixLocalization>

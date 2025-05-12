@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+	 xmlns:bal="http://schemas.microsoft.com/wix/BalExtension"
+	 xmlns:loc="http://schemas.microsoft.com/wix/2006/localization"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+
+  <?define DependencyLibrariesDir=$(var.SolutionDir)Output\Publish\ ?>
+  <?define ExeProcessName=NCATest.ONES.ToolsManagement.exe ?>
+  <?define UpgradeCode={02BF701B-9797-492F-954E-160D4AA9AF34} ?>
+  <?define Version=0.0.0.0 ?>
+  <?define Platform=x86 ?>
+  <?if $(var.Platform)=x64 ?>
+  <?define Win64="yes" ?>
+  <?define PlatformProgramFilesFolder="ProgramFiles64Folder" ?>
+  <?else ?>
+  <?define Win64="no" ?>
+  <?define PlatformProgramFilesFolder="ProgramFilesFolder" ?>
+  <?endif ?>
+
+  <Product Id="*" UpgradeCode="$(var.UpgradeCode)" Language="1033" Codepage="UTF-8"
+           Name="!(loc.ProductName)" Version="$(var.Version)" Manufacturer="!(loc.Manufacturer)">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine"
+             Description="!(loc.Description)" Comments="!(loc.Comments)" Keywords="!(loc.ProductName)"
+             Platform="$(var.Platform)" InstallPrivileges="elevated" AdminImage="yes" />
+
+    <MajorUpgrade Schedule="afterInstallInitialize" AllowDowngrades="yes" />
+    <MediaTemplate EmbedCab="yes" />
+
+    <Icon Id="App.ico" SourceFile="!(loc.IconSourceFile)" />
+    <Property Id="ARPPRODUCTICON" Value="App.ico" />
+    <Icon Id="Uninstall.ico" SourceFile="Assets\Public\Uninstall.ico" />
+
+    <WixVariable Id="WixUIBannerBmp" Value="Assets\Msi\Images\top_banner.png" />
+    <WixVariable Id="WixUIDialogBmp" Value="Assets\Msi\Images\dialog_background.png" />
+    <WixVariable Id="WixUILicenseRtf" Value="Assets\Public\License.rtf" />
+
+    <Binary Id="CSharpCustomActions" SourceFile="$(var.NCATestInstaller.CSharpCustomAction.TargetDir)$(var.NCATestInstaller.CSharpCustomAction.TargetName).CA.dll"/>
+    <CustomAction Id="SetInstallMessage" BinaryKey="CSharpCustomActions" Execute="immediate" DllEntry="SetInstallMessageCustomAction" Return="check" Impersonate="yes"/>
+    <CustomAction Id="Init" BinaryKey="CSharpCustomActions" Execute="immediate" DllEntry="InitCustomAction" Return="check" Impersonate="yes"/>
+    <CustomAction Id="InstallDepends" BinaryKey="CSharpCustomActions" Execute="immediate" DllEntry="InstallDependsCustomAction" Return="check" Impersonate="yes"/>
+    <CustomAction Id="CancelRequestHandler" BinaryKey="CSharpCustomActions" Execute="immediate" DllEntry="CancelRequestHandler" Return="check" Impersonate="yes" />
+    <CustomAction Id="UninstallApp" BinaryKey="CSharpCustomActions" Execute="immediate" DllEntry="UninstallCustomAction" Return="check" Impersonate="yes"/>
+    <InstallExecuteSequence>
+      <Custom Action="SetInstallMessage" After="InstallInitialize">NOT Installed</Custom>
+      <Custom Action="Init" Before="InstallExecute" />
+      <Custom Action="InstallDepends" After="InstallFinalize">NOT REMOVE</Custom>
+      <Custom Action="CancelRequestHandler" Before="InstallFinalize">CANCELREQUEST="yes"</Custom>
+      <Custom Action="UninstallApp" After="InstallFinalize">REMOVE="ALL"</Custom>
+    </InstallExecuteSequence>
+
+    <!--6种默认安装对话框-->
+    <UI>
+      <!--<UIRef Id="WixUI_Common" />-->
+      <!--<UIRef Id="WixUI_Minimal"/>-->
+      <UIRef Id="WixUI_InstallDir" />
+      <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+      <!--<UIRef Id="WixUI_FeatureTree" />-->
+      <!--<UIRef Id="WixUI_Mondo" />-->
+      <!--<UIRef Id="WixUI_Advanced" />
+	  <Property Id="ApplicationFolderName" Value="My Application Folder" />
+	  <Property Id="WixAppFolder" Value="WixPerMachineFolder" />
+	  <WixVariable Id="WixUISupportPerMachine" Value="1" />-->
+      <!--<Property Id="WixAppFolder" Value="WixPerUserFolder" />
+	  <WixVariable Id="WixUISupportPerUser" Value="0" />-->
+
+      <Property Id="INSTALLDEPENDSMESSAGE" Value="正在初始化依赖环境" Secure="yes" />
+      <ProgressText Action="InstallDepends">[INSTALLDEPENDSMESSAGE]</ProgressText>
+
+      <!--触发启动App-->
+      <Publish Dialog="ExitDialog" Control="Finish" Event="DoAction" Value="LaunchApplication">WIXUI_EXITDIALOGOPTIONALCHECKBOX = 1 and NOT Installed</Publish>
+
+      <DialogRef Id="FilesInUse"/>
+      <DialogRef Id="MsiRMFilesInUse"/>
+      <UIRef Id="WixUI_ErrorProgressText" />
+    </UI>
+    <Property Id="WIXUI_EXITDIALOGOPTIONALTEXT" Value="Thank you for installing !(loc.ProductName)." />
+    <Property Id="WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT" Value="Launch !(loc.ProductName)" />
+
+    <!--将App启动包含在Finish页面中-->
+    <Property Id="WixShellExecTarget" Value="[#App.exe]"/>
+    <CustomAction Id="LaunchApplication" BinaryKey="WixCA" DllEntry="WixShellExec" Impersonate="yes" />
+
+    <Feature Id="ProductFeature" Title="!(loc.ProductName)" Level="1">
+      <ComponentGroupRef Id="DependencyLibrariesGroup" />
+      <ComponentGroupRef Id="EnvironmentComponents" />
+      <ComponentGroupRef Id="RegistryComponents" />
+      <ComponentRef Id="ApplicationDesktopComponent"/>
+      <ComponentRef Id="ApplicationStartMenuComponent" />
+    </Feature>
+  </Product>
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="$(var.PlatformProgramFilesFolder)">
+        <Directory Id="Company" Name="!(loc.CompanyName)">
+          <Directory Id="INSTALLFOLDER" Name="!(loc.ProductName)"/>
+        </Directory>
+      </Directory>
+      <Directory Id="DesktopFolder"/>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="AppStartMenuFolder" Name="!(loc.ProductName)"/>
+      </Directory>
+    </Directory>
+  </Fragment>
+
+  <Fragment>
+    <!--Environment-->
+    <ComponentGroup Id="EnvironmentComponents" Directory="INSTALLFOLDER">
+
+    </ComponentGroup>
+
+    <!--Registry-->
+    <ComponentGroup Id="RegistryComponents" Directory="INSTALLFOLDER">
+      <Component Id="RegistryProductCodeComponent" Win64="$(var.Win64)">
+        <RegistryValue Id="RegistryProductCodeValue" Action="write"
+                       Root="HKLM" Key="Software\!(loc.CompanyName)\!(loc.ProductName)"
+                       Name="ProductCode" Value="!(bind.property.ProductCode)" Type="string" KeyPath="yes"/>
+      </Component>
+      <Component Id="RegistryWixBundleProviderKeyoComponent" Win64="$(var.Win64)">
+        <RegistryValue Id="RegistryWixBundleProviderKeyValue" Action="write"
+                       Root="HKLM" Key="Software\!(loc.CompanyName)\!(loc.ProductName)"
+                       Name="WixBundleProviderKey" Value="[WIXBUNDLEPROVIDERKEY]" Type="string" KeyPath="yes"/>
+      </Component>
+    </ComponentGroup>
+
+    <!--Shortcut on Desktop-->
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="ApplicationDesktopComponent" Guid="{D9C7F104-24E8-4853-8E19-A295B53FA188}" Win64="$(var.Win64)">
+        <Shortcut Id="ApplicationDesktopShortcut" Name="!(loc.ProductName)"
+                  Target="[#App.exe]" Icon="App.ico" WorkingDirectory="INSTALLFOLDER" Directory="DesktopFolder"/>
+        <RemoveFolder Id="CleanUpDesktopShortcut" Directory="DesktopFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\!(loc.CompanyName)\!(loc.ProductName)"
+                       Name="DesktopShortcutInstalled" Value="1" Type="integer" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+
+    <!--Shortcut in StartMenu-->
+    <DirectoryRef Id="AppStartMenuFolder">
+      <Component Id="ApplicationStartMenuComponent" Guid="{E6849202-7ED5-461C-A5AF-5B87045AD140}" Win64="$(var.Win64)">
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="!(loc.ProductName)" Description="!(loc.ProductName)"
+                  Target="[#App.exe]" Icon="App.ico" WorkingDirectory="INSTALLFOLDER"/>
+        <!--<Shortcut Id="ApplicationStartMenuUninstallShortcut" Name="Uninstall !(loc.ProductName)" Description="Uninstall !(loc.ProductName)"
+                  Target="[System64Folder]msiexec.exe" Arguments="/x [ProductCode]" Icon="Uninstall.ico"/>-->
+        <RemoveFolder Id="CleanUpStartMenuShortCut" Directory="AppStartMenuFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\!(loc.CompanyName)\!(loc.ProductName)"
+                       Name="StartMenuShortcutInstalled" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+</Wix>

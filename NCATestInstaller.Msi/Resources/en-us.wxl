@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WixLocalization Culture="en-us" Codepage="UTF-8" Language="4" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id="Manufacturer">NCATest</String>
+  <String Id="CompanyName">NCATest</String>
+  <String Id="ProductName">NCATestInstaller.Generate</String>
+  <String Id="Description">NCATestInstaller.Generate</String>
+  <String Id="Comments">The msi package of NCATestInstaller</String>
+  <String Id="DowngradeErrorMessage">A newer version of [ProductName] is already installed.</String>
+  <String Id="DotnetFrameworkNeeded">need .NetFramewrok3.5 runtime</String>
+
+  <String Id="HelpTelephone">021-20940020</String>
+  <String Id="HelpUrl">http://www.ncatest.com</String>
+  <String Id="UpdateUrl">http://www.ncatest.com</String>
+  <String Id="AboutUrl">http://www.ncatest.com</String>
+  <String Id="WindowsVersionMessage">windows verson must more than or equal to v6.3</String>
+  <String Id="ExeProcessName">NCATestInstaller.Generate.exe</String>
+</WixLocalization>

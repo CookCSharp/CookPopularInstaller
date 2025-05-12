@@ -1,6 +1,6 @@
 ﻿<Project>
   <ImportGroup>
-    <Import Project="CookPopularInstaller.props"/>
+    <Import Project="NCATest.Installer.Build.props"/>
   </ImportGroup>
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
@@ -22,11 +22,12 @@
     <Deterministic>true</Deterministic>
     <WarningLevel>4</WarningLevel>
     <Authors>Chance</Authors>
-    <Version>1.0.0.1</Version>
-    <Company>写代码的厨子</Company>
+    <FileVersion>3.0.0.1</FileVersion>
+    <Version>3.0.0.1</Version>   
+    <Company>上海御渡半导体科技有限公司</Company>
     <Product>$(MSBuildProjectName)</Product>
     <Title>$(MSBuildProjectName)</Title>
-    <Copyright>Copyright © CookCSharp All rights reserved.</Copyright>
+    <Copyright>Copyright © NCATest All rights reserved.</Copyright>
   </PropertyGroup>
 
   <!--<Target Name="ObfuscarTask" AfterTargets="AfterBuild" Condition="$(TargetFramework.StartsWith('net5')) or $(TargetFramework.StartsWith('net6'))">

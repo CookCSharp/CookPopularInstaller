@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Patch AllowRemoval="yes" Classification="Update" OptimizedInstallMode="yes" MinorUpdateTargetRTM="yes"
+         Manufacturer="NCATest" MoreInfoURL="http://www.ncatest.com"
+         DisplayName="ProductPatch" Description="Small Update Patch" >
+
+    <Media Id="5000" Cabinet="Product.cab" EmbedCab="yes">
+      <PatchBaseline Id="Product" BaselineFile="NCATestInstaller1.msi" UpdateFile="NCATestInstaller2.msi"/>
+    </Media>
+    <PatchFamily Id='ProductPatchFamily' Version='1.0.0.1' Supersede='yes'>
+      <ComponentRef Id='Txt123'/>
+      <DirectoryRef Id='INSTALLFOLDER'/>
+    </PatchFamily>
+  </Patch>
+
+  <Fragment>
+    <Component Id='Txt123' Transitive='yes' Directory='INSTALLFOLDER' Guid='{B7F01E35-8BBC-4351-9D74-50CF5919B615}'>
+      <File Source='D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package\123.txt'/>
+    </Component>
+  </Fragment>
+
+</Wix>

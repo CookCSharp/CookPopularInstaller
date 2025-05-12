@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <ApplicationIcon>Uninstall.ico</ApplicationIcon>
+    <AssemblyName>Uninst</AssemblyName>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="App.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="App.config" />
+    <None Include="..\upgrade_code.json" Link="upgrade_code.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="AfterBuild" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CreateItem Include="$(OutputPath)*.*" Exclude="$(OutputPath)*.config">
+      <Output TaskParameter="Include" ItemName="CopyAfterBuild" />
+    </CreateItem>
+    <Copy SourceFiles="@(CopyAfterBuild)" DestinationFolder="$(ProjectDir)..\Output\Publish\Uninstall" />
+  </Target>
+
+</Project>
