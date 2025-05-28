@@ -79,11 +79,11 @@
         <RemoveFile Id="RemoveOnRepair" Name="*.*" On="both"/>
       </Component>-->
       <Component Id="ApplicationComponent" Guid="{B08A04BB-B237-463A-AD31-47881E4E1736}">
-        <File Id="App1.exe" DefaultVersion="65535.65535.65535.65535" Source="D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\bin\Debug\x86\NCATestInstaller.Msi\zh-cn\zhoubao.txt" KeyPath="yes"/>
+        <File Id="App1.exe" DefaultVersion="65535.65535.65535.65535" Source="D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\bin\Debug\x86\CookPopularInstaller.Msi\zh-cn\zhoubao.txt" KeyPath="yes"/>
       </Component>
       <!--DefaultVersion="65535.65535.65535.65535"-->
       <Component Id="ApplicationComponent1" Guid="{CF86F015-7CC0-40FA-B5FC-151B2CFF5856}">
-        <File Id="App2.exe" Source="D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\bin\Debug\x86\NCATestInstaller.Msi\zh-cn\log.log" KeyPath="yes"/>
+        <File Id="App2.exe" Source="D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\bin\Debug\x86\CookPopularInstaller.Msi\zh-cn\log.log" KeyPath="yes"/>
       </Component>
     </ComponentGroup>
   </Fragment>

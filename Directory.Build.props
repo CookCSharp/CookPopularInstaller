@@ -1,6 +1,6 @@
 ﻿<Project>
   <ImportGroup>
-    <Import Project="NCATest.Installer.Build.props"/>
+    <Import Project="CookPopularInstaller.Build.props"/>
   </ImportGroup>
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
@@ -24,7 +24,7 @@
     <Authors>Chance</Authors>
     <FileVersion>3.0.0.1</FileVersion>
     <Version>3.0.0.1</Version>   
-    <Company>上海御渡半导体科技有限公司</Company>
+    <Company>写代码的厨子</Company>
     <Product>$(MSBuildProjectName)</Product>
     <Title>$(MSBuildProjectName)</Title>
     <Copyright>Copyright © NCATest All rights reserved.</Copyright>

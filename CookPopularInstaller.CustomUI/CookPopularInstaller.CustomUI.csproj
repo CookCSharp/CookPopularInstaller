@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <ApplicationIcon>Assets\Images\logo.ico</ApplicationIcon>
+    <StartupObject>CookPopularInstaller.CustomUI.Startup</StartupObject>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+
+    <!--测试安装包时不注释，仅仅查看UI界面时注释-->
+    <DefineConstants>ACTUALTEST</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+	<PackageReference Include="CookPopularUI.WPF" Version="1.0.1-preview4" />
+    <PackageReference Include="Prism.DryIoc" Version="9.0.401-pre" />
+    <!--<PackageReference Include="WindowsAPICodePack" Version="1.1.2" />-->
+    <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
+    <PackageReference Include="PropertyChanged.Fody" Version="4.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CookPopularInstaller.Toolkit\CookPopularInstaller.Toolkit.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="BootstrapperCore">
+      <HintPath>..\Libraries\BootstrapperCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <HintPath>..\Libraries\Microsoft.VisualBasic.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Images\uninst.png" />
+    <Resource Include="Assets\Licenses\CookPopularInstallerLicense" />
+    <Resource Include="Assets\Images\company.png" />
+    <Resource Include="Assets\Images\cry.png" />
+    <Resource Include="Assets\Images\happy.png" />
+    <Resource Include="Assets\Images\semiconductor.png" />
+    <Resource Include="Assets\Images\unknown.png" />  
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="Assets\Images\SplashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="handle.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="BootstrapperCore.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="AfterBuild" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CreateItem Include="$(OutputPath)*.*" Exclude="">
+      <Output TaskParameter="Include" ItemName="MoveAfterBuild" />
+    </CreateItem>
+    <!--<Copy SourceFiles="@(MoveAfterBuild)" DestinationFolder="$(OutputPath)..\..\CookPopularInstaller.Generate\$(TargetFramework)" />
+    <Copy SourceFiles="@(MoveAfterBuild)" DestinationFolder="$(OutputPath)..\..\..\..\Debug\$(Platform)\CookPopularInstaller.Generate\$(TargetFramework)" />-->
+    <RemoveDir Directories="$(ProjectDir)Output" />
+  </Target>
+  <!--<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /r /y $(OutputPath)*.* $(OutputPath)..\..\CookPopularInstaller.Generate\$(TargetFramework)\CustomUI\" />
+  </Target>-->
+</Project>

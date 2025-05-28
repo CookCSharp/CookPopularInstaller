@@ -1,6 +1,6 @@
 {
   "Project": {
-    "AppFileName": "NCATestInstaller.Generate.exe",
+    "AppFileName": "CookPopularInstaller.Generate.exe",
     "AppLogo": "",
     "Company": "NCATest",
     "ContainChineseOnInstallFolder": true,
@@ -8,7 +8,7 @@
     "Language": "Chinese",
     "PackageFolder": "",
     "PackageOutputPath": "",
-    "PackageName": "NCATestInstaller.Generate",
+    "PackageName": "CookPopularInstaller.Generate",
     "PackageVersion": "1.0.0.1",
     "PackageFileExtension": ".exe",
     "PackageType": "CustomUIExe",
