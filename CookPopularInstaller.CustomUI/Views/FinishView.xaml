@@ -60,6 +60,7 @@
             <ui:Tag Content="{StaticResource Company}"
                     Header="{StaticResource HeaderImage}"
                     Foreground="{StaticResource ControlForegroundBrush}"
+                    Background="Transparent"
                     FontSize="14"
                     Visibility="{Binding IsUninstalled, Converter={ui:BooleanToVisibilityConverter}}"
                     Style="{StaticResource DefaultTagStyle}" />

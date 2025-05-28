@@ -22,7 +22,7 @@
     <sys:String x:Key="Minimize">Minimize</sys:String>
     <sys:String x:Key="Close">Close</sys:String>
 
-    <sys:String x:Key="Company">Chance</sys:String>
+    <sys:String x:Key="Company">CookCSharp</sys:String>
     <sys:String x:Key="Copyright">Copyright © Chance 2021. All Rights Reserved</sys:String>
     
     <sys:String x:Key="CheckRunning">You cannot start another instance of the installer, because you are running this instance.</sys:String>
