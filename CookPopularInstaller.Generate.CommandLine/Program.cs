@@ -1,10 +1,10 @@
-﻿using NCATestInstaller.Toolkit.Helpers;
-using NCATestInstaller.Toolkit;
+﻿using CookPopularInstaller.Toolkit.Helpers;
+using CookPopularInstaller.Toolkit;
 using System;
 using System.IO;
 using System.Text;
 
-namespace NCATestInstaller.Generate.CommandLine
+namespace CookPopularInstaller.Generate.CommandLine
 {
     internal class Program
     {
@@ -12,7 +12,7 @@ namespace NCATestInstaller.Generate.CommandLine
 
         static void Usage()
         {
-            Console.WriteLine("example: NCATestInstaller.Generate.CommandLine build package.json");
+            Console.WriteLine("example: CookPopularInstaller.Generate.CommandLine build package.json");
         }
 
         static void Main(string[] args)

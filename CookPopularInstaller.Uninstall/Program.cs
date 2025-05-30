@@ -14,7 +14,7 @@ using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Web.Script.Serialization;
 
-namespace NCATestInstaller.Uninstall
+namespace CookPopularInstaller.Uninstall
 {
     /// <summary>
     /// 每一个Uninstall.exe需要单独生成后再拷贝至打包目录下

@@ -18,7 +18,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 
-namespace NCATestInstaller.CustomUI.Patch
+namespace CookPopularInstaller.CustomUI.Patch
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -70,7 +70,7 @@ namespace NCATestInstaller.CustomUI.Patch
         private void GetProductInfoByUpgradeCode()
         {
             var assembly = Assembly.GetExecutingAssembly();
-            using var stream = assembly.GetManifestResourceStream("NCATestInstaller.CustomUI.Patch.Assets.content.json");
+            using var stream = assembly.GetManifestResourceStream("CookPopularInstaller.CustomUI.Patch.Assets.content.json");
             if (stream == null)
             {
                 App.Over(Level.Info, "Can not find product for this patch");

@@ -15,7 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NCATestInstaller.CustomUI.Patch
+namespace CookPopularInstaller.CustomUI.Patch
 {
     public class JsonTool
     {

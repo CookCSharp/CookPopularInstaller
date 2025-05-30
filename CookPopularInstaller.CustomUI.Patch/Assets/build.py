@@ -2,10 +2,10 @@ import subprocess
 
 
 patch_build_script='build.sh'
-product_name='NCATestInstaller.Generate'
+product_name='CookPopularInstaller.Generate'
 patch_version='1.0.0.1P01'
-old_dir=r'D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package'
-new_dir=r'D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Publish'
+old_dir=r'D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\Package'
+new_dir=r'D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\Publish'
 
 
 def build(productName:str, oldDir:str, newDir:str):

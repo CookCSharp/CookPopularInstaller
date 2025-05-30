@@ -14,7 +14,7 @@ using System.Threading.Tasks;
  * CLR Version: 4.0.30319.42000
  * Copyright (c) NCATest 2018-2023 All Rights Reserved.
  */
-namespace NCATestInstaller.Generate.CommandLine
+namespace CookPopularInstaller.Generate.CommandLine
 {
     public class ProcessHelper
     {

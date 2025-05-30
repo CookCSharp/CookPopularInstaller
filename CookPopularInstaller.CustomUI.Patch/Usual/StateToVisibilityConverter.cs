@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 
-namespace NCATestInstaller.CustomUI.Patch
+namespace CookPopularInstaller.CustomUI.Patch
 {
     public class StateToVisibilityConverter : IValueConverter
     {

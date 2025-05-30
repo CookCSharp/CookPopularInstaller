@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <UseWPF>false</UseWPF>
     <UseWindowsForms>false</UseWindowsForms>
     <!--<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>-->
@@ -13,12 +13,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta3" />
-    <PackageReference Include="System.Windows.Extensions" Version="7.0.0" />
+    <PackageReference Include="System.Windows.Extensions" Version="10.0.0-preview.4.25258.110" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NCATestInstaller.Toolkit\NCATestInstaller.Toolkit.csproj" />
+    <ProjectReference Include="..\CookPopularInstaller.Toolkit\CookPopularInstaller.Toolkit.csproj" />
   </ItemGroup>
 
   <ItemGroup>

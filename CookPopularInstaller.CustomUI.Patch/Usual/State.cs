@@ -1,7 +1,7 @@
 ﻿/*
- * Description：Level 
+ * Description：State 
  * Author： Chance.Zheng
- * Create Time: 2024/6/26 11:42:21
+ * Create Time: 2024/6/25 14:59:16
  * .Net Version: 4.8
  * CLR Version: 4.0.30319.42000
  * Copyright (c) NCATest 2020-2024 All Rights Reserved.
@@ -13,12 +13,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NCATestInstaller.CustomUI.Patch
+namespace CookPopularInstaller.CustomUI.Patch
 {
-    public enum Level
+    public enum State
     {
-        Info,
-        Success,
-        Error
+        Prepare,
+        Installing,
+        Finish
     }
 }

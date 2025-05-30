@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace NCATestInstaller.CustomUI.Patch
+namespace CookPopularInstaller.CustomUI.Patch
 {
     public delegate void Result(State state, string res, System.Windows.Media.Geometry geometry, System.Windows.Media.Brush brush);
 
@@ -59,10 +59,10 @@ namespace NCATestInstaller.CustomUI.Patch
             SevenZDllPath = Extract7zDll();
 
             ////调试
-            //string name = "NCATestInstaller.Generate";
+            //string name = "CookPopularInstaller.Generate";
             //string version = "1.0.0.1P01";
-            //string oldDir = @"D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package";
-            //string newDir = @"D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Publish";
+            //string oldDir = @"D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\Package";
+            //string newDir = @"D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\Publish";
             //string targetDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Diff");
             //if (Directory.Exists(targetDir)) Directory.Delete(targetDir, true);
             //Compress.CompressFiles(name, version, oldDir, newDir, targetDir, SevenZDllPath);
@@ -85,7 +85,7 @@ namespace NCATestInstaller.CustomUI.Patch
         private string Extract7zDll()
         {
             var assembly = Assembly.GetExecutingAssembly();
-            using var rs = assembly.GetManifestResourceStream("NCATestInstaller.CustomUI.Patch.Assets.7z.dll");
+            using var rs = assembly.GetManifestResourceStream("CookPopularInstaller.CustomUI.Patch.Assets.7z.dll");
             if (rs == null) throw new Exception("Resource 7z.dll not found");
 
             string tempPath = Path.Combine(Path.GetTempPath(), "7z64.dll");

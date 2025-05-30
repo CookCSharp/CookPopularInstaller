@@ -17,7 +17,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NCATestInstaller.CustomUI.Patch
+namespace CookPopularInstaller.CustomUI.Patch
 {
     public delegate void Message(string msg);
     public delegate void Progress(byte progress);
@@ -69,7 +69,7 @@ namespace NCATestInstaller.CustomUI.Patch
         private static string ExtractDiff7zFile(out long length)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            using var stream = assembly.GetManifestResourceStream("NCATestInstaller.CustomUI.Patch.Assets.diff.7z");
+            using var stream = assembly.GetManifestResourceStream("CookPopularInstaller.CustomUI.Patch.Assets.diff.7z");
             if (stream == null) throw new Exception("Resource Assets\\diff.7z not found");
             length = stream.Length;
 
