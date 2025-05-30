@@ -2,7 +2,7 @@
   "Project": {
     "AppFileName": "CookPopularInstaller.Generate.exe",
     "AppLogo": "",
-    "Company": "NCATest",
+    "Company": "CookCSharp",
     "ContainChineseOnInstallFolder": true,
     "IsOutputPdb": false,
     "Language": "Chinese",
@@ -45,7 +45,7 @@
         "RegistryHive": 2,
         "RegistryValueKind": 0,
         "Path": "Software\\[CompanyName]\\[ProductName]",
-        "Name": "Path",
+        "Name": "Directory",
         "Value": "[InstallFolder]"
       },
       {
