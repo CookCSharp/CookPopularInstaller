@@ -1,0 +1,98 @@
+﻿<ui:NormalWindow x:Name="RootWindow"
+                 x:Class="CookPopularInstaller.Generate.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:behavior="http://schemas.microsoft.com/xaml/behaviors"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:local="clr-namespace:CookPopularInstaller.Generate"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:ui="https://github.cookpopularui/2021/xaml"
+                 xmlns:vm="clr-namespace:CookPopularInstaller.Generate.ViewModels"
+                 mc:Ignorable="d"
+                 d:DataContext="{Binding Source={d:DesignInstance Type={x:Type vm:MainWindowViewModel}}}"
+                 d:Style="{d:StaticResource WindowStyle}"
+                 d:WindowStyle="None"
+                 Title="CookPopularInstaller"
+                 Width="810"
+                 Height="600"
+                 BorderBrush="{StaticResource PrimaryThemeBrush}"
+                 Background="White"
+                 ResizeMode="CanMinimize"
+                 WindowStartupLocation="CenterScreen">
+
+    <Window.DataContext>
+        <vm:MainWindowViewModel />
+    </Window.DataContext>
+
+    <!--<Window.Background>
+        <DrawingBrush Stretch="None"
+                      AlignmentX="Center" AlignmentY="Center" TileMode="Tile"
+                      Viewport="0,0,45,40" ViewportUnits="Absolute">
+            <DrawingBrush.Drawing>
+                <GeometryDrawing Brush="{x:Static SystemColors.ControlLightBrush}" Geometry="{StaticResource WindowBackgroundGeometry}">
+                    <GeometryDrawing.Pen>
+                        <Pen Brush="{x:Static SystemColors.ControlLightBrush}" Thickness="1" />
+                    </GeometryDrawing.Pen>
+                </GeometryDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </Window.Background>-->
+
+    <!--<ui:NormalWindow.ClientTitleBarAdditionalContent>
+        <Button ToolTip="主页"
+                HorizontalAlignment="Right"
+                Command="{Binding HomeCommand}"
+                ui:FrameworkElementBaseAttached.IconGeometry="{StaticResource HomePageGeometry}"
+                ui:FrameworkElementBaseAttached.IconHeight="18" ui:FrameworkElementBaseAttached.IconWidth="18"
+                Style="{StaticResource WindowIconButtonStyle}" />
+    </ui:NormalWindow.ClientTitleBarAdditionalContent>-->
+
+    <Grid>
+        <Grid.Background>
+            <DrawingBrush Stretch="None"
+                          AlignmentX="Center" AlignmentY="Center" TileMode="Tile"
+                          Viewport="0,0,45,40" ViewportUnits="Absolute">
+                <DrawingBrush.Drawing>
+                    <GeometryDrawing Brush="{x:Static SystemColors.ControlLightBrush}" Geometry="{StaticResource WindowBackgroundGeometry}">
+                        <GeometryDrawing.Pen>
+                            <Pen Brush="{x:Static SystemColors.ControlLightBrush}" Thickness="1" />
+                        </GeometryDrawing.Pen>
+                    </GeometryDrawing>
+                </DrawingBrush.Drawing>
+            </DrawingBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="listBox"
+                 BorderThickness="0,0,1,0"
+                 ItemsSource="{Binding ContentViewsList}"
+                 SelectedIndex="{Binding ContentViewSelectedIndex, Mode=TwoWay}"
+                 SelectionMode="Single" ui:FrameworkElementBaseAttached.CornerRadius="0">
+            <!--<behavior:Interaction.Triggers>
+                <behavior:DataTrigger Binding="{Binding ElementName=RootWindow, Path=IsCheckedSideBar}" Value="True">
+                    <behavior:ControlStoryboardAction ControlStoryboardOption="Play">
+                        <behavior:ControlStoryboardAction.Storyboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="listBox" Storyboard.TargetProperty="Width"
+                                                 To="120" Duration="0:0:0.4" />
+                            </Storyboard>
+                        </behavior:ControlStoryboardAction.Storyboard>
+                    </behavior:ControlStoryboardAction>
+                </behavior:DataTrigger>
+                <behavior:DataTrigger Binding="{Binding ElementName=RootWindow, Path=IsCheckedSideBar}" Value="False">
+                    <behavior:ControlStoryboardAction ControlStoryboardOption="Play">
+                        <behavior:ControlStoryboardAction.Storyboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="listBox" Storyboard.TargetProperty="Width"
+                                                 To="0" Duration="0:0:0.4" />
+                            </Storyboard>
+                        </behavior:ControlStoryboardAction.Storyboard>
+                    </behavior:ControlStoryboardAction>
+                </behavior:DataTrigger>
+            </behavior:Interaction.Triggers>-->
+        </ListBox>
+        <ContentControl Grid.Column="1" Content="{Binding ContentView}" />
+    </Grid>
+</ui:NormalWindow>

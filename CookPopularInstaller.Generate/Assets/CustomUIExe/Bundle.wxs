@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension"
+     xmlns:loc="http://schemas.microsoft.com/wix/2006/localization"
+	 xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"    
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension" >
+
+  <?define UpgradeCode={02BF701B-9797-492F-954E-160D4AA9AF34} ?>
+  <?define PackageVersion=1.0.0.1?>
+
+  <Bundle Name="!(bind.packageName.CookPopularInstaller)" Version="!(bind.packageVersion.CookPopularInstaller)" Manufacturer="!(bind.packageManufacturer.CookPopularInstaller)"
+          HelpTelephone="!(loc.HelpTelephone)" HelpUrl="!(loc.HelpUrl)" UpdateUrl="!(loc.UpdateUrl)" AboutUrl="!(loc.AboutUrl)"
+          Compressed="yes" IconSourceFile="!(loc.IconSourceFile)"
+          Copyright="Copyright © 2021 !(bind.packageManufacturer.CookPopularInstaller). All rights reserved."
+          DisableRemove="no" DisableModify="no" DisableRepair="no"
+          UpgradeCode="$(var.UpgradeCode)">
+    
+    <!--查找安装包缓存位置-->
+    <util:ProductSearchRef Id="ProductSearch"/>
+    <!--<util:RegistrySearchRef Id="WixBundleProviderKeySearch"/>
+    <util:RegistrySearchRef Id="PackageCachePathSearch"/>-->
+
+    <WixVariable Id="WixMbaPrereqPackageId" Value="Netfx4Full"/>
+    <WixVariable Id="WixMbaPrereqLicenseUrl" Value="NetfxLicense.rtf"/>
+    
+    <Variable Name="ExeName" Type="string" Value="!(loc.ExeProcessName)" Persisted="no" bal:Overridable="yes"/>
+    <Variable Name="CompanyName" Type="string" Value="!(bind.packageManufacturer.CookPopularInstaller)" Persisted="no" bal:Overridable="yes"/>
+    <Variable Name="ProductName" Type="string" Value="!(bind.packageName.CookPopularInstaller)" Persisted="no" bal:Overridable="yes"/>
+    <Variable Name="PackageVersion" Type="string" Value="$(var.PackageVersion)" Persisted="no" bal:Overridable="yes"/>
+    <Variable Name="UpgradeCode" Type="string" Value="$(var.UpgradeCode)"/>
+    
+    <BootstrapperApplicationRef Id="ManagedBootstrapperApplicationHost">
+      <bal:WixManagedBootstrapperApplicationHost LicenseFile="Assets\Public\License.rtf" />
+      <Payload Name="BootstrapperCore.config" SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)$(var.CookPopularInstaller.CustomUI.TargetFileName).config"/>
+      <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetPath)" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)BootstrapperCore.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)CookPopularInstaller.Toolkit.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)CookPopularToolkit.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)CookPopularToolkit.Windows.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)CookPopularUI.WPF.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)DryIoc.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)handle.exe" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Microsoft.Bcl.AsyncInterfaces.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Microsoft.CodeAnalysis.CSharp.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Microsoft.CodeAnalysis.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Microsoft.CodeAnalysis.Scripting.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Microsoft.Extensions.DependencyInjection.Abstractions.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Microsoft.Extensions.Options.DataAnnotations.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Microsoft.Extensions.Options.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Microsoft.Extensions.Primitives.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Microsoft.Win32.Registry.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Microsoft.Xaml.Behaviors.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Newtonsoft.Json.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Ookii.Dialogs.Wpf.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Prism.Container.Abstractions.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Prism.Container.DryIoc.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Prism.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Prism.DryIoc.Wpf.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Prism.Events.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)Prism.Wpf.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Buffers.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.CodeDom.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Collections.Immutable.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Configuration.ConfigurationManager.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Diagnostics.EventLog.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Diagnostics.PerformanceCounter.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Drawing.Common.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.IO.FileSystem.AccessControl.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Memory.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Numerics.Vectors.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Reflection.Metadata.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Runtime.CompilerServices.Unsafe.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Security.AccessControl.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Security.Principal.Windows.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.ServiceProcess.ServiceController.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Text.Encoding.CodePages.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.Threading.Tasks.Extensions.dll" />
+	  <Payload SourceFile="$(var.CookPopularInstaller.CustomUI.TargetDir)System.ValueTuple.dll" />
+    </BootstrapperApplicationRef>
+
+    <Chain DisableRollback="no">
+      <MsiPackage Id="CookPopularInstaller" SourceFile="$(var.CookPopularInstaller.Msi.TargetPath)" Vital="yes" Compressed="yes" Cache="yes"
+                  DisplayInternalUI="no" Permanent="no" Visible="no" ForcePerMachine="yes" InstallCondition="VersionNT64">
+        <MsiProperty Name="PRODUCTSTATE" Value="[ProductState]"/>
+        <MsiProperty Name="WIXBUNDLEPROVIDERKEY" Value="[WixBundleProviderKey]"/>
+        <MsiProperty Name="INSTALLFOLDER" Value="[InstallFolder]"/>
+        <MsiProperty Name="PACKAGEVERSION" Value="[PackageVersion]"/>
+        <MsiProperty Name="CANCELREQUEST" Value="[CancelRequest]"/>
+      </MsiPackage>    
+    </Chain>
+  </Bundle>
+
+  <Fragment>
+    <!--Saves the state of the product: advertised (1), absent (2), or locally installed (5).-->
+    <util:ProductSearch Id="ProductSearch" UpgradeCode="$(var.UpgradeCode)" Result="state" Variable="ProductState"/>
+    <util:RegistrySearch Id="WixBundleProviderKeySearch"
+                         After="ProductSearch"
+                         Condition="ProductState=5"
+                         Root="HKLM"
+                         Key="Software\!(loc.CompanyName)\!(loc.ProductName)"
+                         Result="value"
+                         Value="WixBundleProviderKey"
+                         Variable="PreviousWixBundleProviderKey"/>
+    <util:RegistrySearch Id="PackageCachePathSearch"
+                         After="WixBundleProviderKeySearch"
+                         Root="HKLM"
+                         Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\[PreviousWixBundleProviderKey]"
+                         Result="value"
+                         Value="BundleCachePath"
+                         Variable="PackageCachePath"/>
+  </Fragment>
+
+</Wix>

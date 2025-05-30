@@ -173,7 +173,7 @@ namespace CookPopularInstaller.Toolkit
                     argument6 = $"\"{candleExePath}\" \"{wxsFilePath_Exe}\" {arch} -ext \"{wixBalExtension}\" -ext \"{wixNetFxExtension}\" -ext \"{wixUtilExtension}\" -dCookPopularInstaller.CustomUI.TargetDir=\"{customUITargetDir}\" -dCookPopularInstaller.CustomUI.TargetFileName=\"{customUITargetFileName}\" -dCookPopularInstaller.CustomUI.TargetPath=\"{customUITargetPath}\" -dCookPopularInstaller.Msi.TargetPath=\"{outputFileName_Msi}\" -out \"{wixprojFilePath_Exe}\"";
                 }
                 var argument7 = $"\"{lightExePath}\" -ext \"{wixBalExtension}\" -ext \"{wixUIExtension}\" -ext \"{wixUtilExtension}\" -loc \"{cultureFilePath_Exe}\" \"{wixprojFilePath_Exe}\" {pdbout} -out \"{outputFileName_Exe}\"";
-                var argument8 = $"\"{adminFilePath}\" {outputFileName_Exe}";
+                var argument8 = $"\"{adminFilePath}\" \"{outputFileName_Exe}\"";
 
                 arguments.Add(argument6);
                 arguments.Add(argument7);

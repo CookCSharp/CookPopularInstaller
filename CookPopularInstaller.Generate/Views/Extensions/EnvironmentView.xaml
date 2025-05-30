@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="CookPopularInstaller.Generate.Views.EnvironmentView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:CookPopularInstaller.Generate.Views"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ui="https://github.cookpopularui/2021/xaml"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+
+    <UserControl.DataContext>
+        <local:EnvironmentViewModel />
+    </UserControl.DataContext>
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+        <ui:Tag Header="变量：">
+            <ui:Tag.Content>
+                <TextBox Width="220" Text="{Binding Result.Name}" ui:TextElementAttached.PlaceHolder="请输入变量名" />
+            </ui:Tag.Content>
+        </ui:Tag>
+        <ui:Tag Header="值：" Margin="0,10,0,0" HeaderWidth="42">
+            <ui:Tag.Content>
+                <TextBox Width="220" Text="{Binding Result.Value}" ui:TextElementAttached.PlaceHolder="请输入变量值" />
+            </ui:Tag.Content>
+        </ui:Tag>
+    </StackPanel>
+
+</UserControl>

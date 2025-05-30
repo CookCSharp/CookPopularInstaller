@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PackageFileName>CookPopularInstaller.exe</PackageFileName>
+    <!--<PackageFile>$([System.IO.Directory]::GetFiles($(OutputPath), "*.exe"))[0]</PackageFile>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="$(OutputPath)$(PackageFileName)" Condition="$([System.IO.File]::Exists($(OutputPath)$(PackageFileName)))" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="AfterBuild" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CreateItem Include="$(OutputPath)*.*" Exclude="$(OutputPath)*.config">
+      <Output TaskParameter="Include" ItemName="CopyAfterBuild" />
+    </CreateItem>
+    <Copy SourceFiles="@(CopyAfterBuild)" DestinationFolder="$(ProjectDir)..\Output\Publish\Admin" />
+  </Target>
+
+</Project>

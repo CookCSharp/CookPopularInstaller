@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="CookPopularInstaller.Generate.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:CookPopularInstaller.Generate.Views"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Welcome to CookPopularInstaller.Generate"
+                       Foreground="{StaticResource PrimaryForegroundBrush}"
+                       FontSize="16" FontWeight="DemiBold" />
+            <TextBlock Text="Windows安装包生成工具"
+                       Foreground="{StaticResource PrimaryForegroundBrush}"
+                       FontSize="16" FontWeight="DemiBold"
+                       Margin="0,10,0,50"
+                       HorizontalAlignment="Center"
+                       FontFamily="{StaticResource RobotoFonts}" />
+            <Button Width="150"
+                    Content="让我们开始吧!😊"
+                    FontWeight="ExtraBlack"
+                    Command="{Binding BeginCommand}" />
+        </StackPanel>
+        <StatusBar Grid.Row="1">
+            <StatusBarItem Width="170" Margin="20,0,0,0" VerticalContentAlignment="Center">
+                <DockPanel>
+                    <Path Width="14" Height="14"
+                          Data="{StaticResource CompanyLogoGeometry}"
+                          Fill="DarkOrange"
+                          Stretch="Uniform"
+                          Margin="0,1,0,0" />
+                    <TextBlock Height="14" Text="写代码的厨子@版权所有" Margin="6,0,0,0" />
+                </DockPanel>
+            </StatusBarItem>
+            <StatusBarItem Width="240" VerticalContentAlignment="Center">
+                <DockPanel>
+                    <Path Width="14" Height="14"
+                          Data="{StaticResource UrlGeometry}"
+                          Fill="DarkOrange"
+                          Stretch="Uniform" />
+                    <TextBlock Height="16"
+                               Text="https://gitee.com/CookCSharp"
+                               FontSize="13"
+                               Margin="6,0,0,0" />
+                </DockPanel>
+            </StatusBarItem>
+            <StatusBarItem Width="130" VerticalContentAlignment="Center">
+                <DockPanel>
+                    <Path Width="13" Height="13"
+                          Data="{StaticResource UIGeometry}"
+                          Fill="DarkOrange"
+                          Stretch="Uniform" />
+                    <TextBlock Height="14" Text="CookPopularUI" Margin="6,0,0,0" />
+                </DockPanel>
+            </StatusBarItem>
+            <StatusBarItem VerticalContentAlignment="Center">
+                <DockPanel>
+                    <Path Width="14" Height="14"
+                          Data="{StaticResource EmailGeometry}"
+                          Fill="DarkOrange"
+                          Stretch="Uniform" />
+                    <TextBlock Text="qq群：658794308" FontSize="13" Margin="6,0,0,0" />
+                </DockPanel>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+
+</UserControl>

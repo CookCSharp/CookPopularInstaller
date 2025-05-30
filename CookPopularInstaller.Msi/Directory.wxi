@@ -16,352 +16,352 @@
   </Fragment>
   <Fragment>
     <ComponentGroup Id="DependencyLibrariesGroup">
-      <Component Id="cmp5331CA5F52193D033714FDDF20C463C5" Directory="INSTALLFOLDER" Guid="{B218E317-0A3A-4CDB-B8B5-AA9526550F2B}" Win64="$(var.Win64)">
+      <Component Id="cmp5331CA5F52193D033714FDDF20C463C5" Directory="INSTALLFOLDER" Guid="{855F4342-BBFD-4EC0-A07A-177490C8FEF3}" Win64="$(var.Win64)">
         <File Id="filCB70EB97061F227F60A18AA79D1F1486" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\App.config" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp0DB6A9FE15BAB53BF6249425CBFE0028" Directory="INSTALLFOLDER" Guid="{CC855975-75EB-4A27-9AD0-4B77B3FC1259}" Win64="$(var.Win64)">
+      <Component Id="cmp0DB6A9FE15BAB53BF6249425CBFE0028" Directory="INSTALLFOLDER" Guid="{D9F009A2-C0E1-47F9-8A29-19860F0334BD}" Win64="$(var.Win64)">
         <File Id="filE2C62692488FA3BD6BA6BAF382C2AF54" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\BootstrapperCore.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp47219166B302DF7A24836FE51A6DF2F8" Directory="INSTALLFOLDER" Guid="{CE039D0B-3DBB-475F-8D9A-CE71C7E804BD}" Win64="$(var.Win64)">
+      <Component Id="cmp47219166B302DF7A24836FE51A6DF2F8" Directory="INSTALLFOLDER" Guid="{354A2AA9-FF4D-4CDA-A0DC-BC6610FCBD13}" Win64="$(var.Win64)">
         <File Id="filF3D95BEBB54F5F0B97D8F4F518943036" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularInstaller.CSharpCustomAction.CA.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp4F32273EBC70C7845DA4300F138371BF" Directory="INSTALLFOLDER" Guid="{E8DC39E9-C1B9-450C-A389-CA669F8D0C47}" Win64="$(var.Win64)">
+      <Component Id="cmp4F32273EBC70C7845DA4300F138371BF" Directory="INSTALLFOLDER" Guid="{63879DA0-3803-48B6-AC65-75C20869DC0C}" Win64="$(var.Win64)">
         <File Id="fil66350ED30867EA58612E8572FAF8D3F5" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularInstaller.CSharpCustomAction.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp56ECC7B8393A9F5E4002CD924923D537" Directory="INSTALLFOLDER" Guid="{92FE8232-368A-4A97-88F3-99646D043B50}" Win64="$(var.Win64)">
+      <Component Id="cmp56ECC7B8393A9F5E4002CD924923D537" Directory="INSTALLFOLDER" Guid="{B6CEF242-CE23-4267-801A-CB9F5662451A}" Win64="$(var.Win64)">
         <File Id="fil774AFC94CB245734AAE1972427E82876" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularInstaller.CustomUI.exe" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp93CE818E5D3FD00CC6D3B32F0F6864F2" Directory="INSTALLFOLDER" Guid="{043AA73D-09F4-483B-9373-F3D8BA7A6EBF}" Win64="$(var.Win64)">
+      <Component Id="cmp93CE818E5D3FD00CC6D3B32F0F6864F2" Directory="INSTALLFOLDER" Guid="{FD25FD78-F2CE-441D-9226-F183AAC774CA}" Win64="$(var.Win64)">
         <File Id="fil8A201D473965F22249D6DD1C8A74CD94" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularInstaller.CustomUI.exe.config" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpE14A913BDFDEB2C891F3B79F594ECCB5" Directory="INSTALLFOLDER" Guid="{1624A206-392E-4601-B80A-67D5EB7CCFBC}" Win64="$(var.Win64)">
+      <Component Id="cmpE14A913BDFDEB2C891F3B79F594ECCB5" Directory="INSTALLFOLDER" Guid="{06D2C443-1622-4458-8A7F-8889593E7455}" Win64="$(var.Win64)">
         <File Id="App.exe" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularInstaller.Generate.exe" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp0EB39780BC3D231547E470C52C97190B" Directory="INSTALLFOLDER" Guid="{244E6CC7-E06D-4F0E-9207-2E76D3530FE1}" Win64="$(var.Win64)">
+      <Component Id="cmp0EB39780BC3D231547E470C52C97190B" Directory="INSTALLFOLDER" Guid="{52E2A00A-092D-4ACB-9699-62EDA23B3D70}" Win64="$(var.Win64)">
         <File Id="fil49B19D684BB4EBCB4344766E4F28BB1C" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularInstaller.Generate.exe.config" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp188EE76062AFCE2EC00C096C6D9FC5E4" Directory="INSTALLFOLDER" Guid="{DD59BD2B-8E4A-440E-A549-FCBDF9BE2C12}" Win64="$(var.Win64)">
+      <Component Id="cmp188EE76062AFCE2EC00C096C6D9FC5E4" Directory="INSTALLFOLDER" Guid="{E0E4FD81-712D-4755-AEB7-13E87DC67863}" Win64="$(var.Win64)">
         <File Id="fil06392A799C4B39895B2BDF080647A00A" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularInstaller.Toolkit.deps.json" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp1BCC2DD60157A65301D14EC6E376754E" Directory="INSTALLFOLDER" Guid="{0F06D682-E6FE-42BA-8ABB-5FCD63D4EA55}" Win64="$(var.Win64)">
+      <Component Id="cmp1BCC2DD60157A65301D14EC6E376754E" Directory="INSTALLFOLDER" Guid="{415E2A38-E7E7-4FD3-B2CD-9FF3AD320B0E}" Win64="$(var.Win64)">
         <File Id="fil24ED3576F56AE8554EE70959E57B9584" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularInstaller.Toolkit.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp6FB87758F09C378EE5092772F2014E4D" Directory="INSTALLFOLDER" Guid="{34D9D089-198A-4DD1-B4F2-06DCACD1C9BE}" Win64="$(var.Win64)">
+      <Component Id="cmp6FB87758F09C378EE5092772F2014E4D" Directory="INSTALLFOLDER" Guid="{F633EC3A-8512-417C-90C0-7A621F5A3C15}" Win64="$(var.Win64)">
         <File Id="fil930881D1DE4CDE7EE94856A7DD2DA346" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularInstaller.Toolkit.dll.config" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp4E9C81748B951F0FEB81B006716F6A65" Directory="INSTALLFOLDER" Guid="{75215D8B-4EC0-4494-9F2D-0D5806B45117}" Win64="$(var.Win64)">
+      <Component Id="cmp4E9C81748B951F0FEB81B006716F6A65" Directory="INSTALLFOLDER" Guid="{599FCCE9-A9FD-4A50-BBA7-0641139A523D}" Win64="$(var.Win64)">
         <File Id="fil469E7D52F782793F9C09AE256FF783BA" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularToolkit.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp1E172DD3A87355495F9135F4B50404D7" Directory="INSTALLFOLDER" Guid="{067FBA08-E6C3-444C-B864-22B246FB2267}" Win64="$(var.Win64)">
+      <Component Id="cmp1E172DD3A87355495F9135F4B50404D7" Directory="INSTALLFOLDER" Guid="{A6411D34-49A6-4C01-8F3F-75F1CE8053D1}" Win64="$(var.Win64)">
         <File Id="fil3DBF57766A2276C5AC1507C2A3A1D12A" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularToolkit.Windows.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp7727E40850DE90B6562354FF206FEAF9" Directory="INSTALLFOLDER" Guid="{3CE37AD9-E8CE-4013-83A5-3A9062E58041}" Win64="$(var.Win64)">
+      <Component Id="cmp7727E40850DE90B6562354FF206FEAF9" Directory="INSTALLFOLDER" Guid="{D1CC7521-98E4-4F88-A6F3-95BBA68DA785}" Win64="$(var.Win64)">
         <File Id="fil042FF080FEE55EFA201FD26479E25C29" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CookPopularUI.WPF.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp3A3DCB2CB767F63098FA411AE7BB90A7" Directory="INSTALLFOLDER" Guid="{30683207-CBCE-42DA-8D9A-302D2DBC6F31}" Win64="$(var.Win64)">
+      <Component Id="cmp3A3DCB2CB767F63098FA411AE7BB90A7" Directory="INSTALLFOLDER" Guid="{D0C56617-F15E-4587-999D-52F17CF8B854}" Win64="$(var.Win64)">
         <File Id="filC88A84AAA7679BB1CC51240EFA2EB406" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\DryIoc.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpCE3AA6F900B100D6B07C312E605BC62C" Directory="INSTALLFOLDER" Guid="{69587187-7F65-43F7-A937-65F4F850E5F9}" Win64="$(var.Win64)">
+      <Component Id="cmpCE3AA6F900B100D6B07C312E605BC62C" Directory="INSTALLFOLDER" Guid="{C8023FBE-E04E-4B30-90B8-560555EA01CD}" Win64="$(var.Win64)">
         <File Id="fil2AC9EF13260514C58FDB6C9921955D88" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\handle.exe" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp20E5A82EE1F53BB560782568696E50EF" Directory="INSTALLFOLDER" Guid="{363436AF-9189-41E9-910E-84727116248B}" Win64="$(var.Win64)">
+      <Component Id="cmp20E5A82EE1F53BB560782568696E50EF" Directory="INSTALLFOLDER" Guid="{091C6108-590A-44AD-B1E4-A15BBAA1FB85}" Win64="$(var.Win64)">
         <File Id="fil2E537F5E44EFF72FBE1AF325D6F073A2" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.Bcl.AsyncInterfaces.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp036A680CF94E7627338001F023402FC5" Directory="INSTALLFOLDER" Guid="{1434194D-3873-42E3-8243-47CDC84B6521}" Win64="$(var.Win64)">
+      <Component Id="cmp036A680CF94E7627338001F023402FC5" Directory="INSTALLFOLDER" Guid="{8071A5BF-A714-4C9B-B075-E9FF356EF08B}" Win64="$(var.Win64)">
         <File Id="filF343B9BE9F35AB3EFA290E974129327B" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.CodeAnalysis.CSharp.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp19EE8C59117A5FEA6815082A74950CBC" Directory="INSTALLFOLDER" Guid="{9E283C45-DE82-42AE-92D1-2C3863A851C5}" Win64="$(var.Win64)">
+      <Component Id="cmp19EE8C59117A5FEA6815082A74950CBC" Directory="INSTALLFOLDER" Guid="{60FE760B-2757-49A1-B380-10079ACB0FC2}" Win64="$(var.Win64)">
         <File Id="fil36E624B668164A318E21409E179A30A7" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.CodeAnalysis.CSharp.Scripting.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpC721F41377E85E493F0DF0733B2DF311" Directory="INSTALLFOLDER" Guid="{84711302-CD4E-4285-9888-F2F9FEDDF631}" Win64="$(var.Win64)">
+      <Component Id="cmpC721F41377E85E493F0DF0733B2DF311" Directory="INSTALLFOLDER" Guid="{904398AE-73EC-432B-B686-D1D8ADD8C9A9}" Win64="$(var.Win64)">
         <File Id="filC3BC362F988527D89F828BB4F6BC62E0" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.CodeAnalysis.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpDAD9117929198AB160619495A694BEF0" Directory="INSTALLFOLDER" Guid="{7580B571-2B8E-4C74-A127-8C96A7AC1590}" Win64="$(var.Win64)">
+      <Component Id="cmpDAD9117929198AB160619495A694BEF0" Directory="INSTALLFOLDER" Guid="{44ED37DD-8584-487D-83BF-C3CE33A5F429}" Win64="$(var.Win64)">
         <File Id="filAFC1656886CF1566BF01D3BF7BFBC264" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.CodeAnalysis.Scripting.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp3949728EA9840BC34724197B368334AC" Directory="INSTALLFOLDER" Guid="{B8F61340-35C9-4F6C-B2DE-30B191886181}" Win64="$(var.Win64)">
+      <Component Id="cmp3949728EA9840BC34724197B368334AC" Directory="INSTALLFOLDER" Guid="{0652492D-FF90-47A8-A413-7870CA8EBC64}" Win64="$(var.Win64)">
         <File Id="filDEA4341F561E3B7A80B31531A2FA0E17" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.Deployment.WindowsInstaller.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp198468A4AE980CD6955CB6EB86083726" Directory="INSTALLFOLDER" Guid="{A9F95E78-AD84-4F71-A1E5-805BBD1BDC06}" Win64="$(var.Win64)">
+      <Component Id="cmp198468A4AE980CD6955CB6EB86083726" Directory="INSTALLFOLDER" Guid="{76ACFCE0-4060-467A-9440-4C1DEEF89AE1}" Win64="$(var.Win64)">
         <File Id="fil02E4E4D119BFC4831CEA5A71F1288443" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.Extensions.DependencyInjection.Abstractions.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpE8B9940BA2D789D75BD635635C509758" Directory="INSTALLFOLDER" Guid="{D5654E50-1713-4DCD-B5D3-D1886E06C127}" Win64="$(var.Win64)">
+      <Component Id="cmpE8B9940BA2D789D75BD635635C509758" Directory="INSTALLFOLDER" Guid="{92192E15-1B6C-485E-9DF4-2213E54F998F}" Win64="$(var.Win64)">
         <File Id="filE007A4CFA87F06A19A15026B4ABBFB1B" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.Extensions.Options.DataAnnotations.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp3279C150AE8DF554FD7EEE2085672A2B" Directory="INSTALLFOLDER" Guid="{21248C2C-7FDF-4CB6-8E22-3084167D6C5B}" Win64="$(var.Win64)">
+      <Component Id="cmp3279C150AE8DF554FD7EEE2085672A2B" Directory="INSTALLFOLDER" Guid="{B561B5DC-DAB3-4BB0-AF57-A7CD4FC21D3C}" Win64="$(var.Win64)">
         <File Id="filA8D1F5D61FD7BC25099F707CBF5B1F24" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.Extensions.Options.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp946145B53A7DCDFA822B0EFD2314FAB6" Directory="INSTALLFOLDER" Guid="{58641906-DDA2-4236-85FE-535190893A58}" Win64="$(var.Win64)">
+      <Component Id="cmp946145B53A7DCDFA822B0EFD2314FAB6" Directory="INSTALLFOLDER" Guid="{81745095-297A-447D-BB4C-054420E83E9C}" Win64="$(var.Win64)">
         <File Id="fil773F29942324AAB2A7E1977E1AC63609" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.Extensions.Primitives.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp3E4F3E4686A9B425B5812E5171CCDEEF" Directory="INSTALLFOLDER" Guid="{EA8D1713-816F-4A16-9B2B-68FBCCB1FA61}" Win64="$(var.Win64)">
+      <Component Id="cmp3E4F3E4686A9B425B5812E5171CCDEEF" Directory="INSTALLFOLDER" Guid="{841C0373-4641-4EE9-89DC-7F5A7B2A8FCF}" Win64="$(var.Win64)">
         <File Id="fil24DC60A8CFEFE326A0444D71C66806C1" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.Win32.Registry.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp8AC833CFB7DC6722697152FE46DA157A" Directory="INSTALLFOLDER" Guid="{C5FDF6E5-FAFD-43F8-B921-005DEF718390}" Win64="$(var.Win64)">
+      <Component Id="cmp8AC833CFB7DC6722697152FE46DA157A" Directory="INSTALLFOLDER" Guid="{C8AE9926-4BC9-4DF3-82F9-DED2EE0B848C}" Win64="$(var.Win64)">
         <File Id="filD3CAD095889A5DE7EAAE25C73BC9910A" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Microsoft.Xaml.Behaviors.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpBC4FC00A26E7D32479D42D3411317FC5" Directory="INSTALLFOLDER" Guid="{2B52B058-2EEE-4737-871D-67ADFC07BAFC}" Win64="$(var.Win64)">
+      <Component Id="cmpBC4FC00A26E7D32479D42D3411317FC5" Directory="INSTALLFOLDER" Guid="{A239EA83-031C-43BE-B343-922741B91F12}" Win64="$(var.Win64)">
         <File Id="fil90A8AAD9FC612906D405476D61CEA3F4" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Newtonsoft.Json.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp03D7B650F8B878E4777A46EDB795761F" Directory="INSTALLFOLDER" Guid="{C91A2134-EF65-45DB-82B9-E2DEC2E47CD5}" Win64="$(var.Win64)">
+      <Component Id="cmp03D7B650F8B878E4777A46EDB795761F" Directory="INSTALLFOLDER" Guid="{18839874-3CCF-4BEF-BF65-F47E849D2427}" Win64="$(var.Win64)">
         <File Id="fil25E0BE43AC66696960DD057BF437E6CE" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Ookii.Dialogs.Wpf.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpAC1A0D62E0E48EBA9C3CFD3F61E57FF3" Directory="INSTALLFOLDER" Guid="{63F79E56-75E2-4FC4-B895-25FD8EEB9FB2}" Win64="$(var.Win64)">
+      <Component Id="cmpAC1A0D62E0E48EBA9C3CFD3F61E57FF3" Directory="INSTALLFOLDER" Guid="{28BE2FDC-A8AA-456D-A92C-6BF92BE702C9}" Win64="$(var.Win64)">
         <File Id="filAC210D4455FB6223BFC50092E3FECCE9" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\package.json" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpE82BA45C41AB090A95811BF866F48BAD" Directory="INSTALLFOLDER" Guid="{67D6B442-9711-4880-9750-194A16100D54}" Win64="$(var.Win64)">
+      <Component Id="cmpE82BA45C41AB090A95811BF866F48BAD" Directory="INSTALLFOLDER" Guid="{77A2C71D-ED8C-49A7-BD1C-07F46D11C777}" Win64="$(var.Win64)">
         <File Id="fil50B13526A70DD4EA2D2B3A401ED3437C" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Prism.Container.Abstractions.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp0F94CFD27C6F995A737336E0C547D382" Directory="INSTALLFOLDER" Guid="{EB567740-4F4E-4C31-A4E9-AC6B43D78C90}" Win64="$(var.Win64)">
+      <Component Id="cmp0F94CFD27C6F995A737336E0C547D382" Directory="INSTALLFOLDER" Guid="{C44D35A3-B9BA-484D-9C83-A957C8844706}" Win64="$(var.Win64)">
         <File Id="fil6C90C2F34343C9B9B57D8227BECEC4C6" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Prism.Container.DryIoc.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp59564654D02343646998A8D6A6F0C25F" Directory="INSTALLFOLDER" Guid="{2865C223-308E-4056-A5A4-53F6F7FBEC89}" Win64="$(var.Win64)">
+      <Component Id="cmp59564654D02343646998A8D6A6F0C25F" Directory="INSTALLFOLDER" Guid="{0638482C-6DDB-47B8-BBB5-945BDEDAA0BD}" Win64="$(var.Win64)">
         <File Id="fil86F2842A309A2CABD479166F2B4E0588" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Prism.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp1D8C6ABF55C2B2B4242EE9F241074EAC" Directory="INSTALLFOLDER" Guid="{9242CD2D-547D-44D1-BADA-3561028A3D17}" Win64="$(var.Win64)">
+      <Component Id="cmp1D8C6ABF55C2B2B4242EE9F241074EAC" Directory="INSTALLFOLDER" Guid="{4D317633-D269-48B8-B4DD-521B151E2E56}" Win64="$(var.Win64)">
         <File Id="fil4D3E845D168B89C1E51082CEE83971C8" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Prism.DryIoc.Wpf.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp8079029A59EBA4C408F326F20A350CF2" Directory="INSTALLFOLDER" Guid="{473C65A5-B228-4089-A1B2-9039B9079782}" Win64="$(var.Win64)">
+      <Component Id="cmp8079029A59EBA4C408F326F20A350CF2" Directory="INSTALLFOLDER" Guid="{992DF5E3-9986-442E-984F-9813A47245C4}" Win64="$(var.Win64)">
         <File Id="filF6C9BD1D4389FB472CE5FAB8F4C8FDBA" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Prism.Events.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpA9A2AB3353E22A8DA16EAAEE63473B2F" Directory="INSTALLFOLDER" Guid="{A024EB03-660A-4974-ADE0-5DC0A7287BA1}" Win64="$(var.Win64)">
+      <Component Id="cmpA9A2AB3353E22A8DA16EAAEE63473B2F" Directory="INSTALLFOLDER" Guid="{D72F90A6-8477-44A6-9EB9-FA54A6754DD6}" Win64="$(var.Win64)">
         <File Id="fil88EDC55735A4B2968B2469EF3EB5D6E7" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Prism.Wpf.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp55D15D832C8EA4D38A9ED5865C55350D" Directory="INSTALLFOLDER" Guid="{3AD9397A-9C03-4F76-817E-9A5E9DCAE068}" Win64="$(var.Win64)">
+      <Component Id="cmp55D15D832C8EA4D38A9ED5865C55350D" Directory="INSTALLFOLDER" Guid="{261C3E27-19D8-498E-996A-DA5E0554B204}" Win64="$(var.Win64)">
         <File Id="filDC2AD106ACE9F77DFAD85F17708E9111" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\PropertyChanged.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp2F31E04D5B8E818B015AEE0BC01DEA44" Directory="INSTALLFOLDER" Guid="{99712A61-32D4-4D95-BF53-21B4A585B0CA}" Win64="$(var.Win64)">
+      <Component Id="cmp2F31E04D5B8E818B015AEE0BC01DEA44" Directory="INSTALLFOLDER" Guid="{EAD7BF12-8B3B-4FEE-8B7A-3BB0F2AE7F7F}" Win64="$(var.Win64)">
         <File Id="fil923AAC4B92FDB46A4D795FDCA1F53BDE" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\SevenZipSharp.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpA8E9B0F7880FD862527F572D44923DBE" Directory="INSTALLFOLDER" Guid="{F3BAC320-F907-419D-A53B-29341941D621}" Win64="$(var.Win64)">
+      <Component Id="cmpA8E9B0F7880FD862527F572D44923DBE" Directory="INSTALLFOLDER" Guid="{76177659-0B8F-41BA-B0BD-EE0777B50320}" Win64="$(var.Win64)">
         <File Id="fil0A3AF25C140AD8D0989ADD5185440697" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\SplashScreen.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpA748C45814948C0E47F0962CF5A9E2C5" Directory="INSTALLFOLDER" Guid="{E063287B-55A6-4561-B75D-3AAF691D355F}" Win64="$(var.Win64)">
+      <Component Id="cmpA748C45814948C0E47F0962CF5A9E2C5" Directory="INSTALLFOLDER" Guid="{10229C8B-6261-4D47-A984-2D15BB9465C9}" Win64="$(var.Win64)">
         <File Id="filAF63FF48A59E0E5E7F49BFD1CBBB0CC3" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Buffers.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp627F95934DFE8795F8708045A2120F23" Directory="INSTALLFOLDER" Guid="{FE8EDA75-9DE8-4AFA-B5AC-0460FE7AE9C2}" Win64="$(var.Win64)">
+      <Component Id="cmp627F95934DFE8795F8708045A2120F23" Directory="INSTALLFOLDER" Guid="{963A4C43-9235-4B03-9DC7-1F084BC0EB73}" Win64="$(var.Win64)">
         <File Id="filAEAF8C61AA86723A95F0986173532954" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.CodeDom.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp969F6EDF2594F3809D7A716387BF8894" Directory="INSTALLFOLDER" Guid="{C51AE5B5-E892-40C0-90E7-64F2CCE3CC2A}" Win64="$(var.Win64)">
+      <Component Id="cmp969F6EDF2594F3809D7A716387BF8894" Directory="INSTALLFOLDER" Guid="{A0A91905-DB3B-4CE4-9784-ED9D221DAFD0}" Win64="$(var.Win64)">
         <File Id="fil60E3CB228DB7CBE488269EDFC1321CC6" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Collections.Immutable.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp89F5F904B3CAF843A281A5A84D668E1E" Directory="INSTALLFOLDER" Guid="{3BE949F2-046E-42E5-B880-765336BF7EC2}" Win64="$(var.Win64)">
+      <Component Id="cmp89F5F904B3CAF843A281A5A84D668E1E" Directory="INSTALLFOLDER" Guid="{919FA951-E671-494B-92B3-725A5C073872}" Win64="$(var.Win64)">
         <File Id="fil7882FAF25832DB256D31EEFC7582E0FF" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Configuration.ConfigurationManager.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp28DA583D03D243568B9E8D67E28DC03E" Directory="INSTALLFOLDER" Guid="{94900B49-7623-46C2-B3E1-24B61EC1EA50}" Win64="$(var.Win64)">
+      <Component Id="cmp28DA583D03D243568B9E8D67E28DC03E" Directory="INSTALLFOLDER" Guid="{27D24EE4-7B9B-47CC-B4B4-79F4186ED51E}" Win64="$(var.Win64)">
         <File Id="fil7F8EC318E9E8F0F09CC7C081378B6293" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Diagnostics.EventLog.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp28698F3E40E97D0D04ED87AE917B13C7" Directory="INSTALLFOLDER" Guid="{0A75FBD4-6B02-4874-B72F-F696B20D394B}" Win64="$(var.Win64)">
+      <Component Id="cmp28698F3E40E97D0D04ED87AE917B13C7" Directory="INSTALLFOLDER" Guid="{B47010EB-7AB3-404E-ABF5-C658FECF1FC5}" Win64="$(var.Win64)">
         <File Id="fil07DA91370126729501EE3756F11EC693" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Diagnostics.PerformanceCounter.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp08EBD8C605FF27A4F0FCEC5A1317087B" Directory="INSTALLFOLDER" Guid="{6F807035-DD29-4C95-940F-2CB53738BA86}" Win64="$(var.Win64)">
+      <Component Id="cmp08EBD8C605FF27A4F0FCEC5A1317087B" Directory="INSTALLFOLDER" Guid="{40A900C4-5493-4184-B22F-04B05A8FD764}" Win64="$(var.Win64)">
         <File Id="fil01C46D7B4C6F372B6DD0D0DC961DAE47" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Drawing.Common.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp6FB68A3D94F72D93B83F617A34391D43" Directory="INSTALLFOLDER" Guid="{A51C13E8-8046-4024-B232-A60BB2FACADE}" Win64="$(var.Win64)">
+      <Component Id="cmp6FB68A3D94F72D93B83F617A34391D43" Directory="INSTALLFOLDER" Guid="{F3DD2175-C139-45F1-A13B-DFD5BA2AE391}" Win64="$(var.Win64)">
         <File Id="fil68E5BC92D13004A9B7057B40B42A647F" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.IO.FileSystem.AccessControl.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp642ED5B0D0BD1F16347D1310992C55A0" Directory="INSTALLFOLDER" Guid="{2D3151E1-E9D4-4BC1-A200-F34ACA0FE291}" Win64="$(var.Win64)">
+      <Component Id="cmp642ED5B0D0BD1F16347D1310992C55A0" Directory="INSTALLFOLDER" Guid="{F4EBC526-B213-4EA3-815A-4180A0BB03BC}" Win64="$(var.Win64)">
         <File Id="filFA1D7EC932018D1CCB80F9F43D328009" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Memory.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp89AE5ECEB789ECF60BE6CC568D60B2F9" Directory="INSTALLFOLDER" Guid="{4C958744-8F16-40B3-BA6F-2C8E6D85E104}" Win64="$(var.Win64)">
+      <Component Id="cmp89AE5ECEB789ECF60BE6CC568D60B2F9" Directory="INSTALLFOLDER" Guid="{4D110EAA-F488-4B3E-B842-393EBA1858A0}" Win64="$(var.Win64)">
         <File Id="fil07CC506FCE6F39AF87379627460A5FFB" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Numerics.Vectors.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp2FF83375B57E90E070D5274FE375C377" Directory="INSTALLFOLDER" Guid="{49A72A1C-57D5-4C18-8766-0A44E1BF30E3}" Win64="$(var.Win64)">
+      <Component Id="cmp2FF83375B57E90E070D5274FE375C377" Directory="INSTALLFOLDER" Guid="{A5F39ECC-7E2A-483B-874C-CC3B4BD69ACB}" Win64="$(var.Win64)">
         <File Id="fil91EF703BE463A4F6D596BD34EF59864F" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Reflection.Metadata.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpAFCF21A15F6EDA45A32D147050609285" Directory="INSTALLFOLDER" Guid="{24A07FCE-1B5C-4AB4-AB03-95AD2F5F7CCE}" Win64="$(var.Win64)">
+      <Component Id="cmpAFCF21A15F6EDA45A32D147050609285" Directory="INSTALLFOLDER" Guid="{B5B82A60-9E1A-4C48-96E5-2D2904676C2B}" Win64="$(var.Win64)">
         <File Id="filAE286E96EA00902BC284AEBF3030D6E4" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Runtime.CompilerServices.Unsafe.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpA79A142FCEA412B1ABBD7BE954692F65" Directory="INSTALLFOLDER" Guid="{7960B7A1-5F6B-491D-A71C-449788423C76}" Win64="$(var.Win64)">
+      <Component Id="cmpA79A142FCEA412B1ABBD7BE954692F65" Directory="INSTALLFOLDER" Guid="{C1EBD0F4-C390-4510-A4EB-BCC4357782E3}" Win64="$(var.Win64)">
         <File Id="fil0B3269E73A503751E3461F1BA6DEB094" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Security.AccessControl.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp98A131703008D3AC809721FE16EEAFF8" Directory="INSTALLFOLDER" Guid="{826CC2DC-A267-4917-964D-0EAE39FCE1EE}" Win64="$(var.Win64)">
+      <Component Id="cmp98A131703008D3AC809721FE16EEAFF8" Directory="INSTALLFOLDER" Guid="{756888E7-12BC-4403-9A69-568F8BE8392E}" Win64="$(var.Win64)">
         <File Id="fil50D3CD433FCD76F25C71E81C31B6DD3A" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Security.Principal.Windows.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp3C5190B580EDFB87D0BC5E835BB950DE" Directory="INSTALLFOLDER" Guid="{A82D17A4-EC25-4CCF-8174-B346DC06AE0D}" Win64="$(var.Win64)">
+      <Component Id="cmp3C5190B580EDFB87D0BC5E835BB950DE" Directory="INSTALLFOLDER" Guid="{E3A23A3C-7C77-4799-A72F-E9FB35AF0955}" Win64="$(var.Win64)">
         <File Id="fil0B6369FF78F990F18A525D5F0CC6D1AB" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.ServiceProcess.ServiceController.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp3111300711520E1E5FE2933E642DA29F" Directory="INSTALLFOLDER" Guid="{6E18A66B-958F-420E-AE65-AE55EE6077A1}" Win64="$(var.Win64)">
+      <Component Id="cmp3111300711520E1E5FE2933E642DA29F" Directory="INSTALLFOLDER" Guid="{67568168-8CE6-46CC-A92C-80D5E3763E1A}" Win64="$(var.Win64)">
         <File Id="fil1A0D25A762964F5C1F5E598DAE4D7F6C" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Text.Encoding.CodePages.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpB3AE432D48BF3A5AB43C6DAF12AB454A" Directory="INSTALLFOLDER" Guid="{1AA55B0F-94A5-4A20-95F5-02BFF5A2CB0F}" Win64="$(var.Win64)">
+      <Component Id="cmpB3AE432D48BF3A5AB43C6DAF12AB454A" Directory="INSTALLFOLDER" Guid="{2DE3F229-002F-448A-A9D9-92E0C63EE8AA}" Win64="$(var.Win64)">
         <File Id="filF7CF33617C2B93F6EEF50C0DEB533B07" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.Threading.Tasks.Extensions.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp3A99A623A71A716A198559E0C9D59400" Directory="INSTALLFOLDER" Guid="{9C6B3633-B743-45E5-BD22-4A594355A828}" Win64="$(var.Win64)">
+      <Component Id="cmp3A99A623A71A716A198559E0C9D59400" Directory="INSTALLFOLDER" Guid="{A6E4A998-39E3-4434-AF71-61C01AF01269}" Win64="$(var.Win64)">
         <File Id="filE6242AE03AF2509440ADF395C76688A4" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\System.ValueTuple.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpBEC715782490BD2AC6E2C93F2525865F" Directory="INSTALLFOLDER" Guid="{5C29A2AB-48D8-4B61-A808-E5EE7D1776EA}" Win64="$(var.Win64)">
+      <Component Id="cmpBEC715782490BD2AC6E2C93F2525865F" Directory="INSTALLFOLDER" Guid="{7D724CDD-6EB0-4E59-BB2D-B5853AE8A957}" Win64="$(var.Win64)">
         <File Id="filF7E6EF61D1437B4669D7DE7C4066BD7E" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Unity.Abstractions.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp665B78AB4AC844F961BF5ECBB81E189B" Directory="INSTALLFOLDER" Guid="{525C404C-31E8-4699-8F38-528A8A8F41BE}" Win64="$(var.Win64)">
+      <Component Id="cmp665B78AB4AC844F961BF5ECBB81E189B" Directory="INSTALLFOLDER" Guid="{5EA7EF0A-AA01-434D-A082-8A02159E8326}" Win64="$(var.Win64)">
         <File Id="filA3C7419293ACF778143324C6DB73F920" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Unity.Container.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp818E2343D1043BDDB979652E9162FA23" Directory="dir114B583B5B26AD6DB8670CC5B54BF0F7" Guid="{1BC02C46-C2DF-437B-A66C-FA02E2349340}" Win64="$(var.Win64)">
+      <Component Id="cmp818E2343D1043BDDB979652E9162FA23" Directory="dir114B583B5B26AD6DB8670CC5B54BF0F7" Guid="{2ED25B6D-0584-4D66-8E46-7597E81DE0C9}" Win64="$(var.Win64)">
         <File Id="filBE41813634525DE9E5DBAB6DC096526E" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Admin\CookPopularInstaller.Admin.exe" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp7AB1D40F1DC924908277C7E66D75F98D" Directory="dir3DFA6F3206F79BB11079069A20C50A36" Guid="{875637AC-1CE6-48B0-9CA4-D3E09F684A62}" Win64="$(var.Win64)">
+      <Component Id="cmp7AB1D40F1DC924908277C7E66D75F98D" Directory="dir3DFA6F3206F79BB11079069A20C50A36" Guid="{4A5CC98B-51CD-44BC-A538-50A787FA8A8E}" Win64="$(var.Win64)">
         <File Id="filC8EC2C98E1ABAD055308A89ADB0452F4" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\CustomUIExe\Bundle.wxs" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp29DEB025AD882735F54D0110A956C387" Directory="dir3DFA6F3206F79BB11079069A20C50A36" Guid="{6F5B50BF-0FCB-4BC4-BDCC-9C7C43E4A588}" Win64="$(var.Win64)">
+      <Component Id="cmp29DEB025AD882735F54D0110A956C387" Directory="dir3DFA6F3206F79BB11079069A20C50A36" Guid="{72EB2E2D-560C-4A1A-8260-47062E954FB4}" Win64="$(var.Win64)">
         <File Id="fil6920E4BB78BAEA515E0C6EAE04C3A221" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\CustomUIExe\zh-cn.wxl" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpD8F819E0B6B2909C750A60CA9E47B302" Directory="dir32BA7D47CEF839642427A183AD631DD0" Guid="{10E3A4CC-92AA-4D4C-B5E3-14AF717F1D3D}" Win64="$(var.Win64)">
+      <Component Id="cmpD8F819E0B6B2909C750A60CA9E47B302" Directory="dir32BA7D47CEF839642427A183AD631DD0" Guid="{BD7D9A9F-5FD2-473B-9F25-882DEB66FFEE}" Win64="$(var.Win64)">
         <File Id="fil3475A1CB3E5244046975D977BB9BEC1C" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Exe\Bundle.wxs" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp01A720ECBF83955D24A81B2DDE3E8698" Directory="dir32BA7D47CEF839642427A183AD631DD0" Guid="{7D053ED7-7CA5-43D7-A34E-01058376208E}" Win64="$(var.Win64)">
+      <Component Id="cmp01A720ECBF83955D24A81B2DDE3E8698" Directory="dir32BA7D47CEF839642427A183AD631DD0" Guid="{37003B90-5066-46B0-9F35-C245C506BDF6}" Win64="$(var.Win64)">
         <File Id="filB91C96872FC2AD39302CFD3E8AFCF650" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Exe\zh-cn.wxl" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpA4DCE707AEB7B54806601605F69B4429" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{37E0F25A-DA4B-4B9A-8359-FDE00938D8B0}" Win64="$(var.Win64)">
+      <Component Id="cmpA4DCE707AEB7B54806601605F69B4429" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{BDB7CA24-FCE8-4E2E-ABB7-2DD0B8BCA8AA}" Win64="$(var.Win64)">
         <File Id="filFAEA702ABCD56D3212B12635740905D9" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\en-us.wxl" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpE4832E91BCBDE41BD22912659F1DEF42" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{82B6E0E4-065F-480C-B06D-C1E093840DCD}" Win64="$(var.Win64)">
+      <Component Id="cmpE4832E91BCBDE41BD22912659F1DEF42" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{B16E6517-3C3A-43C3-9FA4-370C5D92CE45}" Win64="$(var.Win64)">
         <File Id="fil46F15A18443BA65E497E29436ACDC8D4" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\HeatTransform.xslt" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpF6D6979408AD7BA9CE4F1D8423DA3875" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{D45391BA-850F-40D8-8A05-ACB0C67A6F56}" Win64="$(var.Win64)">
+      <Component Id="cmpF6D6979408AD7BA9CE4F1D8423DA3875" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{7BC8C61B-368C-4E41-A034-DE371CD13E03}" Win64="$(var.Win64)">
         <File Id="filEE2624E65F11D3F0C2CFC471770FAE7C" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\Product.wxs" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp01EB4961004F35F73C7213AEBD02E3DF" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{D768A944-EE6B-488D-8D94-4EF3156F44FA}" Win64="$(var.Win64)">
+      <Component Id="cmp01EB4961004F35F73C7213AEBD02E3DF" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{5183F9F4-69E4-4657-A05E-E91C395AFBFC}" Win64="$(var.Win64)">
         <File Id="filB4DED53D5900875A6723AD4CDE82F781" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\set_version.ps1" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpD3D8E1A87C349A7DB67FD755024E3723" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{7997741E-431D-45A5-AD0E-925C3AD58E08}" Win64="$(var.Win64)">
+      <Component Id="cmpD3D8E1A87C349A7DB67FD755024E3723" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{3D7CA3FC-3014-4514-BDAE-006F931681D8}" Win64="$(var.Win64)">
         <File Id="fil8D059C60FCC32E35C306F300B821656A" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\update_directory_product.py" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpA0C303FF9F347A386543BDE264A7E3DF" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{51B1B574-EB55-4B72-B467-30678F772C2E}" Win64="$(var.Win64)">
+      <Component Id="cmpA0C303FF9F347A386543BDE264A7E3DF" Directory="dir70FD858209ED658E8E7760219362B5D8" Guid="{0CEC4E02-4F0F-4526-AE40-FFF9CDB150B8}" Win64="$(var.Win64)">
         <File Id="filFC47B0D6CF151F5F6B00736FD0EF509E" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\zh-cn.wxl" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp87984CCC159EA18320E1C5BA66321272" Directory="dirA30E1AE1038F3A967AE4C060574DC15C" Guid="{C69F7F58-6629-41D5-8D34-B214B5DACDCE}" Win64="$(var.Win64)">
+      <Component Id="cmp87984CCC159EA18320E1C5BA66321272" Directory="dirA30E1AE1038F3A967AE4C060574DC15C" Guid="{DE41B155-A9F0-4040-919D-49BA58134570}" Win64="$(var.Win64)">
         <File Id="filC65F5D2F801EDB1780E7EE20F8230350" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\Images\dialog_background.png" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpD3D1828770DFB438EABFA99BF1977DF4" Directory="dirA30E1AE1038F3A967AE4C060574DC15C" Guid="{E8CDEBFF-C2DE-47E4-9B39-CD2BC438408A}" Win64="$(var.Win64)">
+      <Component Id="cmpD3D1828770DFB438EABFA99BF1977DF4" Directory="dirA30E1AE1038F3A967AE4C060574DC15C" Guid="{49723F81-4B97-4DB4-BFCB-1E1D065C7141}" Win64="$(var.Win64)">
         <File Id="fil867402601955C7E504107ED891E75063" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Msi\Images\top_banner.png" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpF3B98A84CC32EB070AF3031EC4DA7349" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{9AFC6851-73A1-4C10-9523-67D2AF87544C}" Win64="$(var.Win64)">
+      <Component Id="cmpF3B98A84CC32EB070AF3031EC4DA7349" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{108AD6C6-E049-4F7B-ABDE-D9102D76F29A}" Win64="$(var.Win64)">
         <File Id="fil8C2D5A0A82C877EF105F42028E15FDBC" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Public\License.rtf" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpF4EF9365812247DAE0674C1A5D44CDA3" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{B8FDD61B-6141-4A65-B38B-DF31BA7287BE}" Win64="$(var.Win64)">
+      <Component Id="cmpF4EF9365812247DAE0674C1A5D44CDA3" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{BFF82F1A-7FA8-41A3-894B-BB7FFD74A27B}" Win64="$(var.Win64)">
         <File Id="fil14FDD50F7C13FF430680F71573FBFC18" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Public\Uninstall.ico" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp9E3B82D5A2F8ED3AC9520DD56657E836" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{0DDF2654-801E-45E7-B83E-DAB10CA42CAD}" Win64="$(var.Win64)">
+      <Component Id="cmp9E3B82D5A2F8ED3AC9520DD56657E836" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{CE9D2749-0989-4E1B-AE90-54918937B9F0}" Win64="$(var.Win64)">
         <File Id="fil5DC1F236B0002DD10E06218729584C74" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Public\update_zhcn.py" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp923F91874EC9AEE0D5C8D25ACE3AAB3E" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{C7238832-2203-4EE9-B874-2F6E05B17311}" Win64="$(var.Win64)">
+      <Component Id="cmp923F91874EC9AEE0D5C8D25ACE3AAB3E" Directory="dirD4BC46D465CCF5C0E05C04AF32BB5A16" Guid="{A934BF95-D2CA-4E7B-9BC7-BCC220489233}" Win64="$(var.Win64)">
         <File Id="filF6C8642FEDCCA21ABC0CF18FBB4E4705" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Assets\Public\upgrade_code.json" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpD69F84DA8B7C425D394C7CD9A869AB25" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{1D3EE306-2F52-46E7-8AD2-93011AC2729C}" Win64="$(var.Win64)">
+      <Component Id="cmpD69F84DA8B7C425D394C7CD9A869AB25" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{49A05BB8-5153-484B-A013-9707B296B16C}" Win64="$(var.Win64)">
         <File Id="fil4FF822325C179C1497AF38F80E0AF981" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\CookPopularInstaller.Generate.CommandLine.deps.json" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp55D07DD17BF2899DE040D04B4540F5E9" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{74F9763D-CF89-478A-8C3A-3A4F68047CD8}" Win64="$(var.Win64)">
+      <Component Id="cmp55D07DD17BF2899DE040D04B4540F5E9" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{C169EE79-0ECB-448A-95BD-AA846B1C6033}" Win64="$(var.Win64)">
         <File Id="fil94AB3E9FB4879E21A1973C13EB9A0804" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\CookPopularInstaller.Generate.CommandLine.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpE1C5E4550396BA2DE8BF133A44C83B76" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{0D910BB5-68AC-4DEF-89BD-D3BCEBB8EE23}" Win64="$(var.Win64)">
+      <Component Id="cmpE1C5E4550396BA2DE8BF133A44C83B76" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{79D00438-3829-4278-87C8-224D78D54767}" Win64="$(var.Win64)">
         <File Id="filCF16D56501C0721A56A7E8D6A0D1CD8B" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\CookPopularInstaller.Generate.CommandLine.dll.config" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp6C0F468D4A8D3873E721FFCB606235A2" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{94AF172B-8755-489D-A812-1B6F20AAD618}" Win64="$(var.Win64)">
+      <Component Id="cmp6C0F468D4A8D3873E721FFCB606235A2" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{C778846B-3EC6-48C4-B693-C74BEB2885AC}" Win64="$(var.Win64)">
         <File Id="fil359032774BF1ADED5A7868E1D9611737" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\CookPopularInstaller.Generate.CommandLine.exe" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp1E09123BE2F2B322197AD122C4434552" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{072175C8-4B11-4863-AA92-467AE37D7AE8}" Win64="$(var.Win64)">
+      <Component Id="cmp1E09123BE2F2B322197AD122C4434552" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{CB85781B-5B84-4BD8-B169-16BDC45B5FE7}" Win64="$(var.Win64)">
         <File Id="fil1B9CB49CE037EAB5F110F2D2E61B30EC" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\CookPopularInstaller.Generate.CommandLine.runtimeconfig.json" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp658193F0FF884AE278C32D46C73D07E6" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{2D8833B5-083E-4280-B767-A465CD95BA62}" Win64="$(var.Win64)">
+      <Component Id="cmp658193F0FF884AE278C32D46C73D07E6" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{D2A0A58D-DC8A-46FC-8800-D39E676D798B}" Win64="$(var.Win64)">
         <File Id="filE72EFF093820898B332E4917C2CFA9E7" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\CookPopularInstaller.Toolkit.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp695A727B35FCDBD7A2334AF5471B1B30" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{ABB297CE-904F-4EA6-BF23-BF459D5BCB60}" Win64="$(var.Win64)">
+      <Component Id="cmp695A727B35FCDBD7A2334AF5471B1B30" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{AE4BB523-D7FD-4E01-83E2-8594ECB44449}" Win64="$(var.Win64)">
         <File Id="fil59415F55CC09FD9A4BD4A7FE22C90131" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\CookPopularInstaller.Toolkit.dll.config" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp2789801A66CE47CD2D2B0FDC5A6668F0" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{F138247A-D94D-43F1-8198-11590B738899}" Win64="$(var.Win64)">
+      <Component Id="cmp2789801A66CE47CD2D2B0FDC5A6668F0" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{F4B9FEC3-919B-446A-B6C8-ADF1B3DCD130}" Win64="$(var.Win64)">
         <File Id="filDBA756E5056E832AA07DFF584D87F5F1" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\Newtonsoft.Json.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp81138C10E8CC67FB3C5EB7D8E153CB64" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{FDC893FE-A4CF-47AD-8DBA-569BA3071EC9}" Win64="$(var.Win64)">
+      <Component Id="cmp81138C10E8CC67FB3C5EB7D8E153CB64" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{62E1E8B6-9CD9-42A7-B2A8-9EC6959A392F}" Win64="$(var.Win64)">
         <File Id="fil964F226F146259FA76E3C47FB425E46A" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\package.json" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpF00092D4653209649C939DA1EEC216DA" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{604B6EE7-D4A1-4921-AF09-848E47AE0D0B}" Win64="$(var.Win64)">
+      <Component Id="cmpF00092D4653209649C939DA1EEC216DA" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{3AC8B7ED-49EA-422C-B51D-710C783B7511}" Win64="$(var.Win64)">
         <File Id="filEA2ABAB5289DED364F6D50A144C6F0DA" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\PropertyChanged.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp1DD2E926B20E8EC4B22F63CD144EC69A" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{0860CAED-7002-4B38-B07E-8D6710640AB7}" Win64="$(var.Win64)">
+      <Component Id="cmp1DD2E926B20E8EC4B22F63CD144EC69A" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{02EF7732-5927-4742-B3D7-28ECBD875308}" Win64="$(var.Win64)">
         <File Id="filEF58133985C908453A11EBF27B404DC7" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\System.CodeDom.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp06210E767999BEE63E2893B8B4714C6B" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{DFFA7ECD-2ACB-4C9A-95B2-EF0AE5FD8E09}" Win64="$(var.Win64)">
+      <Component Id="cmp06210E767999BEE63E2893B8B4714C6B" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{71AC875B-0388-47E9-8110-55C310742C7A}" Win64="$(var.Win64)">
         <File Id="fil076FC1B280C3AE35928910A983023E3C" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\System.Configuration.ConfigurationManager.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpA7463001452DC5BBA159A30D9185528B" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{F92D8262-F2BF-4BC8-A8D5-817D414E5C23}" Win64="$(var.Win64)">
+      <Component Id="cmpA7463001452DC5BBA159A30D9185528B" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{22092102-DC94-444E-B427-41ED28CEFDDC}" Win64="$(var.Win64)">
         <File Id="filC96A1FFF96E2E4807AFFFE68CA7E0234" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\System.Diagnostics.EventLog.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp917CBDF5D1ABBDFB0FB77DFA0BF9A5CB" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{631A20CE-78EC-42DE-9AC5-BADAF7035A8E}" Win64="$(var.Win64)">
+      <Component Id="cmp917CBDF5D1ABBDFB0FB77DFA0BF9A5CB" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{37B73260-DD19-4A9F-83D2-3419361518A1}" Win64="$(var.Win64)">
         <File Id="fil721689FCE5CB21A6C2EE9BE1327CD293" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\System.Management.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp2473F3EF4463E0F6F1DD4B9D63B03FC1" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{BE72DFC0-73A5-4178-AC46-F00BD7A43B01}" Win64="$(var.Win64)">
+      <Component Id="cmp2473F3EF4463E0F6F1DD4B9D63B03FC1" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{2E934FFF-4778-4A1B-9252-48983AD4C564}" Win64="$(var.Win64)">
         <File Id="fil96269F1BD2D66D98B1C2210452369ECD" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\System.Security.Cryptography.ProtectedData.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp7C2E85992A3879EAB2837C45082BF419" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{89DF3224-9D80-402A-9C2C-1F2E546046F7}" Win64="$(var.Win64)">
+      <Component Id="cmp7C2E85992A3879EAB2837C45082BF419" Directory="dir6A90E81722C7D91D1F21161ADF11AF96" Guid="{D20411AD-F67F-4BB6-9B05-2FD16F318706}" Win64="$(var.Win64)">
         <File Id="filE9DA8EEEC08B1F041B45BA4FF04A10C2" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\CommandLine\System.Windows.Extensions.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp5B7BB00B5AD93DA35A0FCF56C857F94F" Directory="dirF9E3447EB21768D805E1954685437AC3" Guid="{848FB904-548F-4F95-AD97-6165D6920117}" Win64="$(var.Win64)">
+      <Component Id="cmp5B7BB00B5AD93DA35A0FCF56C857F94F" Directory="dirF9E3447EB21768D805E1954685437AC3" Guid="{345D4400-FFAC-4DF8-A445-B7B929625342}" Win64="$(var.Win64)">
         <File Id="filE22831D020244D5E6B445441DB7C23D9" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Depends\python-3.11.1-amd64.exe" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp9DA17969F6EF7498A97AD1303F13EB9D" Directory="dirF9E3447EB21768D805E1954685437AC3" Guid="{9279CCF8-3050-4279-BDE4-3FED4DA9EEF7}" Win64="$(var.Win64)">
+      <Component Id="cmp9DA17969F6EF7498A97AD1303F13EB9D" Directory="dirF9E3447EB21768D805E1954685437AC3" Guid="{18B85699-2A78-46AC-903D-EEB0C30B827B}" Win64="$(var.Win64)">
         <File Id="filC7625AB9E2BA15A1056917E27A525C46" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Depends\wix314.exe" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpDBDD034298D63363016368967F4EC40D" Directory="dir3384D516679ED362302BD04F7FF9ADE6" Guid="{09691119-6C62-45E4-88DC-AA26C0A618A0}" Win64="$(var.Win64)">
+      <Component Id="cmpDBDD034298D63363016368967F4EC40D" Directory="dir3384D516679ED362302BD04F7FF9ADE6" Guid="{BD93BADD-846A-45D1-9CE2-180371F7EDCB}" Win64="$(var.Win64)">
         <File Id="filED1DE3E86E002724CA2669E1808CF365" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Extensions\create_windows_service.py" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpD8365AFC4039B6787FD8E085ACF4FE3A" Directory="dir3384D516679ED362302BD04F7FF9ADE6" Guid="{6DC46774-39CC-4194-A328-1E8FE59AAA2B}" Win64="$(var.Win64)">
+      <Component Id="cmpD8365AFC4039B6787FD8E085ACF4FE3A" Directory="dir3384D516679ED362302BD04F7FF9ADE6" Guid="{DC58119D-30BD-458D-887D-376F9081334A}" Win64="$(var.Win64)">
         <File Id="filCA1C72E4A2C87FECCEBA4418FD2D16E6" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Extensions\delete_windows_service.py" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp70E7F4481BC7B2A8D9BE3A7AB5F69AE5" Directory="dir6486EB3E45FE47E1CFE1E9638D7F24AC" Guid="{C52C6051-04FB-4E8D-AC1A-8D0331C73345}" Win64="$(var.Win64)">
+      <Component Id="cmp70E7F4481BC7B2A8D9BE3A7AB5F69AE5" Directory="dir6486EB3E45FE47E1CFE1E9638D7F24AC" Guid="{EF0A40ED-EE99-4D07-ACF1-0E5C470357B7}" Win64="$(var.Win64)">
         <File Id="filA76AFA01C461F229CA02144A440179AE" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Obfuscar\Obfuscar.Console.exe" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp085B9CB3A69656D3AB0102467B11675E" Directory="dir6486EB3E45FE47E1CFE1E9638D7F24AC" Guid="{A7BF5999-5EAA-4A1B-9757-FC90149A0ED8}" Win64="$(var.Win64)">
+      <Component Id="cmp085B9CB3A69656D3AB0102467B11675E" Directory="dir6486EB3E45FE47E1CFE1E9638D7F24AC" Guid="{F5AFD6C5-341E-4223-8D5D-279B725E137F}" Win64="$(var.Win64)">
         <File Id="fil417B904DF7F9284109DD76749EC8EFE9" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Obfuscar\Obfuscar.xml" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp59CFCF7E3BBA6D817F9F3B6D590FB4FA" Directory="dir6486EB3E45FE47E1CFE1E9638D7F24AC" Guid="{807416A9-C10D-4560-8FE1-95405D475DF6}" Win64="$(var.Win64)">
+      <Component Id="cmp59CFCF7E3BBA6D817F9F3B6D590FB4FA" Directory="dir6486EB3E45FE47E1CFE1E9638D7F24AC" Guid="{6FCB1505-AFB1-4449-B433-39486B3B9549}" Win64="$(var.Win64)">
         <File Id="filA4482F6BBEA780620918C6AE43FED257" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Obfuscar\update_obfuscar_xml.py" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpFE2810E11C8708892D6389BF589E4B97" Directory="dir4E8A5961CECB922D214EE6A7049B81F1" Guid="{48F77CD9-EFB9-4B57-B003-F0E7CE36774A}" Win64="$(var.Win64)">
+      <Component Id="cmpFE2810E11C8708892D6389BF589E4B97" Directory="dir4E8A5961CECB922D214EE6A7049B81F1" Guid="{54C8F97E-60A7-40BC-87C5-0850C9B981D5}" Win64="$(var.Win64)">
         <File Id="fil74BFCC2CC0A8DD62642B4552658C8833" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\Uninstall\Uninst.exe" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp93376EE54A201CE8EFB62F355E94E24F" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{C89EA976-2D1F-43AB-B3C1-8317516326ED}" Win64="$(var.Win64)">
+      <Component Id="cmp93376EE54A201CE8EFB62F355E94E24F" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{0D0A3C78-CACB-4829-9096-ABC96CBC6463}" Win64="$(var.Win64)">
         <File Id="fil34157205638A55342CA700ABAEA6C6D2" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x64\7z.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpEB87F7EC5E7FC50D830F82F748AFEEEC" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{7E50F891-7042-4171-BA17-BCB6DC3EB152}" Win64="$(var.Win64)">
+      <Component Id="cmpEB87F7EC5E7FC50D830F82F748AFEEEC" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{7C9A7921-5751-40B2-BC09-9D1C8C2A9486}" Win64="$(var.Win64)">
         <File Id="fil339B3918EDA7477E4C484B0E8D27FEA0" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x64\7za.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpC9CEB125B8C747192F6BE6B634530F3E" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{F28963E0-B8CC-40E5-BCA8-F5A016E604A5}" Win64="$(var.Win64)">
+      <Component Id="cmpC9CEB125B8C747192F6BE6B634530F3E" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{E05706E6-15D1-4A87-B76C-01D1DD85D090}" Win64="$(var.Win64)">
         <File Id="filB6D0E242153143CC5EB9C8BC21C38D13" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x64\7zxa.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp973ADE524B2189998DD5AB468088A693" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{A6897E73-DB81-4F33-AE64-54FAE05B6AFC}" Win64="$(var.Win64)">
+      <Component Id="cmp973ADE524B2189998DD5AB468088A693" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{C820B4B1-AADF-461A-B801-EDF1A0DFEBEE}" Win64="$(var.Win64)">
         <File Id="filF488F90BAFCEF24BB22F07800A00EFB9" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x64\License.7z.txt" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpA420DC9D0ECB088C7087CBD18210C016" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{2304B7F4-FCCE-4F71-976F-DB179F65F8FD}" Win64="$(var.Win64)">
+      <Component Id="cmpA420DC9D0ECB088C7087CBD18210C016" Directory="dir43FCCFA109FBF584D9155DCE31E452EB" Guid="{1FA0CD08-C581-4C3D-A263-A69E4814727C}" Win64="$(var.Win64)">
         <File Id="fil2C47977629C8BD6B15089C3057967065" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x64\License.7za-7zxa.txt" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp7748EFA0DF27F725930CCAE3FDB1CA5E" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{F045CD12-9E85-4AD5-A727-CC239F198E7F}" Win64="$(var.Win64)">
+      <Component Id="cmp7748EFA0DF27F725930CCAE3FDB1CA5E" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{B2639E9D-100B-4FC8-95EA-C87D5FF2DEC7}" Win64="$(var.Win64)">
         <File Id="filC266F8B1CB8084820C9B09AD1419BA13" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x86\7z.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp4CAAC890D3293ACAC1246ABEE611449C" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{6A125FD7-878A-4C1C-AAFA-68938C57A64F}" Win64="$(var.Win64)">
+      <Component Id="cmp4CAAC890D3293ACAC1246ABEE611449C" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{1A501EEE-495F-4FFD-B947-60DB423164E7}" Win64="$(var.Win64)">
         <File Id="filA67A8B644C6DC3EA27F2FE85A22CCBFD" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x86\7za.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp1B0B351FDAE2D4353D914782A16C324F" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{EB7EDFC5-55C5-42C1-BC10-E2538BC4AFD3}" Win64="$(var.Win64)">
+      <Component Id="cmp1B0B351FDAE2D4353D914782A16C324F" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{92D82552-7BDB-494B-A9E2-6AC3CDAC825C}" Win64="$(var.Win64)">
         <File Id="fil6F358263494AC949A0B8A7DE4DAC2DAD" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x86\7zxa.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpC4AD9F7F80F906041F27F193E1583F51" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{CCACBE30-C440-4F6A-A13F-4FECC351AD0A}" Win64="$(var.Win64)">
+      <Component Id="cmpC4AD9F7F80F906041F27F193E1583F51" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{58D312B1-8C5C-458A-B485-9133C58B2FFB}" Win64="$(var.Win64)">
         <File Id="fil4F2AFE0972D74B6878D8AC75D1ED6C54" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x86\License.7z.txt" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp3828D736DDB3171DC2E0B07DBB99C77C" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{5AF71FD9-AC2B-475D-A401-B3B8B8A2E207}" Win64="$(var.Win64)">
+      <Component Id="cmp3828D736DDB3171DC2E0B07DBB99C77C" Directory="dir97F42FF68945B97AAE670945C4FDAE93" Guid="{8EC90B77-0B12-4BF8-A09F-0F229ADB17DD}" Win64="$(var.Win64)">
         <File Id="filB81000BFD774C54F1293693897949BF5" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\x86\License.7za-7zxa.txt" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp339891BCF25868096046232AE5B206A8" Directory="dir4A8DD77DBC79775EC39CACBC8AA06107" Guid="{0A52AEA6-5EB8-49ED-9693-897456EDB90E}" Win64="$(var.Win64)">
+      <Component Id="cmp339891BCF25868096046232AE5B206A8" Directory="dir4A8DD77DBC79775EC39CACBC8AA06107" Guid="{8155465B-BFB7-4302-A85A-C6C7B25BCF86}" Win64="$(var.Win64)">
         <File Id="filFD08C44647BD25EA183798864B200931" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\zh-Hans\CookPopularUI.WPF.resources.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmpE74E1BFCBF5DAF24230ADED9F41CA273" Directory="dir4A8DD77DBC79775EC39CACBC8AA06107" Guid="{5CBAF6F4-EB20-48A6-A1C0-82B2A855C122}" Win64="$(var.Win64)">
+      <Component Id="cmpE74E1BFCBF5DAF24230ADED9F41CA273" Directory="dir4A8DD77DBC79775EC39CACBC8AA06107" Guid="{5C211788-4A8D-4A61-BC36-9AED2B72F165}" Win64="$(var.Win64)">
         <File Id="filF072B18BBC0CBCD17880633A6D77AB68" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp4B689609F084DFD0F056DEBB8870BFDD" Directory="dir4A8DD77DBC79775EC39CACBC8AA06107" Guid="{BC1C51D7-5BB0-4197-814E-F1C5F1A75BF7}" Win64="$(var.Win64)">
+      <Component Id="cmp4B689609F084DFD0F056DEBB8870BFDD" Directory="dir4A8DD77DBC79775EC39CACBC8AA06107" Guid="{0ECF8F7A-AD80-4B76-ADA3-176E14A8C00C}" Win64="$(var.Win64)">
         <File Id="filDA8204413D6F639093EBD8790F9145E2" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\zh-Hans\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp337184108B965333B018985B74BF5CF7" Directory="dir4A8DD77DBC79775EC39CACBC8AA06107" Guid="{8F4D8390-34B1-447A-A0D0-8194F22FF092}" Win64="$(var.Win64)">
+      <Component Id="cmp337184108B965333B018985B74BF5CF7" Directory="dir4A8DD77DBC79775EC39CACBC8AA06107" Guid="{C1E36405-770D-4E64-BE32-D32DEEDADD72}" Win64="$(var.Win64)">
         <File Id="fil41E3C21496060BD5639FBAE9FE59E87B" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\zh-Hans\Microsoft.CodeAnalysis.resources.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
-      <Component Id="cmp8A90A0DA436254684AFD659A0EC91C6F" Directory="dir4A8DD77DBC79775EC39CACBC8AA06107" Guid="{FAFA1CD2-5C35-402F-8704-C3EBDD95D433}" Win64="$(var.Win64)">
+      <Component Id="cmp8A90A0DA436254684AFD659A0EC91C6F" Directory="dir4A8DD77DBC79775EC39CACBC8AA06107" Guid="{23F9A6B8-FC76-4B1E-8FFC-F61D6D95C734}" Win64="$(var.Win64)">
         <File Id="fil34568C9B0A854E7A3F600616A38EBE44" KeyPath="yes" Source="$(var.DependencyLibrariesDir)\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll" DefaultVersion="65535.65535.65535.65535" />
       </Component>
     </ComponentGroup>

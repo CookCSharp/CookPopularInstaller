@@ -7,7 +7,7 @@
     <ProjectGuid>44f65e2d-5c42-41a7-8e0e-09757d882501</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
     <SuppressPdbOutput Condition="'$(Configuration)'=='Release'">true</SuppressPdbOutput>
-    <OutputPath>$(SolutionDir)Output\bin\$(Configuration)\$(Platform)\$(MSBuildProjectName)\</OutputPath>
+    <OutputPath>$(SolutionDir)Output\bin\Release\$(Platform)\$(MSBuildProjectName)\</OutputPath>
     <BaseIntermediateOutputPath>$(SolutionDir)Output\obj\$(Configuration)\$(Platform)\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
     <OutputName>CookPopularInstaller</OutputName>
     <OutputType>Bundle</OutputType>
