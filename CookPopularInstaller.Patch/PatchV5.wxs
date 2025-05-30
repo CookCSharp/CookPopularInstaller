@@ -5,7 +5,7 @@
          DisplayName="ProductPatch" Description="Small Update Patch" >
 
     <Media Id="5000" Cabinet="Product.cab" EmbedCab="yes">
-      <PatchBaseline Id="Product" BaselineFile="NCATestInstaller1.msi" UpdateFile="NCATestInstaller2.msi"/>
+      <PatchBaseline Id="Product" BaselineFile="CookPopularInstaller1.msi" UpdateFile="CookPopularInstaller2.msi"/>
     </Media>
     <PatchFamily Id='ProductPatchFamily' Version='1.0.0.1' Supersede='yes'>
       <ComponentRef Id='Txt123'/>
@@ -15,7 +15,7 @@
 
   <Fragment>
     <Component Id='Txt123' Transitive='yes' Directory='INSTALLFOLDER' Guid='{B7F01E35-8BBC-4351-9D74-50CF5919B615}'>
-      <File Source='D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package\123.txt'/>
+      <File Source='D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\Package\123.txt'/>
     </Component>
   </Fragment>
 

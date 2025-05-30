@@ -16,7 +16,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NCATestInstaller.UnitTest
+namespace CookPopularInstaller.UnitTest
 {
     public class CompressWithUncompress
     {

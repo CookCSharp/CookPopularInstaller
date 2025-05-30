@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" InitialTargets="EnsureWixToolsetInstalled" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>3.10</ProductVersion>
     <ProjectGuid>3905575f-c2cf-4755-83ea-1f58614a0b62</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
     <SuppressPdbOutput Condition="'$(Configuration)'=='Release'">true</SuppressPdbOutput>
-    <OutputPath>$(SolutionDir)Output\bin\$(Configuration)\$(Platform)\$(MSBuildProjectName)\</OutputPath>
+    <OutputPath>$(SolutionDir)Output\bin\Release\$(Platform)\$(MSBuildProjectName)\</OutputPath>
     <BaseIntermediateOutputPath>$(SolutionDir)Output\obj\$(Configuration)\$(Platform)\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
     <OutputName>NCATestInstaller.Patch</OutputName>
     <OutputType>Package</OutputType>

@@ -10,7 +10,7 @@
 
 //using ICSharpCode.SharpZipLib.Zip;
 using Microsoft.Win32;
-using NCATestInstaller.Toolkit.Helpers;
+using CookPopularInstaller.Toolkit.Helpers;
 using SevenZip;
 using SharpCompress.Archives;
 using SharpCompress.Archives.GZip;
@@ -33,7 +33,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace NCATestInstaller.UnitTest
+namespace CookPopularInstaller.UnitTest
 {
     public class Program
     {
@@ -42,7 +42,7 @@ namespace NCATestInstaller.UnitTest
 
         static void Main(string[] args)
         {
-            //var dd = FindProcessOccupyFileAsync1(@"D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package\AFM相关接口.docx").Result;
+            //var dd = FindProcessOccupyFileAsync1(@"D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\Package\AFM相关接口.docx").Result;
             //using var sw1 = new StreamWriter(@"D:\Users\chance.zheng\Desktop\123.txt", true);
             //Array.ForEach(dd.ToArray(), arg =>
             //{
@@ -56,9 +56,9 @@ namespace NCATestInstaller.UnitTest
             var registry64Key = RegistryHelper.GetLocalMachineRegistryKey(key64Path);
             var registry32Key = RegistryHelper.GetLocalMachineRegistryKey(key32Path);
             var registryKey = registry64Key ?? registry32Key;
-            registryKey.SetValue("InstallLocation", @"C:\Program Files (x86)\NCATest\NCATestInstaller.Generate\1.0.0.1");
+            registryKey.SetValue("InstallLocation", @"C:\Program Files (x86)\NCATest\CookPopularInstaller.Generate\1.0.0.1");
             string s = "";
-            //ProcessHelper.StartProcess(@"D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package\afterinstall.bat", null, true);
+            //ProcessHelper.StartProcess(@"D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\Package\afterinstall.bat", null, true);
             //var ss = IsProductInstalled("{65A1DDBF-92FA-403B-9BC2-2B9869BE49A1}");
 
             //var runningProcesses = GetAllProcessAsync().Result;
@@ -73,7 +73,7 @@ namespace NCATestInstaller.UnitTest
             //    }
             //}
 
-            //var sss1 = IsFileLocked(@"D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package\K8860.chm");
+            //var sss1 = IsFileLocked(@"D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\Package\K8860.chm");
 
             //using var fs = new FileStream(@"D:\Users\chance.zheng\Desktop\123123.txt", FileMode.Create);
             //using var sw = new StreamWriter(@"D:\Users\chance.zheng\Desktop\123123.txt", false);
@@ -115,7 +115,7 @@ namespace NCATestInstaller.UnitTest
             var ss2 = Path.GetInvalidPathChars();
 
 
-            var pp = "C:\\Program Files(x86)\\NCATest\\NCATestInstaller.Generate\"";
+            var pp = "C:\\Program Files(x86)\\NCATest\\CookPopularInstaller.Generate\"";
             var folderName = Path.GetFileName(pp);
             var isValidPath = Path.GetInvalidPathChars().All(c => !pp.Contains(c));
             isValidPath &= !string.IsNullOrEmpty(folderName) && !System.Text.RegularExpressions.Regex.IsMatch(folderName, InvalidPathPattern);
@@ -173,7 +173,7 @@ namespace NCATestInstaller.UnitTest
 
             var sss1 = IsFileLocked(@"D:\Users\chance.zheng\Desktop\zhoubao.txt");
             var sss2 = IsFileLocked(@"D:\Users\chance.zheng\Desktop\自动化测试.xlsx");
-            var allFilePath = Directory.GetFiles(@"D:\NCATEST\NCATestInstaller.Generate", "*.*", SearchOption.AllDirectories);
+            var allFilePath = Directory.GetFiles(@"D:\NCATEST\CookPopularInstaller.Generate", "*.*", SearchOption.AllDirectories);
             var count = allFilePath.Where(f => IsFileLocked(f) && Path.GetExtension(f) != ".exe");
             var allFileNames = allFilePath.Where(f => IsFileLocked(f));
             var allFileNames1 = allFilePath.Where(f => IsFileLocked(f)).Select(f => Path.GetFileNameWithoutExtension(f));
@@ -200,7 +200,7 @@ namespace NCATestInstaller.UnitTest
 
         private static IEnumerable<string> GetExeNames()
         {
-            var installFolder = @"D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package";
+            var installFolder = @"D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\Package";
             var appNames = Directory.GetFiles(installFolder, "*.exe", SearchOption.AllDirectories)
                                     //.Where(f => Path.GetFileName(f) != "Uninst.exe")
                                     .Select(f => Path.GetFileNameWithoutExtension(f));
@@ -211,7 +211,7 @@ namespace NCATestInstaller.UnitTest
             return await Task.Run(() =>
             {
                 Process process = new Process();
-                ProcessStartInfo processStartInfo = new ProcessStartInfo(Path.Combine(@"D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package", "handle.exe"), filePath + " /accepteula");
+                ProcessStartInfo processStartInfo = new ProcessStartInfo(Path.Combine(@"D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\Package", "handle.exe"), filePath + " /accepteula");
                 processStartInfo.UseShellExecute = false;
                 processStartInfo.RedirectStandardOutput = true;
                 processStartInfo.RedirectStandardError = true;
@@ -235,7 +235,7 @@ namespace NCATestInstaller.UnitTest
         }
         public static async Task<IList<Process>> FindAllProcessOccupyFilesExceptExeAsync()
         {
-            var installFolder = @"D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package";
+            var installFolder = @"D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\Package";
             var allFiles = Directory.GetFiles(installFolder, "*.*", SearchOption.AllDirectories)
                                     .Where(f => !Path.GetFileName(f).Contains(".dll"))
                                     .Where(f => !Path.GetFileName(f).Contains(".exe"));
@@ -276,7 +276,7 @@ namespace NCATestInstaller.UnitTest
             return await Task.Run(() =>
             {
                 Process process = new Process();
-                ProcessStartInfo processStartInfo = new ProcessStartInfo(Path.Combine(@"D:\Users\chance.zheng\Desktop\Company\NCATestInstaller\Output\Package", "handle.exe"), filePath + " /accepteula");
+                ProcessStartInfo processStartInfo = new ProcessStartInfo(Path.Combine(@"D:\Users\chance.zheng\Desktop\Company\CookPopularInstaller\Output\Package", "handle.exe"), filePath + " /accepteula");
                 processStartInfo.UseShellExecute = false;
                 processStartInfo.RedirectStandardOutput = true;
                 processStartInfo.RedirectStandardError = true;

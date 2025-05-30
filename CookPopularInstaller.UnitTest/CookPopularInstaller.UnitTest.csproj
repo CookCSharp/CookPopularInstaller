@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!--<Nullable>enable</Nullable>-->
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.0-preview-25107-01" />
+    <PackageReference Include="NUnit" Version="4.3.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.1.0-alpha.1" />
+    <!--<PackageReference Include="NUnit.Analyzers" Version="3.3.0" />-->
+    <PackageReference Include="coverlet.collector" Version="6.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+
+
+    <!--<PackageReference Include="System.IO.Compression.ZipFile" Version="4.3.0" />-->
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    <PackageReference Include="SharpCompress" Version="0.39.0" />
+    <PackageReference Include="7z.Libs" Version="24.9.0" />
+    <PackageReference Include="Squid-Box.SevenZipSharp" Version="1.6.2.24" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CookPopularInstaller.Toolkit\CookPopularInstaller.Toolkit.csproj" />
+  </ItemGroup>
+
+</Project>
